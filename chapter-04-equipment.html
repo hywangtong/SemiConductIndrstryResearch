@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1e30">
+<meta name="description" content="晶圆制造工艺设备全景调研：62 个设备技术家族、26 条视频资源，从 FEOL、MOL、BEOL 到光掩模与晶圆厂配套。">
+<meta property="og:type" content="website"><meta property="og:title" content="晶圆制造设备全景图谱｜FAB ATLAS"><meta property="og:description" content="62 个设备技术家族 · 26 条视频资源 · 工艺流程与产业研究">
+<title>晶圆制造工艺设备全景调研 | FAB ATLAS</title>
+<style>
+:root{color-scheme:light;--ink:#172536;--ink2:#344459;--muted:#68798b;--line:#dde5e9;--paper:#f5f7f8;--card:#fff;--navy:#071b2d;--navy2:#102b43;--mint:#06ab99;--green:#0b776d;--lightmint:#e7f6f2;--blue:#347de2;--shadow:0 18px 65px rgba(24,42,57,.07);--radius:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:92px}body{margin:0;background:var(--paper);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;line-height:1.65;color:var(--ink);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}::selection{background:#b9f2e8;color:#07382f}:focus-visible{outline:3px solid #5ccbc1;outline-offset:3px}svg{display:block}section[id]{scroll-margin-top:94px}h1,h2,h3,h4,p{margin-top:0}p:last-child{margin-bottom:0}
+.progress{position:fixed;left:0;top:0;height:3px;width:0;background:linear-gradient(90deg,#60ead7,#25b2d3);z-index:120;pointer-events:none}
+.topbar{position:sticky;top:0;z-index:100;background:rgba(250,251,252,.94);backdrop-filter:blur(16px);border-bottom:1px solid rgba(214,224,231,.8)}.nav-inner{max-width:1260px;margin:auto;padding:0 30px;min-height:74px;display:flex;align-items:center;gap:26px}.brand{display:flex;gap:12px;align-items:center;min-width:222px}.brand-mark{display:grid;place-items:center;width:36px;height:36px;background:var(--navy);color:#77ead6;border-radius:10px;font-size:17px;font-weight:900;letter-spacing:-.06em}.brand-word{font-size:15px;font-weight:900;letter-spacing:.07em}.brand small{display:block;font-size:10px;font-weight:650;letter-spacing:.11em;color:var(--muted)}.desktop-nav{display:flex;justify-content:center;gap:25px;flex:1;white-space:nowrap}.desktop-nav a{font-size:13px;font-weight:660;color:#55677a;transition:color .2s}.desktop-nav a:hover{color:#078e80}.github-nav{border:1px solid #d1dce4;border-radius:50px;padding:9px 15px;font-size:12px;font-weight:760;white-space:nowrap}.github-nav:hover{background:#eaf0f2}.nav-mobile{display:none}
+.container{max-width:1200px;margin:0 auto;padding:0 30px}.hero{background:linear-gradient(124deg,#08192a 4%,#102c42 58%,#123850 100%);position:relative;overflow:hidden;color:#fff}.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(104,195,199,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(104,195,199,.06) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(90deg,transparent 3%,#000 100%)}.hero:after{content:"";position:absolute;right:-220px;top:-200px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(26,192,169,.17),transparent 66%);pointer-events:none}.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.03fr .97fr;gap:14px;align-items:center;min-height:580px;padding-top:60px;padding-bottom:56px}.eyebrow{font-size:11px;font-weight:850;letter-spacing:.18em;text-transform:uppercase;color:#58d7c6;margin-bottom:24px;display:flex;align-items:center;gap:11px}.eyebrow:before{content:"";height:1px;width:25px;background:currentColor}.hero h1{font-size:clamp(41px,4.4vw,64px);line-height:1.17;letter-spacing:-.045em;font-weight:850;margin:0 0 24px}.hero h1 em{display:block;font-style:normal;color:#76ead8}.hero-desc{font-size:15px;line-height:1.85;color:#b4c7d5;max-width:570px;margin-bottom:31px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.btn-primary,.btn-ghost{display:inline-flex;align-items:center;gap:12px;padding:13px 21px;border-radius:9px;font-size:13px;font-weight:780}.btn-primary{background:#64e4cf;color:#072c31}.btn-primary:hover{background:#94f8e7}.btn-ghost{border:1px solid rgba(190,215,225,.27);color:#e5f1f5}.btn-ghost:hover{background:rgba(255,255,255,.09)}.hero-meta{margin-top:29px;font-size:11px;color:#91aab9;letter-spacing:.03em}.hero-meta span{margin:0 9px;color:#526b7e}.hero-art{position:relative;width:100%;min-width:0;height:450px}.hero-art svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 38px 32px rgba(0,0,0,.18))}.float-tag{position:absolute;border:1px solid rgba(144,227,221,.28);background:rgba(11,39,52,.83);border-radius:9px;backdrop-filter:blur(7px);padding:10px 14px;line-height:1.4;box-shadow:0 18px 30px rgba(0,0,0,.14)}.float-tag b{display:block;color:#d2fff1;font-size:12px}.float-tag small{color:#7da9b6;font-size:10px;font-weight:750;letter-spacing:.11em}.float-a{top:17%;right:4%}.float-b{left:-3%;bottom:28%}.float-c{right:0;bottom:13%}.metrics-strip{background:#fefefe;border-bottom:1px solid var(--line)}.metrics-inner{display:grid;grid-template-columns:repeat(4,1fr);padding-top:30px;padding-bottom:30px}.metric{display:flex;align-items:center;gap:17px;padding:2px 22px;border-right:1px solid var(--line)}.metric:first-child{padding-left:0}.metric:last-child{border:0}.metric-value{font-size:39px;line-height:1;font-weight:830;letter-spacing:-.07em;color:#14354b;white-space:nowrap}.metric-text{font-size:12px;line-height:1.55;color:#718093}.metric-text b{color:#394c60;display:block;font-size:13px}
+.section{padding:95px 0}.section.white{background:#fff}.section.soft{background:#f0f5f4}.section-head{margin-bottom:40px;display:flex;align-items:end;gap:35px;justify-content:space-between}.section-heading{max-width:700px}.kicker{font-weight:850;font-size:11px;letter-spacing:.16em;color:#078d80;margin-bottom:12px;text-transform:uppercase}.section h2{font-size:clamp(29px,3.2vw,41px);line-height:1.2;letter-spacing:-.045em;margin:0 0 14px;font-weight:830}.lead{color:#64768a;font-size:14px;line-height:1.9;max-width:740px}.aside-caption{font-size:12px;color:#7e8b99;max-width:265px;text-align:right}.scope-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.scope-card{min-height:226px;padding:25px 24px;border-radius:15px;background:#fff;border:1px solid #e0e7ea;box-shadow:0 8px 30px rgba(13,38,57,.025)}.scope-index{font-size:11px;font-weight:900;color:#08988b;letter-spacing:.12em}.scope-card h3{font-size:17px;line-height:1.35;margin:19px 0 12px}.scope-card p{font-size:12px;color:#677b8d;line-height:1.8}.principle{margin-top:23px;display:flex;gap:19px;align-items:flex-start;background:#e7f2f1;border-left:3px solid #2db69f;padding:18px 22px;border-radius:0 12px 12px 0;color:#2e5960;font-size:13px;line-height:1.7}.principle strong{color:#0e6860;white-space:nowrap}
+.timeline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;position:relative}.step{position:relative;background:#fff;border:1px solid #dfe8e9;border-radius:14px;padding:24px 18px 22px;min-height:236px}.step:after{content:"→";position:absolute;top:45px;right:-16px;color:#37998d;font-size:23px;z-index:2}.step:last-child:after{display:none}.step-number{font-size:11px;color:#159c92;font-weight:900;letter-spacing:.11em}.step h3{font-size:19px;margin:22px 0 8px;line-height:1.4}.step h3 small{display:block;margin:5px 0;color:#7c8794;font-size:11px;font-weight:700}.step p{font-size:12px;line-height:1.8;color:#65788a}.timeline-support{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}.support-box{padding:19px 23px;background:#e8f3f2;border-radius:12px;font-size:13px;line-height:1.75;color:#476c6a}.support-box b{color:#126e67}.support-box.mask{background:#edf0f8;color:#566383}.support-box.mask b{color:#314c8c}.timing-note{font-size:12px;line-height:1.85;color:#6f7d8b;margin-top:16px}
+.coverage-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin:23px 0 27px}.coverage-item{text-align:left;padding:17px 14px;background:#fff;border:1px solid #e0e7ea;border-radius:10px;transition:.2s}.coverage-item:hover,.coverage-item:focus-visible{border-color:#2aad9e;transform:translateY(-2px);box-shadow:0 7px 22px rgba(7,101,92,.08)}.coverage-top{display:flex;justify-content:space-between;gap:4px;align-items:center}.coverage-name{font-size:11px;font-weight:790;color:#476175}.coverage-num{font-size:17px;font-weight:850;color:#14384e}.coverage-track{display:block;margin-top:13px;border-radius:10px;height:4px;background:#edf1f2;overflow:hidden}.coverage-track>span{display:block;height:100%;border-radius:10px;background:#23a998}.controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:19px;border-radius:13px;border:1px solid #dfe7eb;background:#fff;margin-bottom:15px}.searchbox{position:relative;min-width:215px;flex:1}.searchbox:before{content:"⌕";font-size:23px;position:absolute;left:13px;top:7px;color:#7e90a0;line-height:1}input[type="search"],select{width:100%;height:41px;border:1px solid #dce4e9;background:#f9fbfc;color:#294155;border-radius:8px;padding:0 13px;font-size:12px;outline-offset:2px}input[type="search"]{padding-left:39px}.controls select{width:166px}.check-label{font-size:12px;font-weight:680;color:#576a79;display:flex;align-items:center;gap:7px;white-space:nowrap;padding:0 5px}.check-label input{accent-color:#0b9486}.small-btn{border:1px solid #dae5e8;background:#f8fafb;color:#51677a;padding:10px 12px;border-radius:8px;font-size:12px;font-weight:720}.small-btn:hover{background:#eaf4f3}.resultbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:14px 2px 14px}.resultbar .count{font-size:12px;color:#64778a}.resultbar .count b{color:#0a7f73}.resultbar .hint{font-size:11px;color:#8d9ba8}.table-wrap{border:1px solid #dce5e9;background:#fff;border-radius:13px;overflow:auto;box-shadow:var(--shadow)}.eq-table{width:100%;min-width:1090px;border-collapse:collapse;text-align:left}.eq-table thead th{background:#17334a;color:#e5f0f5;font-size:11px;letter-spacing:.03em;padding:15px 13px;white-space:nowrap}.eq-table tbody td{padding:16px 13px;border-bottom:1px solid #ecf0f2;vertical-align:top;font-size:12px;line-height:1.55}.eq-table tbody tr:last-child td{border-bottom:0}.eq-table tbody tr:hover{background:#f7fbfa}.eq-table tbody tr[hidden]{display:none}.seq{font-variant-numeric:tabular-nums;color:#96a3ae;font-weight:760}.group-name{background:#eff5f6;padding:5px 7px;font-size:11px;color:#53707d;border-radius:6px;white-space:nowrap}.equipment-name{min-width:210px}.equipment-name strong{font-size:13px;color:#1a3447;display:block;margin-bottom:6px}.equipment-name span{font-size:11px;line-height:1.7;color:#7a8b98}.stage-text{font-size:11px;color:#547481}.role-text{min-width:180px;color:#536979}.vendor-text{min-width:150px;color:#556a7d}.table-video{color:#078c7c;font-size:11px;font-weight:760}.table-source{color:#466a8c;font-size:11px;font-weight:750}.unavailable{font-size:11px;color:#a4aeb6}.muted-dash{color:#c2cad0}.nowrap{white-space:nowrap}.arrow-out{font-size:12px;margin-left:3px}.under-table-note{font-size:11px;color:#7d8b97;margin-top:15px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature-card{display:block;background:#fff;border:1px solid #dce6e7;border-radius:13px;overflow:hidden;transition:transform .2s,box-shadow .2s}.feature-card:hover{transform:translateY(-4px);box-shadow:0 20px 38px rgba(16,44,58,.1)}.feature-art{height:162px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:#122e46;color:#61d5cb}.feature-art:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 31px,rgba(255,255,255,.055) 32px),repeating-linear-gradient(0deg,transparent 0 31px,rgba(255,255,255,.055) 32px)}.feature-art svg{position:relative;width:170px;height:154px;opacity:.9}.feature-art--euv{background:#142c4f;color:#92bcff}.feature-art--clean{background:#0d4649;color:#83ead9}.feature-art--ald{background:#28466a;color:#a9bffe}.feature-art--ion{background:#2e3158;color:#bebdfb}.feature-art--inspect{background:#18494c;color:#b0ecbc}.micro-top{position:absolute;top:17px;left:19px;font-size:10px;color:rgba(255,255,255,.55);font-weight:900;letter-spacing:.14em}.art-index{position:absolute;bottom:13px;right:19px;font-size:10px;color:rgba(255,255,255,.55);font-weight:900;letter-spacing:.09em}.feature-copy{padding:22px 23px 24px}.feature-kicker{font-size:10px;font-weight:800;color:#139989;letter-spacing:.07em}.feature-copy h3{font-size:17px;line-height:1.5;margin:10px 0}.feature-copy p{font-size:12px;line-height:1.85;color:#667989;min-height:46px;margin-bottom:14px}.feature-open{color:#087f74;font-weight:780;font-size:11px}.video-notice{font-size:12px;color:#697d8a;border-left:3px solid #80c8bd;padding:8px 15px;background:#eaf6f3;border-radius:0 6px 6px 0;margin-top:24px}.library{margin-top:36px;background:#fff;border:1px solid #dde7e8;border-radius:14px;overflow:hidden}.library-head{padding:25px 27px;border-bottom:1px solid #e6ecee;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.library-head h3{font-size:20px;margin:0}.library-head h3 span{font-size:12px;color:#8294a0;font-weight:700;margin-left:10px}.library-controls{display:flex;gap:9px;align-items:center}.library-controls .searchbox{width:235px;flex:none}.library-controls select{width:156px}.video-row{display:flex;align-items:center;gap:20px;padding:18px 27px;border-bottom:1px solid #edf1f2}.video-row:last-child{border:0}.video-row[hidden]{display:none}.video-row:hover{background:#f9fcfb}.video-id{flex:0 0 40px;color:#0e9f90;font-size:11px;font-weight:900;letter-spacing:.07em}.video-main{flex:1;min-width:0}.video-main h4{font-size:13px;font-weight:770;margin:0 0 8px}.video-tags{display:flex;flex-wrap:wrap;align-items:center;gap:7px;color:#8898a4;font-size:10px}.video-tags>span:not(:last-child):after{content:"·";margin-left:7px;color:#a0b0b9}.video-tags .vtype{font-weight:800;color:#137f78}.video-link{flex:0 0 130px;text-align:right}.text-link{color:#097d76;font-size:11px;font-weight:800}.text-link:hover{text-decoration:underline}.no-results{display:none;text-align:center;padding:28px;color:#768996;font-size:12px}.no-results.visible{display:block}
+.gap-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:start}.gap-panel,.method-panel{background:#fff;border-radius:13px;border:1px solid #e0e8eb;overflow:hidden}.gap-panel h3,.method-panel h3{font-size:17px;margin:0;padding:23px 24px 20px}.gap-panel table{border-collapse:collapse;width:100%;font-size:12px}.gap-panel td{padding:15px 20px;border-top:1px solid #eef2f3;vertical-align:top}.gap-panel td:first-child{width:23%}.gap-panel td:nth-child(2){width:31%}.gap-panel td:last-child{color:#657987}.method-panel ol{margin:0;padding:0 25px 25px 47px;color:#556d7e;font-size:12px;line-height:2}.method-panel li{padding:5px 0}.method-panel strong{color:#173d51}.method-panel .method-foot{font-size:11px;line-height:1.75;color:#81909d;padding:18px 24px;background:#f8fafb;border-top:1px solid #edf1f3}
+.closing{background:#0a2334;color:#fff;padding:66px 0 56px}.closing-inner{display:flex;align-items:center;justify-content:space-between;gap:25px}.closing h2{font-size:30px;letter-spacing:-.04em;margin:0 0 12px}.closing p{font-size:13px;color:#a8c0cd;max-width:610px;line-height:1.9}.closing a{white-space:nowrap}.footer{background:#071926;color:#86a0af;font-size:11px;padding:23px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-links{display:flex;gap:20px}.footer a:hover{color:#7ee8d7}
+@media(max-width:1080px){.desktop-nav{gap:14px}.nav-inner{padding:0 20px}.brand{min-width:174px}.hero-inner{min-height:520px}.coverage-grid{grid-template-columns:repeat(5,1fr)}.hero-art{height:390px}.scope-grid{grid-template-columns:repeat(2,1fr)}.metric{padding:2px 13px}.metric-value{font-size:32px}}
+@media(max-width:760px){html{scroll-padding-top:70px}.container{padding-left:19px;padding-right:19px}.nav-inner{min-height:64px;padding:0 18px;gap:12px}.brand{min-width:auto;flex:1}.brand-word{font-size:13px}.brand small{font-size:9px}.desktop-nav{display:none}.github-nav{font-size:11px;padding:7px 11px}.nav-mobile{display:flex;justify-content:space-between;align-items:center;padding:0 18px 9px;gap:13px;overflow:auto;white-space:nowrap}.nav-mobile a{font-size:11px;color:#637689;font-weight:770}.hero-inner{display:flex;flex-direction:column;gap:0;align-items:stretch;padding-top:47px;padding-bottom:29px;min-height:auto}.hero h1{font-size:clamp(39px,8.2vw,58px)}.hero-desc{font-size:13px}.hero-art{height:300px;margin-top:3px}.hero-art svg{max-width:450px;margin:auto}.float-a{top:10%;right:4%}.float-b{left:4%;bottom:23%}.float-c{right:5%;bottom:12%}.float-tag{padding:7px 9px}.float-tag b{font-size:9px}.float-tag small{font-size:8px}.hero-meta{margin-top:22px}.metrics-inner{grid-template-columns:repeat(2,1fr);gap:14px;padding-top:22px;padding-bottom:22px}.metric{padding:8px 0;border:0}.metric-value{font-size:33px}.metric-text{font-size:11px}.metric-text b{font-size:12px}.section{padding:66px 0}.section-head{display:block;margin-bottom:27px}.section h2{font-size:32px}.aside-caption{text-align:left;max-width:none;margin-top:13px}.scope-grid{grid-template-columns:repeat(2,1fr);gap:10px}.scope-card{padding:19px 17px;min-height:214px}.scope-card h3{font-size:14px;margin:13px 0 8px}.scope-card p{font-size:11px}.principle{display:block;padding:15px 17px;font-size:12px}.principle strong{display:block;margin-bottom:5px}.timeline{grid-template-columns:1fr;gap:8px}.step{min-height:auto;padding:16px 18px}.step h3{margin:7px 0 5px;font-size:17px}.step:after{content:"↓";top:auto;bottom:-21px;right:calc(50% - 7px);z-index:3;font-size:22px}.timeline-support{grid-template-columns:1fr}.coverage-grid{grid-template-columns:repeat(3,1fr);gap:8px}.coverage-item{padding:12px 9px}.coverage-name{font-size:10px}.controls{padding:13px;gap:9px}.controls .searchbox{flex:1 0 100%}.controls select{flex:1;width:auto;min-width:128px}.check-label{font-size:11px}.resultbar .hint{display:none}.feature-grid{grid-template-columns:repeat(2,1fr);gap:10px}.feature-art{height:125px}.feature-art svg{width:125px;height:115px}.feature-copy{padding:15px}.feature-copy h3{font-size:14px}.feature-copy p{font-size:11px;min-height:75px}.library-head{padding:19px}.library-controls{width:100%;gap:7px}.library-controls .searchbox{width:auto;flex:1}.library-controls select{max-width:130px}.video-row{gap:11px;padding:15px 17px;align-items:flex-start}.video-id{flex-basis:29px}.video-main h4{font-size:12px}.video-scope{display:none}.video-link{flex:0 0 78px}.video-link a{font-size:10px}.gap-layout{grid-template-columns:1fr}.gap-panel{overflow-x:auto}.gap-panel table{min-width:610px}.closing-inner{display:block}.closing h2{font-size:25px}.closing a{margin-top:15px}.footer-inner{align-items:flex-start}.footer-links{gap:10px;flex-wrap:wrap}}
+@media(max-width:390px){.brand small{display:none}.feature-grid{grid-template-columns:1fr}.feature-copy p{min-height:0}.coverage-grid{grid-template-columns:repeat(2,1fr)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+@media print{.topbar,.progress,.hero-actions,.controls,.library-controls,.coverage-grid,.footer-links,.small-btn{display:none!important}.hero{background:#fff;color:#000}.hero h1 em{color:#087b70}.hero-desc,.hero-meta{color:#444}.hero-art{display:none}.hero-inner{min-height:0;padding:25px 0}.section{padding:25px 0}.table-wrap{overflow:visible}.eq-table{min-width:0;font-size:8px}.eq-table td,.eq-table th{padding:4px!important;font-size:8px!important}.feature-grid{grid-template-columns:repeat(3,1fr)}.video-row{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="topbar"><div class="nav-inner">
+  <a class="brand" href="#top" aria-label="返回页首"><span class="brand-mark">F/</span><span><span class="brand-word">FAB ATLAS</span><small>WAFER PROCESS RESEARCH</small></span></a>
+  <nav class="desktop-nav" aria-label="页面目录"><a href="#scope">研究范围</a><a href="#flow">工艺路线</a><a href="#equipment">设备图谱</a><a href="#videos">视频资源</a><a href="#method">研究方法</a></nav>
+  <a class="github-nav" href="https://github.com/hywangtong/SemiConductIndrstryResearch" target="_blank" rel="noopener noreferrer">GitHub 仓库 ↗</a>
+</div><nav class="nav-mobile" aria-label="移动端目录"><a href="#scope">研究范围</a><a href="#flow">工艺路线</a><a href="#equipment">设备图谱</a><a href="#videos">视频资源</a><a href="#method">方法说明</a></nav></header>
+<main id="top">
+<section class="hero"><div class="container hero-inner"><div class="hero-copy">
+ <div class="eyebrow">Research Dossier / Section 04</div>
+ <h1>晶圆制造<br><em>工艺设备全景图谱</em></h1>
+ <p class="hero-desc">从空白晶圆到完整电路。以设备技术家族为最小研究单位，沿着 FEOL、MOL、BEOL 生产路径，系统梳理核心加工、检测量测、光掩模与 Fab 配套设备，并链接可查阅的视频资源。</p>
+ <div class="hero-actions"><a class="btn-primary" href="#equipment">探索设备目录 <span aria-hidden="true">↘</span></a><a class="btn-ghost" href="#videos">浏览设备视频 <span aria-hidden="true">↗</span></a></div>
+ <div class="hero-meta">2026.10.20 <span> / </span> 原报告第四节 <span> / </span> 研究版本 V1.0</div>
+ </div><div class="hero-art" role="img" aria-label="晶圆及集成电路图形的技术示意图，非真实工艺照片">
+ <svg viewBox="0 0 550 490" aria-hidden="true" focusable="false">
+   <defs><linearGradient id="wafer" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#55a4b1"/><stop offset=".43" stop-color="#1d4d6b"/><stop offset="1" stop-color="#132d4b"/></linearGradient><radialGradient id="glow"><stop offset="0" stop-color="#62e2c3" stop-opacity=".35"/><stop offset="1" stop-color="#62e2c3" stop-opacity="0"/></radialGradient><linearGradient id="edgering" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a4fff1"/><stop offset="1" stop-color="#4f87a8"/></linearGradient><clipPath id="clipWafer"><circle cx="0" cy="0" r="158"/></clipPath>
+   </defs><ellipse cx="280" cy="300" rx="230" ry="110" fill="url(#glow)"/>
+   <g transform="translate(276 255) rotate(-22) scale(1 .63)">
+     <circle cy="25" r="161" fill="#072333" stroke="#257d8e" stroke-width="3"/>
+     <circle r="159" fill="url(#wafer)" stroke="url(#edgering)" stroke-width="4"/>
+     <g clip-path="url(#clipWafer)" opacity=".85"><g stroke="#61bbb8" stroke-width="2" opacity=".51">
+       <path d="M-180-140h360M-180-108h360M-180-76h360M-180-44h360M-180-12h360M-180 20h360M-180 52h360M-180 84h360M-180 116h360M-180 148h360"/>
+       <path d="M-140-180v360M-108-180v360M-76-180v360M-44-180v360M-12-180v360M20-180v360M52-180v360M84-180v360M116-180v360M148-180v360"/>
+     </g><g fill="#64ddc8" opacity=".13"><rect x="-76" y="-76" width="30" height="30"/><rect x="20" y="-44" width="30" height="30"/><rect x="52" y="20" width="30" height="30"/><rect x="-108" y="84" width="30" height="30"/><rect x="84" y="-108" width="30" height="30"/></g>
+     <circle r="123" fill="none" stroke="#7cd6d3" opacity=".19" stroke-width="1.5"/><circle r="75" fill="none" stroke="#7cd6d3" opacity=".16" stroke-width="1.5"/></g>
+     <circle r="159" fill="none" stroke="#85e6de" opacity=".5" stroke-width=".9"/></g>
+   <g stroke="#4e9caa" stroke-width="1" opacity=".58" fill="none"><path d="M105 343L48 383H20"/><path d="M411 178l52-48h56"/><path d="M403 343l65 31h50"/></g><circle cx="105" cy="343" r="3.5" fill="#74ecdb"/><circle cx="411" cy="178" r="3.5" fill="#74ecdb"/><circle cx="403" cy="343" r="3.5" fill="#74ecdb"/>
+ </svg><div class="float-tag float-a"><small>PROCESS 01</small><b>LITHOGRAPHY</b></div><div class="float-tag float-b"><small>PROCESS 02</small><b>DEPOSITION / ETCH</b></div><div class="float-tag float-c"><small>CONTROL</small><b>METROLOGY</b></div>
+ </div></div></section>
+<div class="metrics-strip"><div class="container metrics-inner"><div class="metric"><div class="metric-value">62</div><div class="metric-text"><b>设备技术家族</b>含加工、量测及配套</div></div><div class="metric"><div class="metric-value">26</div><div class="metric-text"><b>已定位视频入口</b>实机、动画及厂商页面</div></div><div class="metric"><div class="metric-value">14</div><div class="metric-text"><b>设备一级领域</b>支持检索与筛选</div></div><div class="metric"><div class="metric-value">04</div><div class="metric-text"><b>核心研究层次</b>加工 / 量测 / 配套 / 掩模</div></div></div></div>
+<section class="section" id="scope"><div class="container"><div class="section-head"><div class="section-heading"><div class="kicker">01 / Research Scope</div><h2>建立明确的设备研究边界</h2><p class="lead">「工艺」与「设备」不能一一对应。同一种工艺可能使用多个设备平台；同一平台也可能通过不同反应腔执行不同步骤。以设备技术家族划分，是下一阶段比较能力、供应商与成本的前提。</p></div><div class="aside-caption">对应原报告 4.1–4.6，覆盖 FEOL / MOL / BEOL、光掩模制造及晶圆厂关键配套。</div></div>
+<div class="scope-grid"><article class="scope-card"><span class="scope-index">LAYER / 01</span><h3>核心加工设备</h3><p>清洗、氧化、扩散、外延、沉积、光刻、刻蚀、掺杂、退火、CMP、电镀与钝化。</p></article><article class="scope-card"><span class="scope-index">LAYER / 02</span><h3>检测与量测</h3><p>光学和电子束缺陷检测、CD-SEM、OCD、套刻、膜厚、材料分析及在线电学测试。</p></article><article class="scope-card"><span class="scope-index">LAYER / 03</span><h3>晶圆厂配套</h3><p>FOUP / EFEM、AMHS、真空与射频、气液供应、排气处理、超纯水及厂务系统。</p></article><article class="scope-card"><span class="scope-index">LAYER / 04</span><h3>光掩模制造</h3><p>电子束掩模写入、涂胶显影、刻蚀、检测修复、保护膜及掩模搬运。</p></article></div>
+<div class="principle"><strong>研究原则</strong><span>本目录按设备技术类型归类，而不是任何一座具体晶圆厂的采购清单。设备示例不代表其必然用于全部节点或架构；成熟逻辑、先进逻辑、存储器与 SiC / GaN 需要分别评估。</span></div>
+</div></section>
+<section class="section soft" id="flow"><div class="container"><div class="section-head"><div class="section-heading"><div class="kicker">02 / Manufacturing Architecture</div><h2>从工艺流程理解设备的角色</h2><p class="lead">不同工艺模块反复穿插，形成完整的器件与多层互连结构。下图展示典型 CMOS 的阶段逻辑，而不是一张晶圆的一次通过式旅行路线。</p></div></div>
+<div class="timeline"><div class="step"><span class="step-number">STAGE 01</span><h3>晶圆入厂<small>Wafer Preparation</small></h3><p>来料检查、湿法清洗、表面准备和污染控制。</p></div><div class="step"><span class="step-number">STAGE 02</span><h3>FEOL<small>Transistor Formation</small></h3><p>氧化/外延、光刻、刻蚀、掺杂与退火，形成晶体管结构。</p></div><div class="step"><span class="step-number">STAGE 03</span><h3>MOL<small>Contact Formation</small></h3><p>介质沉积、接触孔图形化、预清洗与金属填充。</p></div><div class="step"><span class="step-number">STAGE 04</span><h3>BEOL<small>Metal Interconnect</small></h3><p>多层介质/金属图形化，阻挡与种子层、填充与 CMP。</p></div><div class="step"><span class="step-number">STAGE 05</span><h3>完成电路<small>Passivation</small></h3><p>最终钝化、焊盘开口与制造内工艺验证。</p></div></div>
+<div class="timeline-support"><div class="support-box"><b>贯穿全流程：</b> 光学与电子束缺陷检测、关键尺寸、套刻、膜厚、材料分析及电学在线量测。</div><div class="support-box mask"><b>并行支撑：</b> 光掩模制造、晶圆自动搬运、真空、气体、化学品和洁净厂务系统。</div></div>
+<p class="timing-note">注意：WAT/PCM 为制造过程参数控制的一部分，不等同于后续完整晶圆电性测试（CP）；EUV 光掩模检测设备也不等同于晶圆缺陷检测设备。</p>
+</div></section>
+<section class="section" id="equipment"><div class="container"><div class="section-head"><div class="section-heading"><div class="kicker">03 / Equipment Taxonomy</div><h2>62 个设备家族 · 全量检索</h2><p class="lead">保留所有设备技术子类、制造阶段、用途、代表厂商与视频来源。可按领域、工艺阶段、是否有视频筛选，也可搜索设备名称、技术和厂商。</p></div><div class="aside-caption">下方条目是设备技术家族，不是单一机型、厂内实际设备台数或制程认证清单。</div></div>
+<div class="coverage-grid" aria-label="按领域设备数量统计"><button class="coverage-item" type="button" data-select-group="清洗/表面准备" aria-label="筛选清洗/表面准备设备"> 
+  <span class="coverage-top"><span class="coverage-name">清洗/表面准备</span><span class="coverage-num">05</span></span>
+  <span class="coverage-track"><span style="width:50%"></span></span>
+</button><button class="coverage-item" type="button" data-select-group="热工艺" aria-label="筛选热工艺设备"> 
+  <span class="coverage-top"><span class="coverage-name">热工艺</span><span class="coverage-num">04</span></span>
+  <span class="coverage-track"><span style="width:40%"></span></span>
+</button><button class="coverage-item" type="button" data-select-group="晶体生长" aria-label="筛选晶体生长设备"> 
+  <span class="coverage-top"><span class="coverage-name">晶体生长</span><span class="coverage-num">02</span></span>
+  <span class="coverage-track"><span style="width:20%"></span></span>
+</button><button class="coverage-item" type="button" data-select-group="薄膜沉积" aria-label="筛选薄膜沉积设备"> 
+  <span class="coverage-top"><span class="coverage-name">薄膜沉积</span><span class="coverage-num">09</span></span>
+  <span class="coverage-track"><span style="width:90%"></span></span>
+</button><button class="coverage-item" type="button" data-select-group="光刻" aria-label="筛选光刻设备"> 
+  <span class="coverage-top"><span class="coverage-name">光刻</span><span class="coverage-num">05</span></span>
+  <span class="coverage-track"><span style="width:50%"></span></span>
+</button><button class="coverage-item" type="button" data-select-group="刻蚀" aria-label="筛选刻蚀设备"> 
+  <span class="coverage-top"><span class="coverage-name">刻蚀</span><span class="coverage-num">05</span></span>
+  <span class="coverage-track"><span style="width:50%"></span></span>
+</button><button class="coverage-item" type="button" data-select-group="去胶/残留" aria-label="筛选去胶/残留设备"> 
+  <span class="coverage-top"><span class="coverage-name">去胶/残留</span><span class="coverage-num">02</span></span>
+  <span class="coverage-track"><span style="width:20%"></span></span>
+</button><button class="coverage-item" type="button" data-select-group="掺杂" aria-label="筛选掺杂设备"> 
+  <span class="coverage-top"><span class="coverage-name">掺杂</span><span class="coverage-num">04</span></span>
+  <span class="coverage-track"><span style="width:40%"></span></span>
+</button><button class="coverage-item" type="button" data-select-group="平坦化" aria-label="筛选平坦化设备"> 
+  <span class="coverage-top"><span class="coverage-name">平坦化</span><span class="coverage-num">02</span></span>
+  <span class="coverage-track"><span style="width:20%"></span></span>
+</button><button class="coverage-item" type="button" data-select-group="电化学" aria-label="筛选电化学设备"> 
+  <span class="coverage-top"><span class="coverage-name">电化学</span><span class="coverage-num">02</span></span>
+  <span class="coverage-track"><span style="width:20%"></span></span>
+</button><button class="coverage-item" type="button" data-select-group="终段" aria-label="筛选终段设备"> 
+  <span class="coverage-top"><span class="coverage-name">终段</span><span class="coverage-num">01</span></span>
+  <span class="coverage-track"><span style="width:10%"></span></span>
+</button><button class="coverage-item" type="button" data-select-group="量测/检测" aria-label="筛选量测/检测设备"> 
+  <span class="coverage-top"><span class="coverage-name">量测/检测</span><span class="coverage-num">10</span></span>
+  <span class="coverage-track"><span style="width:100%"></span></span>
+</button><button class="coverage-item" type="button" data-select-group="光掩模" aria-label="筛选光掩模设备"> 
+  <span class="coverage-top"><span class="coverage-name">光掩模</span><span class="coverage-num">06</span></span>
+  <span class="coverage-track"><span style="width:60%"></span></span>
+</button><button class="coverage-item" type="button" data-select-group="Fab配套" aria-label="筛选Fab配套设备"> 
+  <span class="coverage-top"><span class="coverage-name">Fab配套</span><span class="coverage-num">05</span></span>
+  <span class="coverage-track"><span style="width:50%"></span></span>
+</button></div>
+<div class="controls" role="search" aria-label="筛选设备目录"><label class="searchbox"><span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">搜索设备、厂商、工艺</span><input type="search" id="eqSearch" placeholder="搜索：ALD / 光刻 / KLA / 铜互连…" autocomplete="off"></label>
+<select id="eqGroup" aria-label="按设备领域筛选"><option value="">全部设备领域</option><option value="清洗/表面准备">清洗/表面准备 · 5</option><option value="热工艺">热工艺 · 4</option><option value="晶体生长">晶体生长 · 2</option><option value="薄膜沉积">薄膜沉积 · 9</option><option value="光刻">光刻 · 5</option><option value="刻蚀">刻蚀 · 5</option><option value="去胶/残留">去胶/残留 · 2</option><option value="掺杂">掺杂 · 4</option><option value="平坦化">平坦化 · 2</option><option value="电化学">电化学 · 2</option><option value="终段">终段 · 1</option><option value="量测/检测">量测/检测 · 10</option><option value="光掩模">光掩模 · 6</option><option value="Fab配套">Fab配套 · 5</option></select>
+<select id="eqStage" aria-label="按工艺阶段筛选"><option value="">全部工艺阶段</option><option value="FEOL">FEOL · 前道</option><option value="MOL">MOL · 中段</option><option value="BEOL">BEOL · 后道</option><option value="MASK">光掩模厂</option><option value="FAB">Fab 配套</option></select>
+<label class="check-label"><input type="checkbox" id="eqWithVideo"> 仅看有视频</label><button class="small-btn" type="button" id="eqReset">重置</button><button class="small-btn" type="button" id="exportCsv">导出 CSV ↓</button></div>
+<div class="resultbar"><span class="count">显示 <b id="eqCount">62</b> / 62 个设备家族</span><span class="hint">可横向滚动表格查看全部字段 · 厂商及型号为研究示例</span></div>
+<div class="table-wrap" role="region" aria-label="晶圆制造设备完整目录，可横向滚动" tabindex="0"><table class="eq-table" id="equipmentTable"><thead><tr><th>No.</th><th>一级领域</th><th>设备家族 / 技术子类</th><th>制造阶段</th><th>主要任务</th><th>厂商 / 型号示例</th><th>视频</th><th>技术资料</th></tr></thead><tbody><tr data-group="清洗/表面准备" data-stage="FEOL MOL BEOL" data-hasvideo="1" data-search="清洗/表面准备 湿法单片清洗 sc1/sc2、dhf、臭氧水、喷淋/旋干 feol/mol/beol 去除微粒/金属/有机污染及氧化层 screen su-3300; mtk cl 核心">
+      <td><span class="seq">01</span></td>
+      <td><span class="group-name">清洗/表面准备</span></td>
+      <td class="equipment-name"><strong>湿法单片清洗</strong><span>SC1/SC2、dHF、臭氧水、喷淋/旋干</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">去除微粒/金属/有机污染及氧化层</td>
+      <td class="vendor-text">SCREEN SU-3300; MTK CL</td>
+      <td class="nowrap"><a class="table-video" href="https://www.mtk-2.com/product-info/en-washing_apparatus.html" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.screen.co.jp/spe/en/products/su-3300" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="清洗/表面准备" data-stage="FEOL MOL BEOL" data-hasvideo="1" data-search="清洗/表面准备 湿法批式清洗 多槽浸泡、di水漂洗、marangoni干燥 feol/mol/beol 批处理清洗、湿刻和剥胶 rena revolution+ 核心">
+      <td><span class="seq">02</span></td>
+      <td><span class="group-name">清洗/表面准备</span></td>
+      <td class="equipment-name"><strong>湿法批式清洗</strong><span>多槽浸泡、DI水漂洗、Marangoni干燥</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">批处理清洗、湿刻和剥胶</td>
+      <td class="vendor-text">RENA Revolution+</td>
+      <td class="nowrap"><a class="table-video" href="https://www.rena.com/en/products/semiconductor/semiconductor-wet-solutions-for-lab-or-production/revolution-compact-automatic-wet-processing-for-semiconductor-cleaning-and-etching" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.rena.com/en/products/semiconductor/semiconductor-wet-solutions-for-lab-or-production/revolution-compact-automatic-wet-processing-for-semiconductor-cleaning-and-etching" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="清洗/表面准备" data-stage="FEOL MOL BEOL" data-hasvideo="1" data-search="清洗/表面准备 兆声/双流体清洗 megasonic、二流体、刷洗 feol/mol/beol 物理方式去除表面微粒 mtk cl series 核心">
+      <td><span class="seq">03</span></td>
+      <td><span class="group-name">清洗/表面准备</span></td>
+      <td class="equipment-name"><strong>兆声/双流体清洗</strong><span>Megasonic、二流体、刷洗</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">物理方式去除表面微粒</td>
+      <td class="vendor-text">MTK CL series</td>
+      <td class="nowrap"><a class="table-video" href="https://www.mtk-2.com/product-info/en-washing_apparatus.html" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.mtk-2.com/product-info/en-washing_apparatus.html" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="清洗/表面准备" data-stage="FEOL BEOL" data-hasvideo="1" data-search="清洗/表面准备 晶圆背面/边缘清洗 背面刷洗、双面清洗、边缘颗粒去除 feol/beol 控制污染传递/背面污染 mtk cl 核心">
+      <td><span class="seq">04</span></td>
+      <td><span class="group-name">清洗/表面准备</span></td>
+      <td class="equipment-name"><strong>晶圆背面/边缘清洗</strong><span>背面刷洗、双面清洗、边缘颗粒去除</span></td>
+      <td><span class="stage-text">FEOL/BEOL</span></td>
+      <td class="role-text">控制污染传递/背面污染</td>
+      <td class="vendor-text">MTK CL</td>
+      <td class="nowrap"><a class="table-video" href="https://www.mtk-2.com/product-info/en-washing_apparatus.html" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.mtk-2.com/product-info/en-washing_apparatus.html" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="清洗/表面准备" data-stage="FEOL MOL" data-hasvideo="0" data-search="清洗/表面准备 干法预清洗 远程等离子、氢基/氟基原位清洗 feol/mol 沉积或接触前去氧化物及残留 applied materials; lam research 核心">
+      <td><span class="seq">05</span></td>
+      <td><span class="group-name">清洗/表面准备</span></td>
+      <td class="equipment-name"><strong>干法预清洗</strong><span>远程等离子、氢基/氟基原位清洗</span></td>
+      <td><span class="stage-text">FEOL/MOL</span></td>
+      <td class="role-text">沉积或接触前去氧化物及残留</td>
+      <td class="vendor-text">Applied Materials; Lam Research</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="热工艺" data-stage="FEOL" data-hasvideo="0" data-search="热工艺 批式氧化炉 干氧、湿氧、热氮氧化 feol 形成热氧化层/绝缘层 jtekt thermo systems vf5100 核心">
+      <td><span class="seq">06</span></td>
+      <td><span class="group-name">热工艺</span></td>
+      <td class="equipment-name"><strong>批式氧化炉</strong><span>干氧、湿氧、热氮氧化</span></td>
+      <td><span class="stage-text">FEOL</span></td>
+      <td class="role-text">形成热氧化层/绝缘层</td>
+      <td class="vendor-text">JTEKT Thermo Systems VF5100</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><a class="table-source" href="https://www.jtektthermos.com/products/semiconductor/vf5100/" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="热工艺" data-stage="FEOL" data-hasvideo="0" data-search="热工艺 扩散/批式热处理炉 掺杂扩散、低温退火、氮化 feol 热驱动扩散与薄膜性质调整 jtekt thermo systems vf5100 核心">
+      <td><span class="seq">07</span></td>
+      <td><span class="group-name">热工艺</span></td>
+      <td class="equipment-name"><strong>扩散/批式热处理炉</strong><span>掺杂扩散、低温退火、氮化</span></td>
+      <td><span class="stage-text">FEOL</span></td>
+      <td class="role-text">热驱动扩散与薄膜性质调整</td>
+      <td class="vendor-text">JTEKT Thermo Systems VF5100</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><a class="table-source" href="https://www.jtektthermos.com/products/semiconductor/vf5100/" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="热工艺" data-stage="FEOL MOL" data-hasvideo="1" data-search="热工艺 rtp/rta单片快速热处理 灯阵列加热、spike anneal、rto feol/mol 注入掺杂激活、硅化物退火 applied materials vantage radiance plus 核心">
+      <td><span class="seq">08</span></td>
+      <td><span class="group-name">热工艺</span></td>
+      <td class="equipment-name"><strong>RTP/RTA单片快速热处理</strong><span>灯阵列加热、Spike anneal、RTO</span></td>
+      <td><span class="stage-text">FEOL/MOL</span></td>
+      <td class="role-text">注入掺杂激活、硅化物退火</td>
+      <td class="vendor-text">Applied Materials Vantage Radiance Plus</td>
+      <td class="nowrap"><a class="table-video" href="https://www.zmnt.rwth-aachen.de/?p=2047" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.appliedmaterials.com/us/en/product-library/vantage-radiance-plus-rtp.html" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="热工艺" data-stage="FEOL" data-hasvideo="0" data-search="热工艺 毫秒退火 laser spike anneal、flash lamp anneal feol 受控热预算下的浅结激活 veeco lsa101/lsa201 先进节点/特定工艺">
+      <td><span class="seq">09</span></td>
+      <td><span class="group-name">热工艺</span></td>
+      <td class="equipment-name"><strong>毫秒退火</strong><span>Laser spike anneal、Flash lamp anneal</span></td>
+      <td><span class="stage-text">FEOL</span></td>
+      <td class="role-text">受控热预算下的浅结激活</td>
+      <td class="vendor-text">Veeco LSA101/LSA201</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="晶体生长" data-stage="FEOL" data-hasvideo="1" data-search="晶体生长 单片硅/sige外延 减压cvd外延、选择性外延 feol s/d应力源与外延堆叠 asm intrepid es 核心">
+      <td><span class="seq">10</span></td>
+      <td><span class="group-name">晶体生长</span></td>
+      <td class="equipment-name"><strong>单片硅/SiGe外延</strong><span>减压CVD外延、选择性外延</span></td>
+      <td><span class="stage-text">FEOL</span></td>
+      <td class="role-text">S/D应力源与外延堆叠</td>
+      <td class="vendor-text">ASM Intrepid ES</td>
+      <td class="nowrap"><a class="table-video" href="https://www.asm.com/news/our-technology-explained-epi" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.asm.com/our-technology-products/epitaxy/intrepid-es" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="晶体生长" data-stage="FEOL" data-hasvideo="0" data-search="晶体生长 化合物半导体外延 sic/gan/iii-v 特殊反应器 特色feol 功率与射频器件的外延层 asm pe2o8 特色工艺">
+      <td><span class="seq">11</span></td>
+      <td><span class="group-name">晶体生长</span></td>
+      <td class="equipment-name"><strong>化合物半导体外延</strong><span>SiC/GaN/III-V 特殊反应器</span></td>
+      <td><span class="stage-text">特色FEOL</span></td>
+      <td class="role-text">功率与射频器件的外延层</td>
+      <td class="vendor-text">ASM PE2O8</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><a class="table-source" href="https://www.asm.com/news/asm-introduces-sic-epitaxy-system-pe2o8" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="薄膜沉积" data-stage="FEOL MOL BEOL" data-hasvideo="0" data-search="薄膜沉积 lpcvd 低压多片炉、sin/多晶硅 feol/mol/beol 低压成膜 jtekt thermo systems vf5100 核心">
+      <td><span class="seq">12</span></td>
+      <td><span class="group-name">薄膜沉积</span></td>
+      <td class="equipment-name"><strong>LPCVD</strong><span>低压多片炉、SiN/多晶硅</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">低压成膜</td>
+      <td class="vendor-text">JTEKT Thermo Systems VF5100</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><a class="table-source" href="https://www.jtektthermos.com/products/semiconductor/vf5100/" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="薄膜沉积" data-stage="MOL BEOL" data-hasvideo="0" data-search="薄膜沉积 pecvd 等离子增强介质沉积 mol/beol 沉积介质/钝化膜/低温膜 applied materials cvd systems 核心">
+      <td><span class="seq">13</span></td>
+      <td><span class="group-name">薄膜沉积</span></td>
+      <td class="equipment-name"><strong>PECVD</strong><span>等离子增强介质沉积</span></td>
+      <td><span class="stage-text">MOL/BEOL</span></td>
+      <td class="role-text">沉积介质/钝化膜/低温膜</td>
+      <td class="vendor-text">Applied Materials CVD systems</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><a class="table-source" href="https://www.appliedmaterials.com/us/en/semiconductor/products/processes/cvd.html" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="薄膜沉积" data-stage="FEOL MOL BEOL" data-hasvideo="0" data-search="薄膜沉积 hdp-cvd / 可流动沉积 高密度等离子体、fcvd feol/mol/beol 沟槽填充与间隙填充 applied materials; lam research 核心">
+      <td><span class="seq">14</span></td>
+      <td><span class="group-name">薄膜沉积</span></td>
+      <td class="equipment-name"><strong>HDP-CVD / 可流动沉积</strong><span>高密度等离子体、FCVD</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">沟槽填充与间隙填充</td>
+      <td class="vendor-text">Applied Materials; Lam Research</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><a class="table-source" href="https://www.appliedmaterials.com/us/en/semiconductor/products/processes/cvd.html" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="薄膜沉积" data-stage="MOL BEOL" data-hasvideo="0" data-search="薄膜沉积 金属cvd w-cvd、钨接触孔填充 mol/beol 高深宽比接触/通孔金属填充 applied materials; lam research 核心">
+      <td><span class="seq">15</span></td>
+      <td><span class="group-name">薄膜沉积</span></td>
+      <td class="equipment-name"><strong>金属CVD</strong><span>W-CVD、钨接触孔填充</span></td>
+      <td><span class="stage-text">MOL/BEOL</span></td>
+      <td class="role-text">高深宽比接触/通孔金属填充</td>
+      <td class="vendor-text">Applied Materials; Lam Research</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><a class="table-source" href="https://www.appliedmaterials.com/us/en/semiconductor/products/processes/cvd.html" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="薄膜沉积" data-stage="FEOL MOL BEOL" data-hasvideo="1" data-search="薄膜沉积 pvd磁控溅射 dc/rf金属沉积、离子化pvd feol/mol/beol 沉积ti/tin、ta/tan、cu seed等 applied materials; semicore 核心">
+      <td><span class="seq">16</span></td>
+      <td><span class="group-name">薄膜沉积</span></td>
+      <td class="equipment-name"><strong>PVD磁控溅射</strong><span>DC/RF金属沉积、离子化PVD</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">沉积Ti/TiN、Ta/TaN、Cu seed等</td>
+      <td class="vendor-text">Applied Materials; Semicore</td>
+      <td class="nowrap"><a class="table-video" href="https://www.semicore.com/semicore-video-list" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.semicore.com/semicore-video-list" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="薄膜沉积" data-stage="FEOL" data-hasvideo="1" data-search="薄膜沉积 高真空蒸发 电子束/热蒸发 研发/特色feol 适用于研发/化合物/特种材料的金属薄膜 semicore 特色/研发">
+      <td><span class="seq">17</span></td>
+      <td><span class="group-name">薄膜沉积</span></td>
+      <td class="equipment-name"><strong>高真空蒸发</strong><span>电子束/热蒸发</span></td>
+      <td><span class="stage-text">研发/特色FEOL</span></td>
+      <td class="role-text">适用于研发/化合物/特种材料的金属薄膜</td>
+      <td class="vendor-text">Semicore</td>
+      <td class="nowrap"><a class="table-video" href="https://www.semicore.com/semicore-video-list" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.semicore.com/semicore-video-list" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="薄膜沉积" data-stage="FEOL MOL BEOL" data-hasvideo="1" data-search="薄膜沉积 热ald 循环前驱体自限反应 feol/mol/beol 高k、衬里、阻挡层及保形性 asm pulsar 核心">
+      <td><span class="seq">18</span></td>
+      <td><span class="group-name">薄膜沉积</span></td>
+      <td class="equipment-name"><strong>热ALD</strong><span>循环前驱体自限反应</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">高k、衬里、阻挡层及保形性</td>
+      <td class="vendor-text">ASM Pulsar</td>
+      <td class="nowrap"><a class="table-video" href="https://www.asm.com/news/our-technology-explained-ald" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.asm.com/news/our-technology-explained-ald" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="薄膜沉积" data-stage="FEOL MOL BEOL" data-hasvideo="1" data-search="薄膜沉积 peald 等离子增强原子层沉积 feol/mol/beol 较低温条件下保形沉积 asm emerald 核心">
+      <td><span class="seq">19</span></td>
+      <td><span class="group-name">薄膜沉积</span></td>
+      <td class="equipment-name"><strong>PEALD</strong><span>等离子增强原子层沉积</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">较低温条件下保形沉积</td>
+      <td class="vendor-text">ASM EmerALD</td>
+      <td class="nowrap"><a class="table-video" href="https://www.asm.com/news/our-technology-explained-ald" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.asm.com/our-technology-products/ald" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="薄膜沉积" data-stage="FEOL MOL BEOL" data-hasvideo="0" data-search="薄膜沉积 选择性沉积 area-selective ald/cvd 先进 feol/mol/beol 减少图形化步骤/选择性生长 asm; applied materials 先进节点">
+      <td><span class="seq">20</span></td>
+      <td><span class="group-name">薄膜沉积</span></td>
+      <td class="equipment-name"><strong>选择性沉积</strong><span>Area-selective ALD/CVD</span></td>
+      <td><span class="stage-text">先进 FEOL/MOL/BEOL</span></td>
+      <td class="role-text">减少图形化步骤/选择性生长</td>
+      <td class="vendor-text">ASM; Applied Materials</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="光刻" data-stage="FEOL MOL BEOL" data-hasvideo="0" data-search="光刻 光刻胶涂布显影机 track hmds、旋涂、软烘、peb、显影 feol/mol/beol 形成光刻胶图形并与曝光机联机 tel clean track lithius pro 核心">
+      <td><span class="seq">21</span></td>
+      <td><span class="group-name">光刻</span></td>
+      <td class="equipment-name"><strong>光刻胶涂布显影机 Track</strong><span>HMDS、旋涂、软烘、PEB、显影</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">形成光刻胶图形并与曝光机联机</td>
+      <td class="vendor-text">TEL CLEAN TRACK LITHIUS Pro</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><a class="table-source" href="https://www.tel.com/product/lithius.html" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="光刻" data-stage="FEOL MOL BEOL" data-hasvideo="1" data-search="光刻 duv步进扫描曝光机 krf 248nm、arf 193nm dry/immersion feol/mol/beol 掩模图形投影曝光 asml twinscan系列 核心">
+      <td><span class="seq">22</span></td>
+      <td><span class="group-name">光刻</span></td>
+      <td class="equipment-name"><strong>DUV步进扫描曝光机</strong><span>KrF 248nm、ArF 193nm dry/immersion</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">掩模图形投影曝光</td>
+      <td class="vendor-text">ASML TWINSCAN系列</td>
+      <td class="nowrap"><a class="table-video" href="https://www.youtube.com/watch?v=Z-E5IUozd7M" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.asml.com/" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="光刻" data-stage="FEOL BEOL" data-hasvideo="1" data-search="光刻 euv步进扫描曝光机 13.5nm、high-na euv选型 先进feol/先进beol关键层 先进线宽图形化 asml nxe/exe系列 核心">
+      <td><span class="seq">23</span></td>
+      <td><span class="group-name">光刻</span></td>
+      <td class="equipment-name"><strong>EUV步进扫描曝光机</strong><span>13.5nm、High-NA EUV选型</span></td>
+      <td><span class="stage-text">先进FEOL/先进BEOL关键层</span></td>
+      <td class="role-text">先进线宽图形化</td>
+      <td class="vendor-text">ASML NXE/EXE系列</td>
+      <td class="nowrap"><a class="table-video" href="https://www.youtube.com/watch?v=MfFGRl00LKY" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.asml.com/" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="光刻" data-stage="" data-hasvideo="0" data-search="光刻 干涉/直写或接触式曝光 mask aligner、直写 研发/特色工艺 不应与先进量产光刻机混为一谈 suss microtec 特色/研发">
+      <td><span class="seq">24</span></td>
+      <td><span class="group-name">光刻</span></td>
+      <td class="equipment-name"><strong>干涉/直写或接触式曝光</strong><span>Mask aligner、直写</span></td>
+      <td><span class="stage-text">研发/特色工艺</span></td>
+      <td class="role-text">不应与先进量产光刻机混为一谈</td>
+      <td class="vendor-text">SUSS MicroTec</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="光刻" data-stage="FEOL MOL BEOL" data-hasvideo="0" data-search="光刻 烘烤及表面增粘模块 脱水烘烤、hmds prime、peb feol/mol/beol 胶膜稳定及化学放大胶反应 tel track集成模块 核心">
+      <td><span class="seq">25</span></td>
+      <td><span class="group-name">光刻</span></td>
+      <td class="equipment-name"><strong>烘烤及表面增粘模块</strong><span>脱水烘烤、HMDS prime、PEB</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">胶膜稳定及化学放大胶反应</td>
+      <td class="vendor-text">TEL track集成模块</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><a class="table-source" href="https://www.tel.com/product/lithius.html" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="刻蚀" data-stage="FEOL MOL BEOL" data-hasvideo="1" data-search="刻蚀 导体/硅等离子刻蚀 icp高密度等离子体、rie feol/mol/beol 刻蚀多晶硅、栅极、鳍、金属 lam research kiyo 核心">
+      <td><span class="seq">26</span></td>
+      <td><span class="group-name">刻蚀</span></td>
+      <td class="equipment-name"><strong>导体/硅等离子刻蚀</strong><span>ICP高密度等离子体、RIE</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">刻蚀多晶硅、栅极、鳍、金属</td>
+      <td class="vendor-text">Lam Research Kiyo</td>
+      <td class="nowrap"><a class="table-video" href="https://news.samsungsemiconductor.com/kr/%EC%9D%B8%EC%83%9D%EB%A7%9B%EC%B9%A9-ep-6-%EC%97%AC%EA%B8%B0%EA%B0%80-%EB%B0%94%EB%A1%9C-%EC%A1%B0%EA%B0%81-%EB%A7%9B%EC%A7%91-%EB%B0%98%EB%8F%84%EC%B2%B4-%EC%8B%9D%EA%B0%81etch-%EA%B3%B5" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.lamresearch.com/products/our-processes/etch/" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="刻蚀" data-stage="FEOL MOL BEOL" data-hasvideo="1" data-search="刻蚀 介质干法刻蚀 ccp/rie、sio2/sin feol/mol/beol sti/接触孔/via/沟槽 lam research flex 核心">
+      <td><span class="seq">27</span></td>
+      <td><span class="group-name">刻蚀</span></td>
+      <td class="equipment-name"><strong>介质干法刻蚀</strong><span>CCP/RIE、SiO2/SiN</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">STI/接触孔/Via/沟槽</td>
+      <td class="vendor-text">Lam Research Flex</td>
+      <td class="nowrap"><a class="table-video" href="https://news.samsungsemiconductor.com/kr/%EC%9D%B8%EC%83%9D%EB%A7%9B%EC%B9%A9-ep-6-%EC%97%AC%EA%B8%B0%EA%B0%80-%EB%B0%94%EB%A1%9C-%EC%A1%B0%EA%B0%81-%EB%A7%9B%EC%A7%91-%EB%B0%98%EB%8F%84%EC%B2%B4-%EC%8B%9D%EA%B0%81etch-%EA%B3%B5" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.lamresearch.com/products/our-processes/etch/" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="刻蚀" data-stage="FEOL MOL" data-hasvideo="1" data-search="刻蚀 高深宽比/深硅刻蚀 har、drie、bosch工艺 3d nand/特色feol/先进mol 深孔/深沟槽结构 lam research syndion 核心">
+      <td><span class="seq">28</span></td>
+      <td><span class="group-name">刻蚀</span></td>
+      <td class="equipment-name"><strong>高深宽比/深硅刻蚀</strong><span>HAR、DRIE、Bosch工艺</span></td>
+      <td><span class="stage-text">3D NAND/特色FEOL/先进MOL</span></td>
+      <td class="role-text">深孔/深沟槽结构</td>
+      <td class="vendor-text">Lam Research Syndion</td>
+      <td class="nowrap"><a class="table-video" href="https://news.samsungsemiconductor.com/kr/%EC%9D%B8%EC%83%9D%EB%A7%9B%EC%B9%A9-ep-6-%EC%97%AC%EA%B8%B0%EA%B0%80-%EB%B0%94%EB%A1%9C-%EC%A1%B0%EA%B0%81-%EB%A7%9B%EC%A7%91-%EB%B0%98%EB%8F%84%EC%B2%B4-%EC%8B%9D%EA%B0%81etch-%EA%B3%B5" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.lamresearch.com/products/our-processes/etch/" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="刻蚀" data-stage="FEOL MOL" data-hasvideo="0" data-search="刻蚀 原子层刻蚀 ale 循环吸附/去除、等离子/热法 先进feol/mol 精确去除接近原子层厚度 lam research ale portfolio 先进节点">
+      <td><span class="seq">29</span></td>
+      <td><span class="group-name">刻蚀</span></td>
+      <td class="equipment-name"><strong>原子层刻蚀 ALE</strong><span>循环吸附/去除、等离子/热法</span></td>
+      <td><span class="stage-text">先进FEOL/MOL</span></td>
+      <td class="role-text">精确去除接近原子层厚度</td>
+      <td class="vendor-text">Lam Research ALE portfolio</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><a class="table-source" href="https://www.lamresearch.com/products/our-processes/etch/" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="刻蚀" data-stage="FEOL MOL BEOL" data-hasvideo="1" data-search="刻蚀 湿法刻蚀 hf、h3po4、koh、混酸 feol/mol/beol 选择性化学去除材料 rena revolution+ 核心">
+      <td><span class="seq">30</span></td>
+      <td><span class="group-name">刻蚀</span></td>
+      <td class="equipment-name"><strong>湿法刻蚀</strong><span>HF、H3PO4、KOH、混酸</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">选择性化学去除材料</td>
+      <td class="vendor-text">RENA Revolution+</td>
+      <td class="nowrap"><a class="table-video" href="https://www.rena.com/en/products/semiconductor/semiconductor-wet-solutions-for-lab-or-production/revolution-compact-automatic-wet-processing-for-semiconductor-cleaning-and-etching" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.rena.com/en/products/semiconductor/semiconductor-wet-solutions-for-lab-or-production/revolution-compact-automatic-wet-processing-for-semiconductor-cleaning-and-etching" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="去胶/残留" data-stage="FEOL MOL BEOL" data-hasvideo="0" data-search="去胶/残留 干法灰化去胶 o2等离子/远程等离子 strip feol/mol/beol 去除光刻胶及部分聚合物 screen; lam research 核心">
+      <td><span class="seq">31</span></td>
+      <td><span class="group-name">去胶/残留</span></td>
+      <td class="equipment-name"><strong>干法灰化去胶</strong><span>O2等离子/远程等离子 strip</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">去除光刻胶及部分聚合物</td>
+      <td class="vendor-text">SCREEN; Lam Research</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="去胶/残留" data-stage="FEOL MOL BEOL" data-hasvideo="1" data-search="去胶/残留 湿法剥胶及后刻蚀清洗 溶剂、混酸、腐蚀抑制体系 feol/mol/beol 去胶/聚合物残留、保护金属 rena revolution+ 核心">
+      <td><span class="seq">32</span></td>
+      <td><span class="group-name">去胶/残留</span></td>
+      <td class="equipment-name"><strong>湿法剥胶及后刻蚀清洗</strong><span>溶剂、混酸、腐蚀抑制体系</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">去胶/聚合物残留、保护金属</td>
+      <td class="vendor-text">RENA Revolution+</td>
+      <td class="nowrap"><a class="table-video" href="https://www.rena.com/en/products/semiconductor/semiconductor-wet-solutions-for-lab-or-production/revolution-compact-automatic-wet-processing-for-semiconductor-cleaning-and-etching" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.rena.com/en/products/semiconductor/semiconductor-wet-solutions-for-lab-or-production/revolution-compact-automatic-wet-processing-for-semiconductor-cleaning-and-etching" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="掺杂" data-stage="FEOL" data-hasvideo="1" data-search="掺杂 高电流离子注入机 高剂量低能注入 feol 源漏及浅结掺杂 axcelis purion; applied materials 核心">
+      <td><span class="seq">33</span></td>
+      <td><span class="group-name">掺杂</span></td>
+      <td class="equipment-name"><strong>高电流离子注入机</strong><span>高剂量低能注入</span></td>
+      <td><span class="stage-text">FEOL</span></td>
+      <td class="role-text">源漏及浅结掺杂</td>
+      <td class="vendor-text">Axcelis Purion; Applied Materials</td>
+      <td class="nowrap"><a class="table-video" href="https://www.axcelis.com/products/purion-ion-implantation-equipment/" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="掺杂" data-stage="FEOL" data-hasvideo="1" data-search="掺杂 中电流离子注入机 精确剂量/能量注入 feol 阱区/阈值/halo调节 axcelis purion 核心">
+      <td><span class="seq">34</span></td>
+      <td><span class="group-name">掺杂</span></td>
+      <td class="equipment-name"><strong>中电流离子注入机</strong><span>精确剂量/能量注入</span></td>
+      <td><span class="stage-text">FEOL</span></td>
+      <td class="role-text">阱区/阈值/halo调节</td>
+      <td class="vendor-text">Axcelis Purion</td>
+      <td class="nowrap"><a class="table-video" href="https://www.axcelis.com/products/purion-ion-implantation-equipment/" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="掺杂" data-stage="FEOL" data-hasvideo="1" data-search="掺杂 高能离子注入机 深阱/高能注入 feol 深层掺杂结构 axcelis purion 核心">
+      <td><span class="seq">35</span></td>
+      <td><span class="group-name">掺杂</span></td>
+      <td class="equipment-name"><strong>高能离子注入机</strong><span>深阱/高能注入</span></td>
+      <td><span class="stage-text">FEOL</span></td>
+      <td class="role-text">深层掺杂结构</td>
+      <td class="vendor-text">Axcelis Purion</td>
+      <td class="nowrap"><a class="table-video" href="https://www.axcelis.com/products/purion-ion-implantation-equipment/" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="掺杂" data-stage="FEOL" data-hasvideo="0" data-search="掺杂 等离子浸没注入 plad/piii 先进feol/特色工艺 三维结构表面改性/掺杂 applied materials 先进节点/可选">
+      <td><span class="seq">36</span></td>
+      <td><span class="group-name">掺杂</span></td>
+      <td class="equipment-name"><strong>等离子浸没注入</strong><span>PLAD/PIII</span></td>
+      <td><span class="stage-text">先进FEOL/特色工艺</span></td>
+      <td class="role-text">三维结构表面改性/掺杂</td>
+      <td class="vendor-text">Applied Materials</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="平坦化" data-stage="FEOL MOL BEOL" data-hasvideo="1" data-search="平坦化 cmp主体抛光机 多头多盘、端点检测 feol/mol/beol sti、w接触、cu/介质平坦化 applied materials reflexion 核心">
+      <td><span class="seq">37</span></td>
+      <td><span class="group-name">平坦化</span></td>
+      <td class="equipment-name"><strong>CMP主体抛光机</strong><span>多头多盘、端点检测</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">STI、W接触、Cu/介质平坦化</td>
+      <td class="vendor-text">Applied Materials Reflexion</td>
+      <td class="nowrap"><a class="table-video" href="https://www.youtube.com/watch?v=iw_uU5PNQZk" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="平坦化" data-stage="FEOL MOL BEOL" data-hasvideo="1" data-search="平坦化 cmp后清洗系统 刷洗、兆声、marangoni干燥 feol/mol/beol 去除磨料、颗粒、污染 screen; mtk 核心">
+      <td><span class="seq">38</span></td>
+      <td><span class="group-name">平坦化</span></td>
+      <td class="equipment-name"><strong>CMP后清洗系统</strong><span>刷洗、兆声、Marangoni干燥</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">去除磨料、颗粒、污染</td>
+      <td class="vendor-text">SCREEN; MTK</td>
+      <td class="nowrap"><a class="table-video" href="https://www.mtk-2.com/product-info/en-washing_apparatus.html" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.mtk-2.com/product-info/en-washing_apparatus.html" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="电化学" data-stage="BEOL" data-hasvideo="0" data-search="电化学 晶圆电镀ecp/ecd 铜填充、电流/添加剂控制 beol damascene铜互连与通孔填充 lam research sabre 核心">
+      <td><span class="seq">39</span></td>
+      <td><span class="group-name">电化学</span></td>
+      <td class="equipment-name"><strong>晶圆电镀ECP/ECD</strong><span>铜填充、电流/添加剂控制</span></td>
+      <td><span class="stage-text">BEOL</span></td>
+      <td class="role-text">Damascene铜互连与通孔填充</td>
+      <td class="vendor-text">Lam Research SABRE</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><a class="table-source" href="https://www.lamresearch.com/product/sabre/" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="电化学" data-stage="MOL BEOL" data-hasvideo="1" data-search="电化学 电镀前阻挡/种子及修复模块 pvd/ald barrier+seed mol/beol 电镀黏附/阻挡/导电连贯性 applied materials; lam research 核心">
+      <td><span class="seq">40</span></td>
+      <td><span class="group-name">电化学</span></td>
+      <td class="equipment-name"><strong>电镀前阻挡/种子及修复模块</strong><span>PVD/ALD barrier+seed</span></td>
+      <td><span class="stage-text">MOL/BEOL</span></td>
+      <td class="role-text">电镀黏附/阻挡/导电连贯性</td>
+      <td class="vendor-text">Applied Materials; Lam Research</td>
+      <td class="nowrap"><a class="table-video" href="https://www.semicore.com/semicore-video-list" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="终段" data-stage="BEOL" data-hasvideo="0" data-search="终段 钝化/焊盘开窗 pecvd钝化 + 光刻/刻蚀 beol末端 保护线路、焊盘可接触 applied materials; tel; lam research 核心">
+      <td><span class="seq">41</span></td>
+      <td><span class="group-name">终段</span></td>
+      <td class="equipment-name"><strong>钝化/焊盘开窗</strong><span>PECVD钝化 + 光刻/刻蚀</span></td>
+      <td><span class="stage-text">BEOL末端</span></td>
+      <td class="role-text">保护线路、焊盘可接触</td>
+      <td class="vendor-text">Applied Materials; TEL; Lam Research</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="量测/检测" data-stage="FEOL MOL BEOL" data-hasvideo="1" data-search="量测/检测 光学晶圆缺陷检测机 brightfield/darkfield patterned wafer feol/mol/beol 表面颗粒/图形缺陷定位 kla broadband plasma inspection 核心">
+      <td><span class="seq">42</span></td>
+      <td><span class="group-name">量测/检测</span></td>
+      <td class="equipment-name"><strong>光学晶圆缺陷检测机</strong><span>Brightfield/Darkfield patterned wafer</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">表面颗粒/图形缺陷定位</td>
+      <td class="vendor-text">KLA broadband plasma inspection</td>
+      <td class="nowrap"><a class="table-video" href="https://www.kla.com/zh-hans/media-room/bbp-inspection-40-years-of-discovery-at-the-speed-of-light" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.kla.com/zh-hans/media-room/bbp-inspection-40-years-of-discovery-at-the-speed-of-light" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="量测/检测" data-stage="FEOL MOL BEOL" data-hasvideo="1" data-search="量测/检测 电子束缺陷检测/复查 e-beam inspection、review sem feol/mol/beol 高分辨率缺陷检测与分类 kla esl10 核心">
+      <td><span class="seq">43</span></td>
+      <td><span class="group-name">量测/检测</span></td>
+      <td class="equipment-name"><strong>电子束缺陷检测/复查</strong><span>e-beam inspection、review SEM</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">高分辨率缺陷检测与分类</td>
+      <td class="vendor-text">KLA eSL10</td>
+      <td class="nowrap"><a class="table-video" href="https://www.linkedin.com/posts/klacorp_esl10-e-beam-wafer-defect-inspection-system-activity-6727946985145475072-bu-x" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.linkedin.com/posts/klacorp_esl10-e-beam-wafer-defect-inspection-system-activity-6727946985145475072-bu-x" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="量测/检测" data-stage="FEOL MOL BEOL" data-hasvideo="0" data-search="量测/检测 cd-sem关键尺寸量测 线宽/孔径/侧壁几何 feol/mol/beol 图形cd与工艺控制 hitachi high-tech cg7300 核心">
+      <td><span class="seq">44</span></td>
+      <td><span class="group-name">量测/检测</span></td>
+      <td class="equipment-name"><strong>CD-SEM关键尺寸量测</strong><span>线宽/孔径/侧壁几何</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">图形CD与工艺控制</td>
+      <td class="vendor-text">Hitachi High-Tech CG7300</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><a class="table-source" href="https://www.hitachi-hightech.com/global/en/knowledge/semiconductor/room/manufacturing/cd-sem.html" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="量测/检测" data-stage="FEOL MOL BEOL" data-hasvideo="0" data-search="量测/检测 ocd/散射计 scatterometry、椭偏、反射光谱 feol/mol/beol 三维轮廓/cd/膜厚模型量测 nova ocd 核心">
+      <td><span class="seq">45</span></td>
+      <td><span class="group-name">量测/检测</span></td>
+      <td class="equipment-name"><strong>OCD/散射计</strong><span>Scatterometry、椭偏、反射光谱</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">三维轮廓/CD/膜厚模型量测</td>
+      <td class="vendor-text">Nova OCD</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><a class="table-source" href="https://www.novami.com/nova-technology/optical-scatterometry/" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="量测/检测" data-stage="FEOL MOL BEOL" data-hasvideo="0" data-search="量测/检测 套刻量测机 optical overlay、e-beam overlay feol/mol/beol 层间对准误差 asml yieldstar; kla archer 核心">
+      <td><span class="seq">46</span></td>
+      <td><span class="group-name">量测/检测</span></td>
+      <td class="equipment-name"><strong>套刻量测机</strong><span>Optical overlay、E-beam overlay</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">层间对准误差</td>
+      <td class="vendor-text">ASML YieldStar; KLA Archer</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="量测/检测" data-stage="FEOL MOL BEOL" data-hasvideo="0" data-search="量测/检测 薄膜膜厚及材料光学量测 椭偏、反射、xrr等 feol/mol/beol 膜厚/光学常数/密度 kla; onto innovation; nova 核心">
+      <td><span class="seq">47</span></td>
+      <td><span class="group-name">量测/检测</span></td>
+      <td class="equipment-name"><strong>薄膜膜厚及材料光学量测</strong><span>椭偏、反射、XRR等</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">膜厚/光学常数/密度</td>
+      <td class="vendor-text">KLA; Onto Innovation; Nova</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="量测/检测" data-stage="FEOL BEOL" data-hasvideo="0" data-search="量测/检测 表面形貌/轮廓量测 afm、台阶仪/profilometer 研发/feol/beol 粗糙度与台阶形貌 bruker; kla 补充">
+      <td><span class="seq">48</span></td>
+      <td><span class="group-name">量测/检测</span></td>
+      <td class="equipment-name"><strong>表面形貌/轮廓量测</strong><span>AFM、台阶仪/Profilometer</span></td>
+      <td><span class="stage-text">研发/FEOL/BEOL</span></td>
+      <td class="role-text">粗糙度与台阶形貌</td>
+      <td class="vendor-text">Bruker; KLA</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="量测/检测" data-stage="" data-hasvideo="0" data-search="量测/检测 材料成分/杂质分析 sims、xps、txrf 研发/量产抽测 深度分布/化学键/金属污染 cameca; thermo fisher 核心/抽测">
+      <td><span class="seq">49</span></td>
+      <td><span class="group-name">量测/检测</span></td>
+      <td class="equipment-name"><strong>材料成分/杂质分析</strong><span>SIMS、XPS、TXRF</span></td>
+      <td><span class="stage-text">研发/量产抽测</span></td>
+      <td class="role-text">深度分布/化学键/金属污染</td>
+      <td class="vendor-text">CAMECA; Thermo Fisher</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="量测/检测" data-stage="FEOL MOL BEOL" data-hasvideo="0" data-search="量测/检测 电学在线量测 四探针片阻、霍尔/参数测试 feol/mol/beol 掺杂活化/膜电阻/参数控制 semilab; keysight 核心">
+      <td><span class="seq">50</span></td>
+      <td><span class="group-name">量测/检测</span></td>
+      <td class="equipment-name"><strong>电学在线量测</strong><span>四探针片阻、霍尔/参数测试</span></td>
+      <td><span class="stage-text">FEOL/MOL/BEOL</span></td>
+      <td class="role-text">掺杂活化/膜电阻/参数控制</td>
+      <td class="vendor-text">Semilab; Keysight</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="量测/检测" data-stage="" data-hasvideo="0" data-search="量测/检测 wat/pcm参数测试 晶圆针测+参数分析（非最终cp） 制造内过程控制 晶体管/互连电性spc keysight; tel wafer prober 核心">
+      <td><span class="seq">51</span></td>
+      <td><span class="group-name">量测/检测</span></td>
+      <td class="equipment-name"><strong>WAT/PCM参数测试</strong><span>晶圆针测+参数分析（非最终CP）</span></td>
+      <td><span class="stage-text">制造内过程控制</span></td>
+      <td class="role-text">晶体管/互连电性SPC</td>
+      <td class="vendor-text">Keysight; TEL wafer prober</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="光掩模" data-stage="MASK" data-hasvideo="1" data-search="光掩模 光掩模电子束写入机 vsb可变形束、mbmw多电子束 光掩模厂 把opc/mdp图形写至掩模胶 nuflare mbm-2000; ims mbmw 核心">
+      <td><span class="seq">52</span></td>
+      <td><span class="group-name">光掩模</span></td>
+      <td class="equipment-name"><strong>光掩模电子束写入机</strong><span>VSB可变形束、MBMW多电子束</span></td>
+      <td><span class="stage-text">光掩模厂</span></td>
+      <td class="role-text">把OPC/MDP图形写至掩模胶</td>
+      <td class="vendor-text">NuFlare MBM-2000; IMS MBMW</td>
+      <td class="nowrap"><a class="table-video" href="https://www.ebeam.org/videos_archive/" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><a class="table-source" href="https://www.ebeam.org/videos_archive/" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="光掩模" data-stage="MASK" data-hasvideo="0" data-search="光掩模 光掩模涂胶显影机 大面积基板旋涂/显影/烘焙 光掩模厂 掩模光刻胶成像 screen; tel 核心">
+      <td><span class="seq">53</span></td>
+      <td><span class="group-name">光掩模</span></td>
+      <td class="equipment-name"><strong>光掩模涂胶显影机</strong><span>大面积基板旋涂/显影/烘焙</span></td>
+      <td><span class="stage-text">光掩模厂</span></td>
+      <td class="role-text">掩模光刻胶成像</td>
+      <td class="vendor-text">SCREEN; TEL</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="光掩模" data-stage="MASK" data-hasvideo="0" data-search="光掩模 掩模刻蚀/去胶设备 cr/吸收层刻蚀；湿法/干法去胶 光掩模厂 将写入图形转移到掩模 lam research; 专用厂商 核心">
+      <td><span class="seq">54</span></td>
+      <td><span class="group-name">光掩模</span></td>
+      <td class="equipment-name"><strong>掩模刻蚀/去胶设备</strong><span>Cr/吸收层刻蚀；湿法/干法去胶</span></td>
+      <td><span class="stage-text">光掩模厂</span></td>
+      <td class="role-text">将写入图形转移到掩模</td>
+      <td class="vendor-text">Lam Research; 专用厂商</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="光掩模" data-stage="MASK" data-hasvideo="0" data-search="光掩模 掩模清洗/缺陷修复 掩模清洗、电子束修复、激光修复 光掩模厂 减小图形缺陷 zeiss; mtk 核心">
+      <td><span class="seq">55</span></td>
+      <td><span class="group-name">光掩模</span></td>
+      <td class="equipment-name"><strong>掩模清洗/缺陷修复</strong><span>掩模清洗、电子束修复、激光修复</span></td>
+      <td><span class="stage-text">光掩模厂</span></td>
+      <td class="role-text">减小图形缺陷</td>
+      <td class="vendor-text">ZEISS; MTK</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><a class="table-source" href="https://www.mtk-2.com/product-info/en-washing_apparatus.html" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="光掩模" data-stage="MASK" data-hasvideo="0" data-search="光掩模 光掩模缺陷检测/量测 actinic euv mask inspection、cd sem 光掩模厂 缺陷/cd/关键图形验证 lasertec actis a300 核心">
+      <td><span class="seq">56</span></td>
+      <td><span class="group-name">光掩模</span></td>
+      <td class="equipment-name"><strong>光掩模缺陷检测/量测</strong><span>Actinic EUV mask inspection、CD SEM</span></td>
+      <td><span class="stage-text">光掩模厂</span></td>
+      <td class="role-text">缺陷/CD/关键图形验证</td>
+      <td class="vendor-text">Lasertec ACTIS A300</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><a class="table-source" href="https://www.lasertec.co.jp/en/products/semiconductor/actis_a300.html" target="_blank" rel="noopener noreferrer">产品/技术 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+    </tr><tr data-group="光掩模" data-stage="MASK" data-hasvideo="0" data-search="光掩模 pellicle/掩模贴膜及搬运 贴保护膜、euv专用掩模搬运 光掩模厂/fab接口 污染风险与颗粒控制 asml; 掩模配套厂商 核心">
+      <td><span class="seq">57</span></td>
+      <td><span class="group-name">光掩模</span></td>
+      <td class="equipment-name"><strong>Pellicle/掩模贴膜及搬运</strong><span>贴保护膜、EUV专用掩模搬运</span></td>
+      <td><span class="stage-text">光掩模厂/Fab接口</span></td>
+      <td class="role-text">污染风险与颗粒控制</td>
+      <td class="vendor-text">ASML; 掩模配套厂商</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="Fab配套" data-stage="FAB" data-hasvideo="1" data-search="fab配套 晶圆foup与efem装卸 foup、efem、load port、robot 全fab 晶圆盒接口和真空模块传片 brooks automation; rorze 必要配套">
+      <td><span class="seq">58</span></td>
+      <td><span class="group-name">Fab配套</span></td>
+      <td class="equipment-name"><strong>晶圆FOUP与EFEM装卸</strong><span>FOUP、EFEM、Load port、robot</span></td>
+      <td><span class="stage-text">全Fab</span></td>
+      <td class="role-text">晶圆盒接口和真空模块传片</td>
+      <td class="vendor-text">Brooks Automation; RORZE</td>
+      <td class="nowrap"><a class="table-video" href="https://www.ti.com/video/6370601542112" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="Fab配套" data-stage="FAB" data-hasvideo="1" data-search="fab配套 amhs自动物料搬运 oht、stocker、agv 全fab 设备间晶圆物流 daifuku; murata machinery 必要配套">
+      <td><span class="seq">59</span></td>
+      <td><span class="group-name">Fab配套</span></td>
+      <td class="equipment-name"><strong>AMHS自动物料搬运</strong><span>OHT、Stocker、AGV</span></td>
+      <td><span class="stage-text">全Fab</span></td>
+      <td class="role-text">设备间晶圆物流</td>
+      <td class="vendor-text">Daifuku; Murata Machinery</td>
+      <td class="nowrap"><a class="table-video" href="https://www.ti.com/video/6370601542112" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="Fab配套" data-stage="FAB" data-hasvideo="0" data-search="fab配套 真空与rf系统 干泵、涡轮泵、rf电源/匹配箱 沉积/刻蚀/设备底座 反应腔压力与等离子激励 edwards; pfeiffer; mks 必要配套">
+      <td><span class="seq">60</span></td>
+      <td><span class="group-name">Fab配套</span></td>
+      <td class="equipment-name"><strong>真空与RF系统</strong><span>干泵、涡轮泵、RF电源/匹配箱</span></td>
+      <td><span class="stage-text">沉积/刻蚀/设备底座</span></td>
+      <td class="role-text">反应腔压力与等离子激励</td>
+      <td class="vendor-text">Edwards; Pfeiffer; MKS</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="Fab配套" data-stage="FAB" data-hasvideo="0" data-search="fab配套 气体/液体/排气处理 mfc、gas cabinet、abate、cds 全fab 高纯工艺介质、安全排放 mks; entegris; edwards 必要配套">
+      <td><span class="seq">61</span></td>
+      <td><span class="group-name">Fab配套</span></td>
+      <td class="equipment-name"><strong>气体/液体/排气处理</strong><span>MFC、Gas cabinet、abate、CDS</span></td>
+      <td><span class="stage-text">全Fab</span></td>
+      <td class="role-text">高纯工艺介质、安全排放</td>
+      <td class="vendor-text">MKS; Entegris; Edwards</td>
+      <td class="nowrap"><span class="unavailable">待补视频</span></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr><tr data-group="Fab配套" data-stage="FAB" data-hasvideo="1" data-search="fab配套 厂务公用工程 upw、cda、冷却水、空调与洁净室 全fab 提供大流量稳定高纯环境 厂务epc与公辅厂商 必要配套">
+      <td><span class="seq">62</span></td>
+      <td><span class="group-name">Fab配套</span></td>
+      <td class="equipment-name"><strong>厂务公用工程</strong><span>UPW、CDA、冷却水、空调与洁净室</span></td>
+      <td><span class="stage-text">全Fab</span></td>
+      <td class="role-text">提供大流量稳定高纯环境</td>
+      <td class="vendor-text">厂务EPC与公辅厂商</td>
+      <td class="nowrap"><a class="table-video" href="https://www.ti.com/video/6370601542112" target="_blank" rel="noopener noreferrer">观看视频 <span aria-hidden="true" class="arrow-out">↗</span></a></td>
+      <td class="nowrap"><span class="muted-dash">待补</span></td>
+    </tr></tbody></table><div class="no-results" id="eqEmpty">未找到匹配设备。请更换关键词或重置筛选。</div></div><p class="under-table-note">说明：视频链接有的直达播放器，有的前往发布方的视频集合或产品页面；“待补视频”只表示本轮尚未找到可明确对应的公开入口。所有外部链接均将在新标签页打开。</p>
+</div></section>
+<section class="section soft" id="videos"><div class="container"><div class="section-head"><div class="section-heading"><div class="kicker">04 / Video Library</div><h2>从真实运行画面到工艺原理</h2><p class="lead">优先提供厂商、晶圆厂、大学与行业组织发布的视频入口。明确区分真实设备/厂内画面、原理动画、产品技术介绍与教学访谈，避免将原理视频误当作设备实机证明。</p></div><div class="aside-caption">26 条“视频入口”包含同一发布方页面上的多段视频，不等于 26 个独立链接域名。</div></div>
+<div class="feature-grid"><a class="feature-card" href="https://www.ti.com/video/6370601542112" target="_blank" rel="noopener noreferrer" aria-label="看懂一座 Fab 的设备组织方式，打开视频资源">
+      <div class="feature-art feature-art--fab"><span class="micro-top">FAB 300MM</span>
+        <svg viewBox="0 0 160 155" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 64h126M22 94h126M42 46v66M76 46v66M110 46v66"/><rect x="48" y="47" width="62" height="64" rx="6"/><path d="M80 12v31m-7-7 7 7 7-7"/><circle cx="80" cy="78" r="19"/></svg>
+        <span class="art-index">F01</span>
+      </div>
+      <div class="feature-copy"><span class="feature-kicker">厂内实景 · TI</span><h3>看懂一座 Fab 的设备组织方式</h3><p>晶圆搬运、洁净环境、自动化系统与工艺设备的生产现场。</p><span class="feature-open">访问视频资源 <span aria-hidden="true">↗</span></span></div>
+    </a><a class="feature-card" href="https://www.youtube.com/watch?v=B2482h_TNwg" target="_blank" rel="noopener noreferrer" aria-label="EUV 光刻机为何如此复杂，打开视频资源">
+      <div class="feature-art feature-art--euv"><span class="micro-top">EUV LITHOGRAPHY</span>
+        <svg viewBox="0 0 160 155" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 80h48l15-22 17 37 16-32 34 0"/><circle cx="80" cy="80" r="53"/><path d="M57 30v100m47-100v100"/></svg>
+        <span class="art-index">L01</span>
+      </div>
+      <div class="feature-copy"><span class="feature-kicker">深度拆解 · Branch Education</span><h3>EUV 光刻机为何如此复杂</h3><p>从光源、光学系统、掩模到工件台的三维结构讲解。</p><span class="feature-open">访问视频资源 <span aria-hidden="true">↗</span></span></div>
+    </a><a class="feature-card" href="https://www.mtk-2.com/product-info/en-washing_apparatus.html" target="_blank" rel="noopener noreferrer" aria-label="单片湿法清洗如何运行，打开视频资源">
+      <div class="feature-art feature-art--clean"><span class="micro-top">WET CLEAN</span>
+        <svg viewBox="0 0 160 155" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="80" cy="77" rx="51" ry="35"/><ellipse cx="80" cy="77" rx="35" ry="23"/><ellipse cx="80" cy="77" rx="16" ry="10"/><path d="M43 28l24 24M118 18l-22 37M43 112l26-17"/></svg>
+        <span class="art-index">W01</span>
+      </div>
+      <div class="feature-copy"><span class="feature-kicker">实机演示 · MTK</span><h3>单片湿法清洗如何运行</h3><p>观察晶圆夹持、喷淋、旋转与清洗动作。</p><span class="feature-open">访问视频资源 <span aria-hidden="true">↗</span></span></div>
+    </a><a class="feature-card" href="https://www.asm.com/news/our-technology-explained-ald" target="_blank" rel="noopener noreferrer" aria-label="ALD 如何实现逐层沉积，打开视频资源">
+      <div class="feature-art feature-art--ald"><span class="micro-top">ALD PROCESS</span>
+        <svg viewBox="0 0 160 155" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M27 109h110M27 92h110M27 75h110M27 58h110"/><path d="M40 32v25m-7-8 7 8 7-8M80 32v25m-7-8 7 8 7-8M120 32v25m-7-8 7 8 7-8"/></svg>
+        <span class="art-index">D02</span>
+      </div>
+      <div class="feature-copy"><span class="feature-kicker">工艺原理 · ASM</span><h3>ALD 如何实现逐层沉积</h3><p>理解前驱体脉冲、自限反应和高深宽比结构保形性。</p><span class="feature-open">访问视频资源 <span aria-hidden="true">↗</span></span></div>
+    </a><a class="feature-card" href="https://www.axcelis.com/products/purion-ion-implantation-equipment/" target="_blank" rel="noopener noreferrer" aria-label="离子注入与 FinFET 掺杂，打开视频资源">
+      <div class="feature-art feature-art--ion"><span class="micro-top">ION IMPLANT</span>
+        <svg viewBox="0 0 160 155" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 40h124M30 28l18 12-18 12M64 28l18 12-18 12M99 28l18 12-18 12"/><path d="M22 110h116M35 110V86m30 24V72m30 38V89m30 21V76"/></svg>
+        <span class="art-index">I02</span>
+      </div>
+      <div class="feature-copy"><span class="feature-kicker">原理动画 · Axcelis</span><h3>离子注入与 FinFET 掺杂</h3><p>从精准掺杂切入理解束流、剂量及三维结构挑战。</p><span class="feature-open">访问视频资源 <span aria-hidden="true">↗</span></span></div>
+    </a><a class="feature-card" href="https://www.kla.com/zh-hans/media-room/bbp-inspection-40-years-of-discovery-at-the-speed-of-light" target="_blank" rel="noopener noreferrer" aria-label="晶圆缺陷检测如何工作，打开视频资源">
+      <div class="feature-art feature-art--inspect"><span class="micro-top">INSPECTION</span>
+        <svg viewBox="0 0 160 155" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="80" cy="77" r="48"/><circle cx="80" cy="77" r="23"/><path d="M80 13v128M16 77h128M47 44l66 66M113 44l-66 66"/><circle cx="98" cy="56" r="7"/></svg>
+        <span class="art-index">M01</span>
+      </div>
+      <div class="feature-copy"><span class="feature-kicker">技术介绍 · KLA</span><h3>晶圆缺陷检测如何工作</h3><p>理解宽带等离子光源与良率控制的关系。</p><span class="feature-open">访问视频资源 <span aria-hidden="true">↗</span></span></div>
+    </a></div>
+<p class="video-notice"><b>视频证据等级：</b>厂内实拍有助于观察设备与物料运动；三维动画适合理解机理；厂商产品视频只能支持其宣称的功能，不直接证明特定制程节点的量产性能。</p>
+<div class="library"><div class="library-head"><h3>完整视频资源库 <span>26 VIDEO ENTRIES</span></h3><div class="library-controls"><label class="searchbox"><span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">搜索视频标题</span><input id="videoSearch" type="search" placeholder="搜索视频 / 发布方…"></label><select aria-label="按视频类型筛选" id="videoType"><option value="">全部视频类型</option><option>实机 / 现场</option><option>原理 / 动画</option><option>厂商 / 产品</option><option>教学 / 访谈</option></select></div></div>
+<div id="videoList"><article class="video-row" data-type="实机 / 现场" data-search="ti 300 mm晶圆厂实景参观 fab/oht/多工艺厂内 ti 厂商实景参观">
+      <div class="video-id">F01</div>
+      <div class="video-main"><h4>TI 300 mm晶圆厂实景参观</h4><div class="video-tags"><span class="vtype">实机 / 现场</span><span>TI</span><span class="video-scope">Fab/OHT/多工艺厂内</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.ti.com/video/6370601542112" target="_blank" rel="noopener noreferrer">打开视频 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="原理 / 动画" data-search="asml nanoland：芯片如何制造 总体流程及光刻 asml 厂商原理动画">
+      <div class="video-id">F02</div>
+      <div class="video-main"><h4>ASML Nanoland：芯片如何制造</h4><div class="video-tags"><span class="vtype">原理 / 动画</span><span>ASML</span><span class="video-scope">总体流程及光刻</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.youtube.com/watch?v=Z-E5IUozd7M" target="_blank" rel="noopener noreferrer">打开视频 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="原理 / 动画" data-search="asml high-na euv光源与机内结构 euv光刻 asml 厂商原理动画">
+      <div class="video-id">F03</div>
+      <div class="video-main"><h4>ASML High-NA EUV光源与机内结构</h4><div class="video-tags"><span class="vtype">原理 / 动画</span><span>ASML</span><span class="video-scope">EUV光刻</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.youtube.com/watch?v=MfFGRl00LKY" target="_blank" rel="noopener noreferrer">打开视频 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="厂商 / 产品" data-search="asml unveiling high-na euv high-na euv asml 厂商产品介绍">
+      <div class="video-id">F04</div>
+      <div class="video-main"><h4>ASML Unveiling High-NA EUV</h4><div class="video-tags"><span class="vtype">厂商 / 产品</span><span>ASML</span><span class="video-scope">High-NA EUV</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.youtube.com/watch?v=h_zgURwr6nA" target="_blank" rel="noopener noreferrer">打开视频 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="实机 / 现场" data-search="mtk 单片湿法清洗实机 单片清洗/旋干 mtk 实机运行视频（页面内第1条）">
+      <div class="video-id">W01</div>
+      <div class="video-main"><h4>MTK 单片湿法清洗实机</h4><div class="video-tags"><span class="vtype">实机 / 现场</span><span>MTK</span><span class="video-scope">单片清洗/旋干</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.mtk-2.com/product-info/en-washing_apparatus.html" target="_blank" rel="noopener noreferrer">前往发布方页面 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="实机 / 现场" data-search="mtk 双流体喷射清洗 物理清洗 mtk 实机运行视频（页面内第2条）">
+      <div class="video-id">W02</div>
+      <div class="video-main"><h4>MTK 双流体喷射清洗</h4><div class="video-tags"><span class="vtype">实机 / 现场</span><span>MTK</span><span class="video-scope">物理清洗</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.mtk-2.com/product-info/en-washing_apparatus.html" target="_blank" rel="noopener noreferrer">前往发布方页面 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="实机 / 现场" data-search="mtk 晶圆双面清洗 双面清洗 mtk 实机运行视频（页面内第3条）">
+      <div class="video-id">W03</div>
+      <div class="video-main"><h4>MTK 晶圆双面清洗</h4><div class="video-tags"><span class="vtype">实机 / 现场</span><span>MTK</span><span class="video-scope">双面清洗</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.mtk-2.com/product-info/en-washing_apparatus.html" target="_blank" rel="noopener noreferrer">前往发布方页面 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="实机 / 现场" data-search="mtk sic晶圆处理 sic特色工艺（非逻辑主流300mm） mtk 实机运行视频（页面内第4条）">
+      <div class="video-id">W04</div>
+      <div class="video-main"><h4>MTK SiC晶圆处理</h4><div class="video-tags"><span class="vtype">实机 / 现场</span><span>MTK</span><span class="video-scope">SiC特色工艺（非逻辑主流300mm）</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.mtk-2.com/product-info/en-washing_apparatus.html" target="_blank" rel="noopener noreferrer">前往发布方页面 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="实机 / 现场" data-search="mtk 伯努利吸盘晶圆夹持 薄片搬运/边缘处理 mtk 实机运行视频（页面内第5条）">
+      <div class="video-id">W05</div>
+      <div class="video-main"><h4>MTK 伯努利吸盘晶圆夹持</h4><div class="video-tags"><span class="vtype">实机 / 现场</span><span>MTK</span><span class="video-scope">薄片搬运/边缘处理</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.mtk-2.com/product-info/en-washing_apparatus.html" target="_blank" rel="noopener noreferrer">前往发布方页面 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="厂商 / 产品" data-search="rena revolution+湿法槽式设备 批式湿法清洗/湿刻/去胶；150-200mm rena 厂商设备产品视频">
+      <div class="video-id">W06</div>
+      <div class="video-main"><h4>RENA Revolution+湿法槽式设备</h4><div class="video-tags"><span class="vtype">厂商 / 产品</span><span>RENA</span><span class="video-scope">批式湿法清洗/湿刻/去胶；150-200mm</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.rena.com/en/products/semiconductor/semiconductor-wet-solutions-for-lab-or-production/revolution-compact-automatic-wet-processing-for-semiconductor-cleaning-and-etching" target="_blank" rel="noopener noreferrer">前往发布方页面 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="原理 / 动画" data-search="asm all about epi 外延生长 asm 厂商技术原理视频">
+      <div class="video-id">D01</div>
+      <div class="video-main"><h4>ASM All about Epi</h4><div class="video-tags"><span class="vtype">原理 / 动画</span><span>ASM</span><span class="video-scope">外延生长</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.asm.com/news/our-technology-explained-epi" target="_blank" rel="noopener noreferrer">前往发布方页面 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="原理 / 动画" data-search="asm all about ald 原子层沉积 asm 厂商技术原理视频">
+      <div class="video-id">D02</div>
+      <div class="video-main"><h4>ASM All about ALD</h4><div class="video-tags"><span class="vtype">原理 / 动画</span><span>ASM</span><span class="video-scope">原子层沉积</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.asm.com/news/our-technology-explained-ald" target="_blank" rel="noopener noreferrer">前往发布方页面 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="原理 / 动画" data-search="semicore what is pvd sputtering? pvd溅射 semicore 厂商技术原理视频（视频集）">
+      <div class="video-id">D03</div>
+      <div class="video-main"><h4>Semicore What Is PVD Sputtering?</h4><div class="video-tags"><span class="vtype">原理 / 动画</span><span>Semicore</span><span class="video-scope">PVD溅射</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.semicore.com/semicore-video-list" target="_blank" rel="noopener noreferrer">前往发布方页面 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="厂商 / 产品" data-search="semicore 1500 in-line sputtering pvd量产/专用设备；非先进逻辑fab等同 semicore 厂商设备展示视频（视频集）">
+      <div class="video-id">D04</div>
+      <div class="video-main"><h4>Semicore 1500 In-Line Sputtering</h4><div class="video-tags"><span class="vtype">厂商 / 产品</span><span>Semicore</span><span class="video-scope">PVD量产/专用设备；非先进逻辑Fab等同</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.semicore.com/semicore-video-list" target="_blank" rel="noopener noreferrer">前往发布方页面 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="厂商 / 产品" data-search="semicore sc943 inline sputtering pvd溅射设备 semicore 厂商设备展示视频（视频集）">
+      <div class="video-id">D05</div>
+      <div class="video-main"><h4>Semicore SC943 Inline Sputtering</h4><div class="video-tags"><span class="vtype">厂商 / 产品</span><span>Semicore</span><span class="video-scope">PVD溅射设备</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.semicore.com/semicore-video-list" target="_blank" rel="noopener noreferrer">前往发布方页面 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="原理 / 动画" data-search="samsung：半导体刻蚀工艺 干法刻蚀 samsung 厂商科普视频（韩语）">
+      <div class="video-id">E01</div>
+      <div class="video-main"><h4>Samsung：半导体刻蚀工艺</h4><div class="video-tags"><span class="vtype">原理 / 动画</span><span>Samsung</span><span class="video-scope">干法刻蚀</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://news.samsungsemiconductor.com/kr/%EC%9D%B8%EC%83%9D%EB%A7%9B%EC%B9%A9-ep-6-%EC%97%AC%EA%B8%B0%EA%B0%80-%EB%B0%94%EB%A1%9C-%EC%A1%B0%EA%B0%81-%EB%A7%9B%EC%A7%91-%EB%B0%98%EB%8F%84%EC%B2%B4-%EC%8B%9D%EA%B0%81etch-%EA%B3%B5" target="_blank" rel="noopener noreferrer">打开视频 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="原理 / 动画" data-search="samsung：离子注入工艺 离子注入 samsung 厂商科普视频（韩语）">
+      <div class="video-id">I01</div>
+      <div class="video-main"><h4>Samsung：离子注入工艺</h4><div class="video-tags"><span class="vtype">原理 / 动画</span><span>Samsung</span><span class="video-scope">离子注入</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://news.samsungsemiconductor.com/kr/%EC%9D%B8%EC%83%9D%EB%A7%9B%EC%B9%A9-ep-7-%EC%9B%A8%EC%9D%B4%ED%8D%BC%EC%97%90-%EB%B9%84%ED%83%80%EB%AF%BC-%ED%8C%A1%ED%8C%A1-%EC%83%9D%EA%B8%B0-%EA%B0%80%EB%93%9D%ED%95%9C-%EB%B0%98%EB%8F%84" target="_blank" rel="noopener noreferrer">打开视频 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="教学 / 访谈" data-search="rwth aachen rtp退火设备教学视频 rtp；教学实验室设备 rwth aachen 大学操作教学视频（页面内）">
+      <div class="video-id">T01</div>
+      <div class="video-main"><h4>RWTH Aachen RTP退火设备教学视频</h4><div class="video-tags"><span class="vtype">教学 / 访谈</span><span>RWTH Aachen</span><span class="video-scope">RTP；教学实验室设备</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.zmnt.rwth-aachen.de/?p=2047" target="_blank" rel="noopener noreferrer">前往发布方页面 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="实机 / 现场" data-search="cmp设备工作方式概述 化学机械抛光 mcf semiconductor 第三方设备演示">
+      <div class="video-id">C01</div>
+      <div class="video-main"><h4>CMP设备工作方式概述</h4><div class="video-tags"><span class="vtype">实机 / 现场</span><span>MCF Semiconductor</span><span class="video-scope">化学机械抛光</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.youtube.com/watch?v=iw_uU5PNQZk" target="_blank" rel="noopener noreferrer">打开视频 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="教学 / 访谈" data-search="cmp化学机械抛光深度讲解 cmp原理与设备 semislides 第三方技术课程">
+      <div class="video-id">C02</div>
+      <div class="video-main"><h4>CMP化学机械抛光深度讲解</h4><div class="video-tags"><span class="vtype">教学 / 访谈</span><span>SemiSlides</span><span class="video-scope">CMP原理与设备</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.youtube.com/watch?v=XXwZ_SJMj70" target="_blank" rel="noopener noreferrer">打开视频 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="厂商 / 产品" data-search="kla bbp宽带等离子晶圆缺陷检测 图形晶圆光学缺陷检测 kla 厂商技术介绍视频">
+      <div class="video-id">M01</div>
+      <div class="video-main"><h4>KLA BBP宽带等离子晶圆缺陷检测</h4><div class="video-tags"><span class="vtype">厂商 / 产品</span><span>KLA</span><span class="video-scope">图形晶圆光学缺陷检测</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.kla.com/zh-hans/media-room/bbp-inspection-40-years-of-discovery-at-the-speed-of-light" target="_blank" rel="noopener noreferrer">前往发布方页面 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="厂商 / 产品" data-search="kla esl10电子束晶圆缺陷检测 电子束缺陷检测 kla 厂商产品视频（linkedin）">
+      <div class="video-id">M02</div>
+      <div class="video-main"><h4>KLA eSL10电子束晶圆缺陷检测</h4><div class="video-tags"><span class="vtype">厂商 / 产品</span><span>KLA</span><span class="video-scope">电子束缺陷检测</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.linkedin.com/posts/klacorp_esl10-e-beam-wafer-defect-inspection-system-activity-6727946985145475072-bu-x" target="_blank" rel="noopener noreferrer">打开视频 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="教学 / 访谈" data-search="ebeam initiative：光掩模多束写入专题 nuflare mbm-1000/2000,ims mbmw ebeam initiative 产业专家访谈视频集">
+      <div class="video-id">K01</div>
+      <div class="video-main"><h4>eBeam Initiative：光掩模多束写入专题</h4><div class="video-tags"><span class="vtype">教学 / 访谈</span><span>eBeam Initiative</span><span class="video-scope">NuFlare MBM-1000/2000,IMS MBMW</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.ebeam.org/videos_archive/" target="_blank" rel="noopener noreferrer">前往发布方页面 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="原理 / 动画" data-search="axcelis precision doping on finfet finfet的离子注入掺杂 axcelis 官方离子注入原理动画（页面中）">
+      <div class="video-id">I02</div>
+      <div class="video-main"><h4>Axcelis Precision Doping on FinFET</h4><div class="video-tags"><span class="vtype">原理 / 动画</span><span>Axcelis</span><span class="video-scope">FinFET的离子注入掺杂</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.axcelis.com/products/purion-ion-implantation-equipment/" target="_blank" rel="noopener noreferrer">前往发布方页面 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="厂商 / 产品" data-search="axcelis purion commonality benefits purion离子注入平台 axcelis 官方离子注入设备平台视频（页面中）">
+      <div class="video-id">I03</div>
+      <div class="video-main"><h4>Axcelis Purion Commonality Benefits</h4><div class="video-tags"><span class="vtype">厂商 / 产品</span><span>Axcelis</span><span class="video-scope">Purion离子注入平台</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.axcelis.com/products/purion-ion-implantation-equipment/" target="_blank" rel="noopener noreferrer">前往发布方页面 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article><article class="video-row" data-type="原理 / 动画" data-search="branch education：euv光刻机系统拆解 euv光源、掩模、光学系统、工件台、track关联 branch education 专业三维教学动画（约38分钟）">
+      <div class="video-id">L01</div>
+      <div class="video-main"><h4>Branch Education：EUV光刻机系统拆解</h4><div class="video-tags"><span class="vtype">原理 / 动画</span><span>Branch Education</span><span class="video-scope">EUV光源、掩模、光学系统、工件台、Track关联</span></div></div>
+      <div class="video-link"><a class="text-link" href="https://www.youtube.com/watch?v=B2482h_TNwg" target="_blank" rel="noopener noreferrer">打开视频 <span aria-hidden="true" class="arrow-out">↗</span></a></div>
+    </article></div><div class="no-results" id="videoEmpty">没有匹配的视频资源。</div></div>
+</div></section>
+<section class="section" id="method"><div class="container"><div class="section-head"><div class="section-heading"><div class="kicker">05 / Research Discipline</div><h2>视频目录是起点，不是结论</h2><p class="lead">设备全貌已经覆盖，但产业研究要形成可比较、可审计的判断，还需要设备子系统、关键指标、经济性和制程适配的纵深验证。</p></div></div>
+<div class="gap-layout"><div class="gap-panel"><h3>优先补充实机视频的设备</h3><table><tbody><tr><td><strong>Track 涂胶显影</strong></td><td><a class="text-link" href="https://www.tel.com/product/lithius.html" target="_blank" rel="noopener noreferrer">TEL CLEAN TRACK LITHIUS <span aria-hidden="true" class="arrow-out">↗</span></a></td><td>尚缺生产级 Track 模块动作与曝光机联机视频</td></tr><tr><td><strong>PECVD 沉积</strong></td><td><a class="text-link" href="https://www.appliedmaterials.com/us/en/semiconductor/products/processes/cvd.html" target="_blank" rel="noopener noreferrer">Applied Materials CVD systems <span aria-hidden="true" class="arrow-out">↗</span></a></td><td>尚缺对应量产机型、反应腔及运行画面</td></tr><tr><td><strong>铜电镀 ECP</strong></td><td><a class="text-link" href="https://www.lamresearch.com/product/sabre/" target="_blank" rel="noopener noreferrer">Lam Research SABRE <span aria-hidden="true" class="arrow-out">↗</span></a></td><td>尚缺载片、电镀腔以及工艺动作实拍</td></tr><tr><td><strong>CD-SEM 量测</strong></td><td><a class="text-link" href="https://www.hitachi-hightech.com/global/en/knowledge/semiconductor/room/manufacturing/cd-sem.html" target="_blank" rel="noopener noreferrer">Hitachi High-Tech CD-SEM <span aria-hidden="true" class="arrow-out">↗</span></a></td><td>尚缺机型对应的完整自动量测演示</td></tr></tbody></table></div><div class="method-panel"><h3>下一阶段的五个验证问题</h3><ol><li><strong>系统架构：</strong>工艺腔、传片、真空、射频和工艺控制如何协同？</li><li><strong>工艺能力：</strong>均匀性、CD、套刻、选择比、缺陷和颗粒指标如何比较？</li><li><strong>制造经济性：</strong>WPH、稼动率、OEE、耗材及 CoO 怎么构成？</li><li><strong>制程适配：</strong>成熟逻辑、FinFET/GAA、DRAM、3D NAND、SiC 的区别是什么？</li><li><strong>竞争格局：</strong>设备整机、关键零部件与配套系统商如何区分？</li></ol><div class="method-foot">本页面为 2026 年 10 月 20 日研究快照。视频播放权限、设备产品信息、型号与产品组合可能变化。请以发布方及厂商最新资料为准。</div></div></div>
+</div></section>
+<section class="closing"><div class="container closing-inner"><div><h2>将设备清单转化为可验证的工艺知识</h2><p>核心设备、检测体系、光掩模和厂务配套必须放在同一生产架构内讨论。下一步不是继续堆积设备名称，而是逐项建立工艺窗口、核心参数与供应链证据链。</p></div><a class="btn-primary" href="https://github.com/hywangtong/SemiConductIndrstryResearch" target="_blank" rel="noopener noreferrer">访问研究仓库 ↗</a></div></section>
+</main><footer class="footer"><div class="container footer-inner"><span>© 2026 FAB ATLAS · 基于 SemiConductIndrstryResearch 第四节延伸研究</span><div class="footer-links"><a href="#top">返回顶部 ↑</a><a href="https://github.com/hywangtong/SemiConductIndrstryResearch" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://github.com/hywangtong/SemiConductIndrstryResearch/blob/master/%25E5%258D%258A%25E5%25AF%25BC%25E4%25BD%2593%25E5%25B7%25A5%25E4%25B8%259A%25E5%2585%25A8%25E6%25B5%2581%25E7%25A8%258B%25E8%25B0%2583%25E7%25A0%2594%25E6%258A%25A5%25E5%2591%258A%20%285%29.html" target="_blank" rel="noopener noreferrer">原始研究报告 ↗</a></div></div></footer>
+<script>
+(()=>{'use strict';
+  const eqRows=Array.from(document.querySelectorAll('#equipmentTable tbody tr'));
+  const vRows=Array.from(document.querySelectorAll('#videoList .video-row'));
+  const eqSearch=document.getElementById('eqSearch');const eqGroup=document.getElementById('eqGroup');const eqStage=document.getElementById('eqStage');const eqWithVideo=document.getElementById('eqWithVideo');
+  const normalize=s=>String(s||'').trim().toLocaleLowerCase();
+  function filterEquipment(){const q=normalize(eqSearch.value),g=eqGroup.value,s=eqStage.value,v=eqWithVideo.checked;let n=0;
+    eqRows.forEach(r=>{const match=(!q||r.dataset.search.includes(q))&&(!g||r.dataset.group===g)&&(!s||(' '+r.dataset.stage+' ').includes(' '+s+' '))&&(!v||r.dataset.hasvideo==='1');r.hidden=!match;if(match)n++});
+    document.getElementById('eqCount').textContent=String(n);document.getElementById('eqEmpty').classList.toggle('visible',n===0);
+  }
+  [eqSearch,eqGroup,eqStage,eqWithVideo].forEach(el=>el.addEventListener(el.type==='checkbox'?'change':'input',filterEquipment));
+  document.getElementById('eqReset').addEventListener('click',()=>{eqSearch.value='';eqGroup.value='';eqStage.value='';eqWithVideo.checked=false;filterEquipment();eqSearch.focus()});
+  document.querySelectorAll('[data-select-group]').forEach(b=>b.addEventListener('click',()=>{eqGroup.value=b.dataset.selectGroup;eqSearch.value='';eqStage.value='';eqWithVideo.checked=false;filterEquipment();document.getElementById('equipment').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'})}));
+  document.getElementById('exportCsv').addEventListener('click',()=>{const header=['序号','一级领域','设备家族','技术子类','制造阶段','主要任务','代表厂商','视频链接','产品技术资料'];const tableRows=eqRows.filter(r=>!r.hidden).map(r=>{const c=r.querySelectorAll('td');return[c[0].innerText,c[1].innerText,c[2].querySelector('strong').innerText,c[2].querySelector('span').innerText,c[3].innerText,c[4].innerText,c[5].innerText,c[6].querySelector('a')?.href||'',c[7].querySelector('a')?.href||'']});const csv=[header,...tableRows].map(row=>row.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(',')).join('\r\n');const blob=new Blob(['﻿'+csv],{type:'text/csv;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='fab-equipment-filtered.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000)});
+  const vs=document.getElementById('videoSearch'),vt=document.getElementById('videoType');function filterVideo(){const q=normalize(vs.value),t=vt.value;let n=0;vRows.forEach(r=>{const show=(!q||r.dataset.search.includes(q))&&(!t||r.dataset.type===t);r.hidden=!show;if(show)n++});document.getElementById('videoEmpty').classList.toggle('visible',n===0)};vs.addEventListener('input',filterVideo);vt.addEventListener('change',filterVideo);
+  const progress=document.getElementById('progress');let ticking=false;function updateProgress(){const max=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=(max>0?Math.max(0,Math.min(100,window.scrollY/max*100)):0)+'%';ticking=false}window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(updateProgress);ticking=true}},{passive:true});window.addEventListener('resize',updateProgress);updateProgress();filterEquipment();
+})();
+</script>
+</body></html>

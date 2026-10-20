@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09111f">
+  <meta name="description" content="半导体前道检测与良率控制设备全景研究：10 大系统、48 类设备、18 条视频资源、工艺节点与研究方法。">
+  <title>第五章 · 前道检测与良率控制 | Semiconductor Process Control</title>
+  <style>
+  :root{color-scheme:dark;--bg:#09111f;--surface:#111e30;--surface2:#14243a;--surface3:#1b3048;--line:#2d4058;--border:rgba(147,177,204,.17);--text:#eff5fb;--muted:#a6b8ca;--faint:#718ca7;--accent:#67e0d1;--accent-soft:rgba(103,224,209,.12);--gold:#e4b97d;--gold-soft:rgba(228,185,125,.1);--white:#fff;--shadow:0 18px 60px rgba(0,0,0,.18)}
+  :root.light{color-scheme:light;--bg:#f5f8fa;--surface:#fff;--surface2:#f0f6f9;--surface3:#e9f2f4;--line:#cddbe1;--border:rgba(50,76,99,.16);--text:#122337;--muted:#495d70;--faint:#667e93;--accent:#067f82;--accent-soft:rgba(6,127,130,.1);--gold:#97611e;--gold-soft:rgba(185,123,35,.1);--white:#102337;--shadow:0 12px 44px rgba(41,75,98,.08)}
+  *,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65;font-size:15px;-webkit-font-smoothing:antialiased}body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse 65% 35% at 80% -12%,rgba(48,160,172,.14),transparent 80%);z-index:-1}a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--accent);outline-offset:3px}::selection{background:var(--accent);color:#071423}h1,h2,h3,p{margin-top:0}h2{font-size:clamp(1.55rem,3vw,2.45rem);line-height:1.3;letter-spacing:-.045em}h3{line-height:1.4}p{color:var(--muted)}section{scroll-margin-top:100px}.container{width:min(1216px,calc(100% - 64px));margin:auto}.small-mono,.eyebrow,.micro-label,.category-index,.video-number,.priority,.process-num,.mini-kicker{font-family:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;letter-spacing:.065em}
+  .skip{position:absolute;left:-9999px}.skip:focus{left:14px;top:14px;z-index:1000;padding:10px;background:#fff;color:#000}.topbar{position:sticky;top:0;z-index:99;background:rgba(9,17,31,.91);border-bottom:1px solid var(--border);backdrop-filter:blur(18px)}.light .topbar{background:rgba(245,248,250,.93)}.top-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:12px;white-space:nowrap;font-weight:700;letter-spacing:-.025em;font-size:14px}.brand-mark{width:34px;height:34px;border-radius:11px;background:var(--accent-soft);border:1px solid rgba(103,224,209,.45);display:grid;place-items:center;color:var(--accent);font-size:23px;line-height:1}.brand small{display:block;font-size:10px;letter-spacing:.13em;color:var(--faint);font-weight:650}.nav{display:flex;align-items:center;gap:26px;font-size:13px;color:var(--muted)}.nav a:hover,.footer a:hover{color:var(--accent)}.actions{display:flex;gap:8px}.icon-btn{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:10px;width:37px;height:37px;display:grid;place-items:center}.icon-btn:hover{border-color:var(--accent)}.mobile-nav{display:none}
+  .hero{padding:80px 0 74px;border-bottom:1px solid var(--border);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.07fr .93fr;gap:52px;align-items:center}.eyebrow{color:var(--accent);font-size:11px;font-weight:750;letter-spacing:.15em;text-transform:uppercase}.hero h1{font-size:clamp(2.4rem,5.6vw,5.45rem);line-height:1.11;letter-spacing:-.066em;max-width:690px;margin:18px 0 20px}.hero h1 em{font-style:normal;color:var(--accent)}.hero-intro{font-size:16px;line-height:1.95;max-width:560px;color:var(--muted)}.hero-actions{display:flex;gap:10px;margin:32px 0 43px;flex-wrap:wrap}.btn{border-radius:10px;border:1px solid var(--border);display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:11px 17px;font-size:13px;font-weight:700;transition:transform .15s ease,border-color .15s ease}.btn:hover{transform:translateY(-2px)}.btn-main{background:var(--accent);border-color:var(--accent);color:#092124}.btn-secondary{background:var(--surface);color:var(--text)}.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;max-width:520px}.stat{padding-top:17px;border-top:1px solid var(--line)}.stat strong{font-size:36px;line-height:1;letter-spacing:-.06em;font-weight:770}.stat span{display:block;color:var(--faint);font-size:11px;margin-top:9px;letter-spacing:.06em}.wafer-stage{padding:28px;border:1px solid var(--border);border-radius:22px;background:linear-gradient(155deg,var(--surface2),var(--surface));box-shadow:var(--shadow);position:relative;overflow:hidden}.wafer-stage::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.27;background-image:linear-gradient(to right,var(--line) 1px,transparent 1px),linear-gradient(to bottom,var(--line) 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(to bottom,#000,transparent)}.wafer-stage header{position:relative;display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.wafer-stage header span{display:block;color:var(--faint);font-size:11px}.wafer-stage header b{font-size:13px;letter-spacing:.02em}.scan-code{color:var(--accent)!important;font-family:monospace;font-size:11px!important}.wafer-svg{display:block;width:100%;height:auto;max-width:425px;margin:8px auto 4px}.wafer-rim{fill:rgba(51,100,123,.16);stroke:rgba(131,204,203,.56);stroke-width:2}.wafer-circle{fill:none;stroke:var(--line);stroke-width:1}.die{fill:rgba(87,171,184,.38);stroke:rgba(147,221,222,.28);stroke-width:1}.die.quiet{fill:rgba(58,113,139,.21)}.die.hot{fill:#e3b67a;stroke:#f0d6a4}.wafer-scan{fill:none;stroke:var(--accent);stroke-width:1.5;opacity:.45;stroke-dasharray:5 8}.legend{display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:10px;color:var(--faint);position:relative}.legend .swatch{display:inline-block;height:8px;width:8px;border-radius:3px;background:var(--gold);margin-right:6px}.legend strong{color:var(--text);font-weight:650}
+  .section{padding:92px 0 12px}.section-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:25px;margin-bottom:33px}.section-heading h2{margin:9px 0 0}.section-heading p{max-width:565px;margin:0;font-size:14px;line-height:1.8}.section-kicker{font:700 11px ui-monospace,monospace;letter-spacing:.17em;color:var(--accent)}.research-note{display:grid;grid-template-columns:1fr 2fr;gap:28px;align-items:start;background:linear-gradient(125deg,var(--accent-soft),transparent 90%);border:1px solid var(--border);border-radius:17px;padding:26px 30px;margin-top:26px}.research-note strong{font-size:18px}.research-note p{margin:0;color:var(--muted);line-height:1.85}.research-note em{font-style:normal;color:var(--accent);font-weight:700}
+  .taxonomy-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}.category-card{text-align:left;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);padding:20px 17px 17px;border-radius:14px;min-height:210px;color:var(--text);transition:background .2s,border .2s,transform .2s}.category-card:hover{border-color:rgba(103,224,209,.55);background:var(--surface2);transform:translateY(-3px)}.category-index{font-size:10px;color:var(--faint);margin-bottom:25px}.category-title{font-size:16px;font-weight:750;line-height:1.45}.category-desc{font-size:12px;color:var(--muted);line-height:1.7;margin:6px 0 15px}.category-bottom{margin-top:auto;display:flex;align-items:baseline;color:var(--faint);font-size:11px;gap:6px}.category-bottom b{font-size:22px;color:var(--accent);line-height:1}.category-bottom span{margin-left:auto;font-size:17px}
+  .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.process-step{position:relative;border:1px solid var(--border);background:var(--surface);border-radius:14px;padding:22px 20px;min-height:218px}.process-step:before{content:"";position:absolute;top:0;left:20px;width:38px;height:2px;background:var(--accent)}.process-num{font-size:11px;color:var(--accent)}.process-step h3{font-size:17px;margin:20px 0 10px}.process-tech{font-size:13px;min-height:46px;line-height:1.75}.process-out{font-size:11px;border-top:1px solid var(--border);padding-top:12px;margin:10px 0 0;color:var(--faint)}.process-out strong{display:block;font-size:12px;color:var(--text);margin-top:4px;font-weight:650}
+  .flow-callout{border:1px solid var(--border);border-radius:14px;background:var(--surface);margin-top:14px;padding:24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:space-between}.flow-callout span{font-size:12px;color:var(--faint);letter-spacing:.045em;font-weight:650}.flow-step{font-size:14px!important;color:var(--text)!important;font-weight:740!important}.flow-arrow{color:var(--accent);font-size:19px}.flow-caption{flex:1 0 100%;text-align:center;color:var(--muted);font-size:12px;font-weight:400;margin-top:2px}
+  .table-frame{border:1px solid var(--border);border-radius:14px;overflow:auto;background:var(--surface)}.focus-table{border-collapse:collapse;width:100%;min-width:770px;font-size:13px}.focus-table th{text-align:left;background:var(--surface2);font:650 11px ui-monospace,monospace;color:var(--faint);text-transform:uppercase;letter-spacing:.05em;padding:16px 21px}.focus-table td{border-top:1px solid var(--border);padding:13px 21px;color:var(--muted)}.focus-table td strong{color:var(--text);font-weight:700}.focus-table td:first-child{font-family:monospace;color:var(--faint);font-size:11px}.focus-table tr:hover td{background:var(--accent-soft)}
+  .searchbar{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:27px 0 22px}.search{display:flex;align-items:center;position:relative;flex:1 1 280px}.search input{width:100%;padding:12px 15px 12px 40px;border:1px solid var(--line);background:var(--surface);border-radius:10px;color:var(--text);outline:none;font-size:13px}.search input:focus{border-color:var(--accent)}.search svg{position:absolute;left:13px;pointer-events:none;color:var(--faint)}.filter-select{max-width:250px;min-width:190px;flex:0 1 auto;border:1px solid var(--line);color:var(--text);border-radius:10px;background:var(--surface);padding:12px 13px;font-size:13px}.segmented{display:flex;align-items:center;border:1px solid var(--line);padding:3px;border-radius:10px;background:var(--surface)}.segmented button{color:var(--muted);background:transparent;border:0;padding:8px 12px;font-size:12px;border-radius:7px}.segmented button[aria-pressed="true"]{color:#052326;background:var(--accent);font-weight:750}.results-line{display:flex;justify-content:space-between;gap:16px;align-items:center;margin:10px 0 18px;color:var(--faint);font-size:12px}.results-line b{color:var(--text)}.text-action{border:0;background:transparent;color:var(--accent);font-weight:700;font-size:12px;padding:6px}.text-action:hover{text-decoration:underline}.equip-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.equip-card{border:1px solid var(--border);background:var(--surface);padding:20px;border-radius:14px;display:flex;flex-direction:column;min-width:0}.equip-card[hidden],.video-card[hidden]{display:none!important}.equip-card:hover,.video-card:hover{border-color:rgba(103,224,209,.36)}.equip-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.micro-label{color:var(--faint);font-size:10px}.priority{border-radius:6px;font-size:10px;letter-spacing:.02em;padding:2px 7px;border:1px solid var(--border)}.priority.p0{background:var(--accent-soft);border-color:rgba(103,224,209,.25);color:var(--accent)}.priority.p1{background:var(--gold-soft);border-color:rgba(228,185,125,.27);color:var(--gold)}.priority.p2{background:var(--surface2);color:var(--muted)}.equip-card h3{font-size:16px;line-height:1.5;margin:17px 0 8px;min-height:47px}.equip-purpose{font-size:12px;line-height:1.8;min-height:41px;margin:0 0 16px}.equip-meta{border-top:1px solid var(--border);margin:0;padding-top:12px}.equip-meta>div{display:grid;grid-template-columns:75px 1fr;gap:9px;margin:9px 0;font-size:11px}.equip-meta dt{color:var(--faint)}.equip-meta dd{margin:0;color:var(--text);overflow-wrap:anywhere}.equip-foot{display:flex;flex-wrap:wrap;gap:15px;align-items:center;margin-top:auto;padding-top:15px;font-size:12px;border-top:1px solid var(--border)}.inline-link{color:var(--accent);font-weight:700}.inline-video{color:var(--gold);font-weight:700}.load-wrap{text-align:center;margin:25px 0 0}.load-btn{color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 27px}.load-btn:hover{border-color:var(--accent)}.empty{display:none;padding:36px;text-align:center;border:1px dashed var(--line);border-radius:14px;color:var(--muted)}
+  .video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.video-card{border:1px solid var(--border);background:var(--surface);padding:22px;border-radius:14px;display:flex;flex-direction:column;min-width:0;scroll-margin-top:100px}.video-card:target{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}.video-top{display:flex;gap:7px;align-items:center}.video-number{font-weight:800;color:var(--accent);font-size:11px;margin-right:auto}.video-kind,.access{font-size:10px;border:1px solid var(--border);border-radius:20px;padding:3px 9px;color:var(--muted)}.kind-vendor{background:var(--accent-soft);color:var(--accent)}.kind-demo{background:var(--gold-soft);color:var(--gold)}.access.pending,.access.limited{color:var(--gold)}.video-card h3{font-size:17px;margin:19px 0 8px;line-height:1.5}.video-for{font-size:12px;color:var(--accent);margin:0 0 13px}.dot-sep{color:var(--faint);margin:0 4px}.video-desc{font-size:12px;line-height:1.85;margin:0 0 19px}.video-foot{display:flex;gap:16px;justify-content:space-between;align-items:flex-end;border-top:1px solid var(--border);padding-top:15px;margin-top:auto;font-size:11px;color:var(--faint)}.video-foot span{max-width:53%}.watch-link{background:var(--surface2);border-radius:8px;border:1px solid var(--line);color:var(--text);padding:8px 11px;white-space:nowrap;font-size:12px;font-weight:700}.watch-link:hover{border-color:var(--accent);color:var(--accent)}.video-disclaimer{padding:16px 20px;border-left:3px solid var(--gold);background:var(--gold-soft);font-size:12px;line-height:1.85;color:var(--muted);margin:0 0 24px;border-radius:0 10px 10px 0}
+  .analysis-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:14px}.analysis-panel{background:var(--surface);border:1px solid var(--border);border-radius:15px;padding:24px}.panel-caption{font:700 11px ui-monospace,monospace;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:11px}.analysis-panel h3{font-size:22px;margin:0 0 20px;letter-spacing:-.025em}.question-item{display:grid;grid-template-columns:40px 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--border)}.question-item>span{font:700 12px ui-monospace,monospace;color:var(--faint)}.question-item strong{font-size:14px}.question-item p{margin:5px 0 0;font-size:12px;line-height:1.8}.mistake{border-top:1px solid var(--border);padding:19px 0}.mistake strong{font-size:14px;display:block}.mistake p{margin:6px 0 0;font-size:12px;line-height:1.85}.rank-row{margin-top:13px;display:grid;grid-template-columns:52px 1fr;align-items:start;gap:9px;font-size:12px;color:var(--muted)}.rank-row b{font-size:12px;color:var(--accent);font-family:monospace}.rank-row strong{color:var(--text);display:block;font-size:13px;margin-bottom:4px}
+  .closing{border:1px solid var(--border);border-radius:17px;background:linear-gradient(120deg,var(--surface2),var(--surface));padding:30px 33px;margin:30px 0 0}.closing h3{font-size:21px;letter-spacing:-.02em}.closing p{max-width:900px;font-size:13px;line-height:1.9;margin:0}.closing p+p{margin-top:11px}.closing strong{color:var(--text)}.footer{border-top:1px solid var(--border);padding:45px 0;margin-top:100px}.footer-grid{display:flex;justify-content:space-between;gap:24px;align-items:flex-start}.footer strong{display:block;font-size:13px}.footer p{max-width:650px;font-size:12px;line-height:1.85;margin-top:8px}.footer a{color:var(--muted);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}.source-list{font-size:11px;max-width:430px;line-height:2.3;text-align:right}.copyright{text-align:center;font-family:ui-monospace,monospace;color:var(--faint);font-size:10px;letter-spacing:.07em;border-top:1px solid var(--border);margin-top:25px;padding-top:18px}
+  @media(max-width:1100px){.nav{gap:16px}.taxonomy-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.equip-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid{gap:24px}.wafer-stage{padding:18px}.process-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:750px){.container{width:min(100% - 36px,600px)}.top-inner{min-height:63px}.brand{font-size:12px}.brand-mark{width:31px;height:31px}.nav{display:none}.mobile-nav{display:flex;overflow:auto;gap:22px;border-top:1px solid var(--border);padding:10px 0;white-space:nowrap;font-size:12px;color:var(--muted);scrollbar-width:none}.mobile-nav::-webkit-scrollbar{display:none}.hero{padding:47px 0 54px}.hero-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(2.5rem,10vw,4.2rem)}.hero-intro{font-size:14px}.wafer-stage{max-width:530px}.section{padding:63px 0 6px}.section-heading{display:block}.section-heading p{margin-top:14px}.taxonomy-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.category-card{min-height:180px}.process-grid{grid-template-columns:repeat(2,1fr)}.equip-grid,.video-grid,.analysis-grid{grid-template-columns:1fr}.searchbar{align-items:stretch}.search{flex-basis:100%}.filter-select{min-width:0;max-width:none;flex:1}.segmented{flex:1;justify-content:center}.segmented button{flex:1}.research-note{grid-template-columns:1fr;padding:22px;gap:9px}.footer-grid{display:block}.source-list{text-align:left;margin-top:20px;max-width:100%}.flow-callout{gap:8px;padding:18px 12px}.flow-step{font-size:12px!important}.flow-arrow{font-size:14px}}
+  @media(max-width:420px){.container{width:calc(100% - 28px)}.brand small{font-size:9px}.hero-actions{flex-wrap:nowrap}.hero-actions .btn{padding:10px 11px;font-size:11px}.stats{gap:8px}.stat strong{font-size:30px}.taxonomy-grid,.process-grid{grid-template-columns:1fr}.category-card{min-height:150px}.category-index{margin-bottom:13px}.process-step{min-height:auto}.wafer-stage{padding:16px}.video-foot{display:block}.video-foot span{display:block;max-width:none;margin-bottom:10px}.watch-link{display:inline-block}.flow-arrow{display:none}.flow-callout{justify-content:center}.flow-step{padding:4px}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+  @media print{html{color-scheme:light}body{background:#fff;color:#182a3c;font-size:11px}.topbar,.hero-actions,.searchbar,.results-line,.load-wrap,.actions,.mobile-nav{display:none!important}.hero{padding:20px 0}.hero-grid{display:block}.wafer-stage{display:none}.section{padding:35px 0 0;break-before:auto}.section-heading{margin-bottom:18px}.equip-grid,.taxonomy-grid,.process-grid{grid-template-columns:repeat(2,1fr)}.equip-card,.category-card,.video-card,.process-step,.analysis-panel{break-inside:avoid;background:#fff;color:#182a3c;border:1px solid #ccc}.equip-card[hidden],.video-card[hidden]{display:flex!important}.footer{margin-top:30px}.container{width:100%}p,.equip-meta dd,.video-desc{color:#334e64}a{color:#135c66!important;text-decoration:underline}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">跳转到正文</a>
+  <header class="topbar">
+    <div class="container top-inner">
+      <a class="brand" href="#top" aria-label="返回页面顶部"><span class="brand-mark" aria-hidden="true">◈</span><span>SEMICON / RESEARCH<small>工艺设备产业研究 · CH.05</small></span></a>
+      <nav class="nav" aria-label="页面导航"><a href="#overview">研究总览</a><a href="#process">工艺节点</a><a href="#focus">核心设备</a><a href="#equipment">设备全景</a><a href="#videos">视频资料</a><a href="#method">研究方法</a></nav>
+      <div class="actions"><button class="icon-btn" type="button" id="themeToggle" aria-label="切换明暗主题" title="切换明暗主题">☼</button><button class="icon-btn" type="button" onclick="window.print()" aria-label="打印报告" title="打印报告">⎙</button></div>
+    </div>
+    <nav class="container mobile-nav" aria-label="移动端页面导航"><a href="#overview">总览</a><a href="#process">工艺节点</a><a href="#focus">核心设备</a><a href="#equipment">设备全景</a><a href="#videos">视频库</a><a href="#method">研究方法</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="top"><div class="container hero-grid">
+      <div>
+        <div class="eyebrow">RESEARCH DOSSIER <span aria-hidden="true">/</span> PROCESS CONTROL 05</div>
+        <h1>贯穿前道的<br><em>检测与良率控制</em></h1>
+        <p class="hero-intro">从晶圆缺陷检测、精密量测到在线工艺反馈，建立半导体前道制程控制设备的完整技术地图。区分真实量产设备、离线分析手段和良率管理软件，并提供可追踪的视频入口。</p>
+        <div class="hero-actions"><a class="btn btn-main" href="#equipment">探索全部设备 <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="#videos">查看视频资源 <span aria-hidden="true">▶</span></a></div>
+        <div class="stats" aria-label="报告统计"><div class="stat"><strong>10</strong><span>设备及控制系统</span></div><div class="stat"><strong>48</strong><span>设备细分类别</span></div><div class="stat"><strong>18</strong><span>视频 / 课程入口</span></div></div>
+      </div>
+      <div class="wafer-stage" aria-label="概念性晶圆缺陷分布示意图，非实际检测数据"><header><div><span>SCHEMATIC / 300 MM WAFER</span><b>Inspection coverage</b></div><span class="scan-code">● SCAN MODE: CONCEPT</span></header>
+        <svg class="wafer-svg" viewBox="0 0 410 420" role="img" aria-label="晶圆上分布着许多芯片方格，金色方格代表概念性缺陷位置，不代表实测数据"><defs><clipPath id="waferClip"><circle cx="204" cy="210" r="179"/></clipPath><radialGradient id="waferShade"><stop offset="0" stop-color="#366a78" stop-opacity=".16"/><stop offset="1" stop-color="#173b53" stop-opacity=".5"/></radialGradient></defs><circle class="wafer-rim" cx="204" cy="210" r="181"/><circle cx="204" cy="210" r="178" fill="url(#waferShade)"/><g clip-path="url(#waferClip)"><rect class="die " x="169" y="70" width="27" height="27" rx="4"/>
+<rect class="die " x="204" y="70" width="27" height="27" rx="4"/>
+<rect class="die " x="239" y="70" width="27" height="27" rx="4"/>
+<rect class="die " x="99" y="105" width="27" height="27" rx="4"/>
+<rect class="die " x="134" y="105" width="27" height="27" rx="4"/>
+<rect class="die " x="169" y="105" width="27" height="27" rx="4"/>
+<rect class="die " x="204" y="105" width="27" height="27" rx="4"/>
+<rect class="die hot" x="239" y="105" width="27" height="27" rx="4"/>
+<rect class="die " x="274" y="105" width="27" height="27" rx="4"/>
+<rect class="die " x="309" y="105" width="27" height="27" rx="4"/>
+<rect class="die " x="99" y="140" width="27" height="27" rx="4"/>
+<rect class="die " x="134" y="140" width="27" height="27" rx="4"/>
+<rect class="die " x="169" y="140" width="27" height="27" rx="4"/>
+<rect class="die " x="204" y="140" width="27" height="27" rx="4"/>
+<rect class="die " x="239" y="140" width="27" height="27" rx="4"/>
+<rect class="die " x="274" y="140" width="27" height="27" rx="4"/>
+<rect class="die " x="309" y="140" width="27" height="27" rx="4"/>
+<rect class="die hot" x="64" y="175" width="27" height="27" rx="4"/>
+<rect class="die " x="99" y="175" width="27" height="27" rx="4"/>
+<rect class="die " x="134" y="175" width="27" height="27" rx="4"/>
+<rect class="die " x="169" y="175" width="27" height="27" rx="4"/>
+<rect class="die " x="204" y="175" width="27" height="27" rx="4"/>
+<rect class="die " x="239" y="175" width="27" height="27" rx="4"/>
+<rect class="die " x="274" y="175" width="27" height="27" rx="4"/>
+<rect class="die " x="309" y="175" width="27" height="27" rx="4"/>
+<rect class="die " x="344" y="175" width="27" height="27" rx="4"/>
+<rect class="die quiet" x="64" y="210" width="27" height="27" rx="4"/>
+<rect class="die quiet" x="99" y="210" width="27" height="27" rx="4"/>
+<rect class="die quiet" x="134" y="210" width="27" height="27" rx="4"/>
+<rect class="die quiet" x="169" y="210" width="27" height="27" rx="4"/>
+<rect class="die hot" x="204" y="210" width="27" height="27" rx="4"/>
+<rect class="die quiet" x="239" y="210" width="27" height="27" rx="4"/>
+<rect class="die quiet" x="274" y="210" width="27" height="27" rx="4"/>
+<rect class="die quiet" x="309" y="210" width="27" height="27" rx="4"/>
+<rect class="die quiet" x="344" y="210" width="27" height="27" rx="4"/>
+<rect class="die " x="64" y="245" width="27" height="27" rx="4"/>
+<rect class="die " x="99" y="245" width="27" height="27" rx="4"/>
+<rect class="die " x="134" y="245" width="27" height="27" rx="4"/>
+<rect class="die " x="169" y="245" width="27" height="27" rx="4"/>
+<rect class="die " x="204" y="245" width="27" height="27" rx="4"/>
+<rect class="die " x="239" y="245" width="27" height="27" rx="4"/>
+<rect class="die " x="274" y="245" width="27" height="27" rx="4"/>
+<rect class="die " x="309" y="245" width="27" height="27" rx="4"/>
+<rect class="die hot" x="344" y="245" width="27" height="27" rx="4"/>
+<rect class="die " x="99" y="280" width="27" height="27" rx="4"/>
+<rect class="die " x="134" y="280" width="27" height="27" rx="4"/>
+<rect class="die " x="169" y="280" width="27" height="27" rx="4"/>
+<rect class="die " x="204" y="280" width="27" height="27" rx="4"/>
+<rect class="die " x="239" y="280" width="27" height="27" rx="4"/>
+<rect class="die " x="274" y="280" width="27" height="27" rx="4"/>
+<rect class="die " x="309" y="280" width="27" height="27" rx="4"/>
+<rect class="die " x="99" y="315" width="27" height="27" rx="4"/>
+<rect class="die " x="134" y="315" width="27" height="27" rx="4"/>
+<rect class="die hot" x="169" y="315" width="27" height="27" rx="4"/>
+<rect class="die " x="204" y="315" width="27" height="27" rx="4"/>
+<rect class="die " x="239" y="315" width="27" height="27" rx="4"/>
+<rect class="die " x="274" y="315" width="27" height="27" rx="4"/>
+<rect class="die " x="309" y="315" width="27" height="27" rx="4"/>
+<rect class="die " x="169" y="350" width="27" height="27" rx="4"/>
+<rect class="die " x="204" y="350" width="27" height="27" rx="4"/>
+<rect class="die " x="239" y="350" width="27" height="27" rx="4"/></g><circle class="wafer-circle" cx="204" cy="210" r="124"/><circle class="wafer-scan" cx="204" cy="210" r="164"/><path d="M 185 393 L 223 393 L 214 406 L 194 406 Z" fill="var(--surface2)"/></svg>
+        <div class="legend"><span><i class="swatch"></i>概念性缺陷位置</span><strong>Illustrative · Not measured data</strong></div>
+      </div>
+    </div></section>
+
+    <section class="section" id="overview"><div class="container">
+      <div class="section-heading"><div><span class="section-kicker">01 / RESEARCH LANDSCAPE</span><h2>建立正确的设备分类框架</h2></div><p>原有章节按薄膜、光刻、刻蚀、CMP 等工艺组织。产业研究还需要按“被测对象 × 物理检测原理 × 产线任务”重组，以避免将功能不同的设备混为一谈。</p></div>
+      <div class="taxonomy-grid"><button class="category-card" type="button" data-pick-group="晶圆缺陷检测" aria-label="筛选 晶圆缺陷检测"><span class="category-index">01 / Inspection</span><span class="category-title">晶圆缺陷检测</span><span class="category-desc">从随机颗粒到超微细图形缺陷</span><span class="category-bottom"><b>08</b> 类设备 <span aria-hidden="true">↗</span></span></button>
+<button class="category-card" type="button" data-pick-group="缺陷复检与失效分析" aria-label="筛选 缺陷复检与失效分析"><span class="category-index">02 / Review &amp; FA</span><span class="category-title">缺陷复检与失效分析</span><span class="category-desc">坐标复检、成分判断与埋藏结构分析</span><span class="category-bottom"><b>04</b> 类设备 <span aria-hidden="true">↗</span></span></button>
+<button class="category-card" type="button" data-pick-group="图形尺寸量测" aria-label="筛选 图形尺寸量测"><span class="category-index">03 / Critical dimension</span><span class="category-title">图形尺寸量测</span><span class="category-desc">关键尺寸与三维形貌参数</span><span class="category-bottom"><b>05</b> 类设备 <span aria-hidden="true">↗</span></span></button>
+<button class="category-card" type="button" data-pick-group="套刻与位置量测" aria-label="筛选 套刻与位置量测"><span class="category-index">04 / Overlay</span><span class="category-title">套刻与位置量测</span><span class="category-desc">多层图形叠对误差和位置偏差</span><span class="category-bottom"><b>03</b> 类设备 <span aria-hidden="true">↗</span></span></button>
+<button class="category-card" type="button" data-pick-group="薄膜与材料量测" aria-label="筛选 薄膜与材料量测"><span class="category-index">05 / Films &amp; materials</span><span class="category-title">薄膜与材料量测</span><span class="category-desc">厚度、光学常数、化学组成和结构</span><span class="category-bottom"><b>07</b> 类设备 <span aria-hidden="true">↗</span></span></button>
+<button class="category-card" type="button" data-pick-group="几何/表面量测" aria-label="筛选 几何/表面量测"><span class="category-index">06 / Topography</span><span class="category-title">几何/表面量测</span><span class="category-desc">台阶、粗糙度、平整度与翘曲</span><span class="category-bottom"><b>04</b> 类设备 <span aria-hidden="true">↗</span></span></button>
+<button class="category-card" type="button" data-pick-group="电学与掺杂量测" aria-label="筛选 电学与掺杂量测"><span class="category-index">07 / Electrical</span><span class="category-title">电学与掺杂量测</span><span class="category-desc">方阻、掺杂、电容和测试结构</span><span class="category-bottom"><b>05</b> 类设备 <span aria-hidden="true">↗</span></span></button>
+<button class="category-card" type="button" data-pick-group="掩模检测与量测" aria-label="筛选 掩模检测与量测"><span class="category-index">08 / Mask inspection</span><span class="category-title">掩模检测与量测</span><span class="category-desc">EUV / DUV 掩模相关缺陷与尺寸</span><span class="category-bottom"><b>04</b> 类设备 <span aria-hidden="true">↗</span></span></button>
+<button class="category-card" type="button" data-pick-group="在线设备监控" aria-label="筛选 在线设备监控"><span class="category-index">09 / In-situ monitoring</span><span class="category-title">在线设备监控</span><span class="category-desc">刻蚀端点、设备状态与污染风险</span><span class="category-bottom"><b>05</b> 类设备 <span aria-hidden="true">↗</span></span></button>
+<button class="category-card" type="button" data-pick-group="良率数据与控制" aria-label="筛选 良率数据与控制"><span class="category-index">10 / Yield software</span><span class="category-title">良率数据与控制</span><span class="category-desc">SPC、FDC、APC、YMS 等数据反馈层</span><span class="category-bottom"><b>03</b> 类设备 <span aria-hidden="true">↗</span></span></button></div>
+      <div class="research-note"><strong>一个关键判断</strong><p><em>检测不是与其他制程并列的一道单独工序。</em>它是跨越 FEOL、MOL、BEOL 的反馈体系：检测缺陷位置，量测连续工艺参数，复检异常，最后将结果送入 SPC / FDC / APC 等控制流程。<strong>WAT/PCM 应保留在制程监控范畴；CP / Wafer Sort 则属于后续测试环节。</strong></p></div>
+    </div></section>
+
+    <section class="section" id="process"><div class="container">
+      <div class="section-heading"><div><span class="section-kicker">02 / PROCESS-TO-TOOL MATRIX</span><h2>这些设备何时进入产线？</h2></div><p>下列工艺节点展示常见检测与控制任务。实际部署因晶圆厂、器件结构、量产阶段和控制计划而异。</p></div>
+      <div class="process-grid"><article class="process-step"><span class="process-num">01</span><div class="process-content"><h3>晶圆进料与清洗后</h3><p class="process-tech">裸片散射、晶圆几何、金属污染</p><p class="process-out">关键输出 <strong>颗粒 / 缺陷密度 / 翘曲</strong></p></div></article>
+<article class="process-step"><span class="process-num">02</span><div class="process-content"><h3>氧化、薄膜沉积后</h3><p class="process-tech">椭偏、反射膜厚、XRR/XRF</p><p class="process-out">关键输出 <strong>厚度 / 均匀性 / 组成</strong></p></div></article>
+<article class="process-step"><span class="process-num">03</span><div class="process-content"><h3>光刻显影后 · ADI</h3><p class="process-tech">CD-SEM、OCD、Overlay、光学检测</p><p class="process-out">关键输出 <strong>CD / 套刻 / 显影缺陷</strong></p></div></article>
+<article class="process-step"><span class="process-num">04</span><div class="process-content"><h3>刻蚀后 · AEI</h3><p class="process-tech">CD-SEM、OCD、电子束、Review SEM</p><p class="process-out">关键输出 <strong>轮廓 / 残留 / 桥接</strong></p></div></article>
+<article class="process-step"><span class="process-num">05</span><div class="process-content"><h3>CMP 后</h3><p class="process-tech">膜厚、AFM、轮廓仪、光学检测</p><p class="process-out">关键输出 <strong>Dishing / Erosion / 划伤</strong></p></div></article>
+<article class="process-step"><span class="process-num">06</span><div class="process-content"><h3>注入与退火后</h3><p class="process-tech">四探针、C–V、SPV、电学量测</p><p class="process-out">关键输出 <strong>方阻 / 激活 / 电学表现</strong></p></div></article>
+<article class="process-step"><span class="process-num">07</span><div class="process-content"><h3>异常 / 良率下滑</h3><p class="process-tech">Review SEM、FIB-SEM、TEM、EDS</p><p class="process-out">关键输出 <strong>根因 / 截面 / 元素</strong></p></div></article>
+<article class="process-step"><span class="process-num">∞</span><div class="process-content"><h3>全流程持续运行</h3><p class="process-tech">OES / 端点监控、SPC / FDC / APC / YMS</p><p class="process-out">关键输出 <strong>漂移 / 异常批次 / 闭环纠偏</strong></p></div></article></div>
+      <div class="flow-callout" aria-label="良率控制反馈闭环"><span>FEEDBACK LOOP</span><span class="flow-step">工艺执行</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">检测 / 量测</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">数据分析</span><span class="flow-arrow" aria-hidden="true">→</span><span class="flow-step">参数纠偏</span><span class="flow-caption">闭环目标：缩短异常发现时间，降低工艺漂移、报废风险与无效抽检成本</span></div>
+    </div></section>
+
+    <section class="section" id="focus"><div class="container">
+      <div class="section-heading"><div><span class="section-kicker">03 / CORE INSTRUMENT SHORTLIST</span><h2>值得首先深挖的 15 类代表设备</h2></div><p>以下是研究优先清单，不等于厂商市场份额排名，也不代表列出的设备型号具有完全相同的功能。</p></div>
+      <div class="table-frame"><table class="focus-table"><thead><tr><th>#</th><th>设备 / 技术</th><th>代表厂商或系列</th><th>研究重点</th></tr></thead><tbody><tr><td>01</td><td><strong>裸片缺陷检测</strong></td><td>KLA Surfscan</td><td>激光散射 / 缺陷密度</td></tr>
+<tr><td>02</td><td><strong>图形晶圆光学检测</strong></td><td>KLA BBP / 39xx</td><td>明场成像 / 随机与系统性缺陷</td></tr>
+<tr><td>03</td><td><strong>电子束缺陷检测</strong></td><td>ASML HMI eScan 1100 / KLA eSL10</td><td>多束扫描 / 电压衬度</td></tr>
+<tr><td>04</td><td><strong>缺陷复检 SEM</strong></td><td>Hitachi CR 系列 / KLA eDR</td><td>ADR 自动复检 / ADC 分类</td></tr>
+<tr><td>05</td><td><strong>CD-SEM</strong></td><td>Hitachi GT2000 / CG7300</td><td>线宽、孔径及低损伤量测</td></tr>
+<tr><td>06</td><td><strong>OCD 散射量测</strong></td><td>Onto Atlas V / G6</td><td>光学散射与模型反演</td></tr>
+<tr><td>07</td><td><strong>Overlay 套刻量测</strong></td><td>ASML YieldStar 1385 / 1390 / 500</td><td>跨层对准偏差</td></tr>
+<tr><td>08</td><td><strong>量产自动化 AFM</strong></td><td>Park NX-Wafer</td><td>形貌、CMP dishing / erosion</td></tr>
+<tr><td>09</td><td><strong>光学膜厚量测</strong></td><td>Onto Atlas / KLA SpectraFilm</td><td>膜厚及光学常数</td></tr>
+<tr><td>10</td><td><strong>X 射线薄膜量测</strong></td><td>Rigaku XTRAIA MF-3000</td><td>XRR / XRF / XRD</td></tr>
+<tr><td>11</td><td><strong>台阶轮廓仪</strong></td><td>KLA Alpha-Step / Tencor</td><td>台阶高度及表面轮廓</td></tr>
+<tr><td>12</td><td><strong>电阻率与电学量测</strong></td><td>KLA OmniMap / Onto FAaST</td><td>方阻 / C–V / I–V</td></tr>
+<tr><td>13</td><td><strong>EUV 掩模检测</strong></td><td>Lasertec ACTIS A200HiT / A300</td><td>13.5 nm 相关掩模缺陷</td></tr>
+<tr><td>14</td><td><strong>刻蚀端点检测</strong></td><td>OES / 干涉式端点监控</td><td>等离子光谱与终点判定</td></tr>
+<tr><td>15</td><td><strong>截面与失效分析</strong></td><td>Thermo Fisher Helios MX1 PFIB-SEM</td><td>埋藏结构 / 3D 分析</td></tr></tbody></table></div>
+    </div></section>
+
+    <section class="section" id="equipment"><div class="container">
+      <div class="section-heading"><div><span class="section-kicker">04 / EQUIPMENT ATLAS</span><h2>48 类设备 · 可筛选索引</h2></div><p>每条设备包含检测目标、工艺环节、代表型号或厂商、部署定位和公开资料入口。点击分类卡片也可直接设置筛选条件。</p></div>
+      <div class="searchbar"><label class="search" aria-label="设备关键词搜索"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="equipmentSearch" type="search" placeholder="搜索技术、设备、厂商、工艺节点…" autocomplete="off"></label>
+      <select id="groupSelect" class="filter-select" aria-label="按设备系统筛选"><option value="all">全部设备系统</option><option value="晶圆缺陷检测">晶圆缺陷检测（8）</option>
+<option value="缺陷复检与失效分析">缺陷复检与失效分析（4）</option>
+<option value="图形尺寸量测">图形尺寸量测（5）</option>
+<option value="套刻与位置量测">套刻与位置量测（3）</option>
+<option value="薄膜与材料量测">薄膜与材料量测（7）</option>
+<option value="几何/表面量测">几何/表面量测（4）</option>
+<option value="电学与掺杂量测">电学与掺杂量测（5）</option>
+<option value="掩模检测与量测">掩模检测与量测（4）</option>
+<option value="在线设备监控">在线设备监控（5）</option>
+<option value="良率数据与控制">良率数据与控制（3）</option></select>
+      <div class="segmented" role="group" aria-label="设备研究优先级"><button type="button" data-priority="all" aria-pressed="true">全部</button><button type="button" data-priority="P0" aria-pressed="false">P0</button><button type="button" data-priority="P1" aria-pressed="false">P1</button><button type="button" data-priority="P2" aria-pressed="false">P2</button></div></div>
+      <div class="results-line"><span id="equipmentCounter" aria-live="polite">共 48 类设备</span><button class="text-action" type="button" id="downloadEquipment">导出设备清单 CSV ↗</button></div>
+      <div class="equip-grid" id="equipmentGrid"><article class="equip-card" data-group="晶圆缺陷检测" data-priority="P0" data-query="E01 晶圆缺陷检测 裸片激光散射检测 / LPD 颗粒、晶体原生缺陷、雾度 进料/清洗/外延 KLA Surfscan 量产在线 P0 https://www.kla.com/ko/media-room/surfscan-%ED%8E%B8 V01">
+      <div class="equip-card-top"><span class="micro-label">E01 · 晶圆缺陷检测</span><span class="priority p0">P0</span></div>
+      <h3>裸片激光散射检测 / LPD</h3>
+      <p class="equip-purpose">颗粒、晶体原生缺陷、雾度</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>进料/清洗/外延</dd></div><div><dt>代表设备 / 厂商</dt><dd>KLA Surfscan</dd></div><div><dt>部署定位</dt><dd>量产在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.kla.com/ko/media-room/surfscan-%ED%8E%B8" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a><a class="inline-video" href="#video-V01">关联视频 V01 <span aria-hidden="true">↘</span></a></div>
+    </article>
+<article class="equip-card" data-group="晶圆缺陷检测" data-priority="P0" data-query="E02 晶圆缺陷检测 带图形晶圆明场/BBP检测 颗粒、图形缺失、短路、桥接 光刻/刻蚀/薄膜/CMP后 KLA 39xx 量产在线 P0 https://www.kla.com/zh-hans/media-room/bbp-inspection-40-years-of-discovery-at-the-speed-of-light V02">
+      <div class="equip-card-top"><span class="micro-label">E02 · 晶圆缺陷检测</span><span class="priority p0">P0</span></div>
+      <h3>带图形晶圆明场/BBP检测</h3>
+      <p class="equip-purpose">颗粒、图形缺失、短路、桥接</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>光刻/刻蚀/薄膜/CMP后</dd></div><div><dt>代表设备 / 厂商</dt><dd>KLA 39xx</dd></div><div><dt>部署定位</dt><dd>量产在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.kla.com/zh-hans/media-room/bbp-inspection-40-years-of-discovery-at-the-speed-of-light" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a><a class="inline-video" href="#video-V02">关联视频 V02 <span aria-hidden="true">↘</span></a></div>
+    </article>
+<article class="equip-card" data-group="晶圆缺陷检测" data-priority="P0" data-query="E03 晶圆缺陷检测 带图形暗场光学检测 散射类颗粒与部分图形缺陷 刻蚀/薄膜/清洗后 KLA Puma; Hitachi DI 量产在线 P0 https://www.hitachi-hightech.com/global/en/products/semiconductor-manufacturing/cd-sem/">
+      <div class="equip-card-top"><span class="micro-label">E03 · 晶圆缺陷检测</span><span class="priority p0">P0</span></div>
+      <h3>带图形暗场光学检测</h3>
+      <p class="equip-purpose">散射类颗粒与部分图形缺陷</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>刻蚀/薄膜/清洗后</dd></div><div><dt>代表设备 / 厂商</dt><dd>KLA Puma; Hitachi DI</dd></div><div><dt>部署定位</dt><dd>量产在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.hitachi-hightech.com/global/en/products/semiconductor-manufacturing/cd-sem/" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="晶圆缺陷检测" data-priority="P0" data-query="E04 晶圆缺陷检测 高分辨率多电子束扫描检测 超微细缺陷、电压衬度、电气异常 关键层图形后 ASML HMI eScan 1100 量产在线 P0 https://www.asml.com/products/metrology-and-inspection-systems">
+      <div class="equip-card-top"><span class="micro-label">E04 · 晶圆缺陷检测</span><span class="priority p0">P0</span></div>
+      <h3>高分辨率多电子束扫描检测</h3>
+      <p class="equip-purpose">超微细缺陷、电压衬度、电气异常</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>关键层图形后</dd></div><div><dt>代表设备 / 厂商</dt><dd>ASML HMI eScan 1100</dd></div><div><dt>部署定位</dt><dd>量产在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.asml.com/products/metrology-and-inspection-systems" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="晶圆缺陷检测" data-priority="P0" data-query="E05 晶圆缺陷检测 单束电子束缺陷检测 光学难检微小缺陷、VC信号 关键光刻/刻蚀层 KLA eSL10 量产在线 P0 https://www.linkedin.com/posts/klacorp_esl10-e-beam-wafer-defect-inspection-system-activity-6727946985145475072-bu-x V14">
+      <div class="equip-card-top"><span class="micro-label">E05 · 晶圆缺陷检测</span><span class="priority p0">P0</span></div>
+      <h3>单束电子束缺陷检测</h3>
+      <p class="equip-purpose">光学难检微小缺陷、VC信号</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>关键光刻/刻蚀层</dd></div><div><dt>代表设备 / 厂商</dt><dd>KLA eSL10</dd></div><div><dt>部署定位</dt><dd>量产在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.linkedin.com/posts/klacorp_esl10-e-beam-wafer-defect-inspection-system-activity-6727946985145475072-bu-x" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a><a class="inline-video" href="#video-V14">关联视频 V14 <span aria-hidden="true">↘</span></a></div>
+    </article>
+<article class="equip-card" data-group="晶圆缺陷检测" data-priority="P1" data-query="E06 晶圆缺陷检测 边缘/斜面/背面检测 崩边、裂纹、背面残留、夹持污染 进出站、CMP、清洗 KLA CIRCL; Lasertec CIEL 量产在线 P1 https://www.lasertec.co.jp/en/company/pdf/en_company_profile202603.pdf">
+      <div class="equip-card-top"><span class="micro-label">E06 · 晶圆缺陷检测</span><span class="priority p1">P1</span></div>
+      <h3>边缘/斜面/背面检测</h3>
+      <p class="equip-purpose">崩边、裂纹、背面残留、夹持污染</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>进出站、CMP、清洗</dd></div><div><dt>代表设备 / 厂商</dt><dd>KLA CIRCL; Lasertec CIEL</dd></div><div><dt>部署定位</dt><dd>量产在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.lasertec.co.jp/en/company/pdf/en_company_profile202603.pdf" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="晶圆缺陷检测" data-priority="P1" data-query="E07 晶圆缺陷检测 宏观缺陷/晶圆外观检测 光刻胶涂布、条纹、边缘不良 涂胶/显影/刻蚀/CMP Onto Inspection portfolio 量产在线/专用 P1 https://ontoinnovation.com/cmos-technologies/">
+      <div class="equip-card-top"><span class="micro-label">E07 · 晶圆缺陷检测</span><span class="priority p1">P1</span></div>
+      <h3>宏观缺陷/晶圆外观检测</h3>
+      <p class="equip-purpose">光刻胶涂布、条纹、边缘不良</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>涂胶/显影/刻蚀/CMP</dd></div><div><dt>代表设备 / 厂商</dt><dd>Onto Inspection portfolio</dd></div><div><dt>部署定位</dt><dd>量产在线/专用</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://ontoinnovation.com/cmos-technologies/" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="晶圆缺陷检测" data-priority="P2" data-query="E08 晶圆缺陷检测 SiC/GaN晶体缺陷专用检测 BPD、stacking fault等 SiC/GaN外延/衬底 Lasertec SICA/GALOIS 化合物半导体专用 P2 https://www.lasertec.co.jp/en/company/pdf/en_company_profile202603.pdf">
+      <div class="equip-card-top"><span class="micro-label">E08 · 晶圆缺陷检测</span><span class="priority p2">P2</span></div>
+      <h3>SiC/GaN晶体缺陷专用检测</h3>
+      <p class="equip-purpose">BPD、stacking fault等</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>SiC/GaN外延/衬底</dd></div><div><dt>代表设备 / 厂商</dt><dd>Lasertec SICA/GALOIS</dd></div><div><dt>部署定位</dt><dd>化合物半导体专用</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.lasertec.co.jp/en/company/pdf/en_company_profile202603.pdf" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="缺陷复检与失效分析" data-priority="P0" data-query="E09 缺陷复检与失效分析 自动缺陷复检 SEM / ADR 按缺陷坐标成像、ADC自动分类 光学检测后 Hitachi CR系列; KLA eDR 量产复检 P0 https://www.hitachi-hightech.com/global/en/knowledge/semiconductor/room/manufacturing/review-sem.html">
+      <div class="equip-card-top"><span class="micro-label">E09 · 缺陷复检与失效分析</span><span class="priority p0">P0</span></div>
+      <h3>自动缺陷复检 SEM / ADR</h3>
+      <p class="equip-purpose">按缺陷坐标成像、ADC自动分类</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>光学检测后</dd></div><div><dt>代表设备 / 厂商</dt><dd>Hitachi CR系列; KLA eDR</dd></div><div><dt>部署定位</dt><dd>量产复检</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.hitachi-hightech.com/global/en/knowledge/semiconductor/room/manufacturing/review-sem.html" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="缺陷复检与失效分析" data-priority="P1" data-query="E10 缺陷复检与失效分析 SEM-EDS元素分析 颗粒化学成分与污染源 异常缺陷调查 Thermo Fisher; EDAX 实验室/部分集成 P1 https://nrf.aux.eng.ufl.edu/resources/resource.asp?id=178 V09">
+      <div class="equip-card-top"><span class="micro-label">E10 · 缺陷复检与失效分析</span><span class="priority p1">P1</span></div>
+      <h3>SEM-EDS元素分析</h3>
+      <p class="equip-purpose">颗粒化学成分与污染源</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>异常缺陷调查</dd></div><div><dt>代表设备 / 厂商</dt><dd>Thermo Fisher; EDAX</dd></div><div><dt>部署定位</dt><dd>实验室/部分集成</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://nrf.aux.eng.ufl.edu/resources/resource.asp?id=178" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a><a class="inline-video" href="#video-V09">关联视频 V09 <span aria-hidden="true">↘</span></a></div>
+    </article>
+<article class="equip-card" data-group="缺陷复检与失效分析" data-priority="P1" data-query="E11 缺陷复检与失效分析 FIB-SEM双束截面分析 局部截面、埋藏缺陷、3D形貌 疑难缺陷/失效分析 Thermo Helios MX1/PFIB 在线专用/实验室 P1 https://www.thermofisher.com/kr/ko/home/events/boost-fab-process-control-with-the-helios-mx1-pfib-sem.html V09;V10;V11">
+      <div class="equip-card-top"><span class="micro-label">E11 · 缺陷复检与失效分析</span><span class="priority p1">P1</span></div>
+      <h3>FIB-SEM双束截面分析</h3>
+      <p class="equip-purpose">局部截面、埋藏缺陷、3D形貌</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>疑难缺陷/失效分析</dd></div><div><dt>代表设备 / 厂商</dt><dd>Thermo Helios MX1/PFIB</dd></div><div><dt>部署定位</dt><dd>在线专用/实验室</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.thermofisher.com/kr/ko/home/events/boost-fab-process-control-with-the-helios-mx1-pfib-sem.html" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="缺陷复检与失效分析" data-priority="P1" data-query="E12 缺陷复检与失效分析 TEM/STEM-EDS/EELS 原子级截面与元素/界面分析 工艺开发/疑难失效 Thermo Talos/Spectra 离线实验室 P1 https://www.thermofisher.com/kr/ko/home/semiconductors/learning-center/webinars.html V12">
+      <div class="equip-card-top"><span class="micro-label">E12 · 缺陷复检与失效分析</span><span class="priority p1">P1</span></div>
+      <h3>TEM/STEM-EDS/EELS</h3>
+      <p class="equip-purpose">原子级截面与元素/界面分析</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>工艺开发/疑难失效</dd></div><div><dt>代表设备 / 厂商</dt><dd>Thermo Talos/Spectra</dd></div><div><dt>部署定位</dt><dd>离线实验室</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.thermofisher.com/kr/ko/home/semiconductors/learning-center/webinars.html" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a><a class="inline-video" href="#video-V12">关联视频 V12 <span aria-hidden="true">↘</span></a></div>
+    </article>
+<article class="equip-card" data-group="图形尺寸量测" data-priority="P0" data-query="E13 图形尺寸量测 CD-SEM 线宽、孔径、CDU、LER/LWR 光刻/刻蚀后 Hitachi GT2000/CG7300 量产在线 P0 https://www.hitachi-hightech.com/global/en/products/semiconductor-manufacturing/cd-sem/metrology-solution/semi-gt2000.html V03">
+      <div class="equip-card-top"><span class="micro-label">E13 · 图形尺寸量测</span><span class="priority p0">P0</span></div>
+      <h3>CD-SEM</h3>
+      <p class="equip-purpose">线宽、孔径、CDU、LER/LWR</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>光刻/刻蚀后</dd></div><div><dt>代表设备 / 厂商</dt><dd>Hitachi GT2000/CG7300</dd></div><div><dt>部署定位</dt><dd>量产在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.hitachi-hightech.com/global/en/products/semiconductor-manufacturing/cd-sem/metrology-solution/semi-gt2000.html" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a><a class="inline-video" href="#video-V03">关联视频 V03 <span aria-hidden="true">↘</span></a></div>
+    </article>
+<article class="equip-card" data-group="图形尺寸量测" data-priority="P1" data-query="E14 图形尺寸量测 高压/深结构 CD-SEM 3D结构较深位置及埋藏信息 先进逻辑/存储3D层 Hitachi CV7300 量产在线 P1 https://www.hitachi-hightech.com/global/en/products/semiconductor-manufacturing/cd-sem/metrology-solution/">
+      <div class="equip-card-top"><span class="micro-label">E14 · 图形尺寸量测</span><span class="priority p1">P1</span></div>
+      <h3>高压/深结构 CD-SEM</h3>
+      <p class="equip-purpose">3D结构较深位置及埋藏信息</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>先进逻辑/存储3D层</dd></div><div><dt>代表设备 / 厂商</dt><dd>Hitachi CV7300</dd></div><div><dt>部署定位</dt><dd>量产在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.hitachi-hightech.com/global/en/products/semiconductor-manufacturing/cd-sem/metrology-solution/" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="图形尺寸量测" data-priority="P0" data-query="E15 图形尺寸量测 OCD /光学散射量测 CD、侧壁角、形貌、埋藏结构反演 光刻/刻蚀/沉积/CMP Onto Atlas V/G6 量产在线 P0 https://ontoinnovation.com/products/atlas-v-system/">
+      <div class="equip-card-top"><span class="micro-label">E15 · 图形尺寸量测</span><span class="priority p0">P0</span></div>
+      <h3>OCD /光学散射量测</h3>
+      <p class="equip-purpose">CD、侧壁角、形貌、埋藏结构反演</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>光刻/刻蚀/沉积/CMP</dd></div><div><dt>代表设备 / 厂商</dt><dd>Onto Atlas V/G6</dd></div><div><dt>部署定位</dt><dd>量产在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://ontoinnovation.com/products/atlas-v-system/" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="图形尺寸量测" data-priority="P1" data-query="E16 图形尺寸量测 红外OCD/高纵深比结构 高AR孔/沟槽、膜层几何 3D NAND/DRAM Onto Aspect 量产在线 P1 https://ontoinnovation.com/product-categories/metrology/">
+      <div class="equip-card-top"><span class="micro-label">E16 · 图形尺寸量测</span><span class="priority p1">P1</span></div>
+      <h3>红外OCD/高纵深比结构</h3>
+      <p class="equip-purpose">高AR孔/沟槽、膜层几何</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>3D NAND/DRAM</dd></div><div><dt>代表设备 / 厂商</dt><dd>Onto Aspect</dd></div><div><dt>部署定位</dt><dd>量产在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://ontoinnovation.com/product-categories/metrology/" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="图形尺寸量测" data-priority="P1" data-query="E17 图形尺寸量测 CD-AFM 直接轮廓、侧壁/CD基准验证 光刻/刻蚀工艺开发 Park NX-Wafer; Bruker 参考/部分在线 P1 https://www.parksystems.com/en/products/in-line-metrology-afm/wafer-fabrications/nx-wafer V04">
+      <div class="equip-card-top"><span class="micro-label">E17 · 图形尺寸量测</span><span class="priority p1">P1</span></div>
+      <h3>CD-AFM</h3>
+      <p class="equip-purpose">直接轮廓、侧壁/CD基准验证</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>光刻/刻蚀工艺开发</dd></div><div><dt>代表设备 / 厂商</dt><dd>Park NX-Wafer; Bruker</dd></div><div><dt>部署定位</dt><dd>参考/部分在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.parksystems.com/en/products/in-line-metrology-afm/wafer-fabrications/nx-wafer" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a><a class="inline-video" href="#video-V04">关联视频 V04 <span aria-hidden="true">↘</span></a></div>
+    </article>
+<article class="equip-card" data-group="套刻与位置量测" data-priority="P0" data-query="E18 套刻与位置量测 图像式套刻 IBO 跨层对准误差 X/Y 显影后/刻蚀后 KLA Archer 量产在线 P0 https://www.asml.com/technology/lithography-principles/measuring-accuracy">
+      <div class="equip-card-top"><span class="micro-label">E18 · 套刻与位置量测</span><span class="priority p0">P0</span></div>
+      <h3>图像式套刻 IBO</h3>
+      <p class="equip-purpose">跨层对准误差 X/Y</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>显影后/刻蚀后</dd></div><div><dt>代表设备 / 厂商</dt><dd>KLA Archer</dd></div><div><dt>部署定位</dt><dd>量产在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.asml.com/technology/lithography-principles/measuring-accuracy" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="套刻与位置量测" data-priority="P0" data-query="E19 套刻与位置量测 衍射式套刻 DBO 周期靶标衍射分析Overlay ADI/AEI ASML YieldStar 1385 量产在线 P0 https://www.asml.com/products/metrology-and-inspection-systems/yieldstar-1385">
+      <div class="equip-card-top"><span class="micro-label">E19 · 套刻与位置量测</span><span class="priority p0">P0</span></div>
+      <h3>衍射式套刻 DBO</h3>
+      <p class="equip-purpose">周期靶标衍射分析Overlay</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>ADI/AEI</dd></div><div><dt>代表设备 / 厂商</dt><dd>ASML YieldStar 1385</dd></div><div><dt>部署定位</dt><dd>量产在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.asml.com/products/metrology-and-inspection-systems/yieldstar-1385" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="套刻与位置量测" data-priority="P1" data-query="E20 套刻与位置量测 晶圆图形位置/几何形变 网格残差、形变、全片对准 关键曝光层 KLA PWG; wafer geometry 量产在线 P1 https://www.asml.com/technology/lithography-principles/measuring-accuracy">
+      <div class="equip-card-top"><span class="micro-label">E20 · 套刻与位置量测</span><span class="priority p1">P1</span></div>
+      <h3>晶圆图形位置/几何形变</h3>
+      <p class="equip-purpose">网格残差、形变、全片对准</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>关键曝光层</dd></div><div><dt>代表设备 / 厂商</dt><dd>KLA PWG; wafer geometry</dd></div><div><dt>部署定位</dt><dd>量产在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.asml.com/technology/lithography-principles/measuring-accuracy" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="薄膜与材料量测" data-priority="P0" data-query="E21 薄膜与材料量测 光谱椭偏仪 SE 厚度、n/k、复合膜光学参数 沉积/氧化/清洗后 Onto Atlas; JA Woollam M2000 量产在线/实验室 P0 https://nfc.arizona.edu/spectroscopic-ellipsometer V05">
+      <div class="equip-card-top"><span class="micro-label">E21 · 薄膜与材料量测</span><span class="priority p0">P0</span></div>
+      <h3>光谱椭偏仪 SE</h3>
+      <p class="equip-purpose">厚度、n/k、复合膜光学参数</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>沉积/氧化/清洗后</dd></div><div><dt>代表设备 / 厂商</dt><dd>Onto Atlas; JA Woollam M2000</dd></div><div><dt>部署定位</dt><dd>量产在线/实验室</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://nfc.arizona.edu/spectroscopic-ellipsometer" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a><a class="inline-video" href="#video-V05">关联视频 V05 <span aria-hidden="true">↘</span></a></div>
+    </article>
+<article class="equip-card" data-group="薄膜与材料量测" data-priority="P0" data-query="E22 薄膜与材料量测 光谱反射率/干涉膜厚仪 厚度与面内均匀性 沉积/刻蚀/CMP后 Filmetrics F20; KLA SpectraFilm 在线/实验室 P0 https://www.filmetrics.com/products/instruments/thin-film-reflectometers/filmetrics-f20">
+      <div class="equip-card-top"><span class="micro-label">E22 · 薄膜与材料量测</span><span class="priority p0">P0</span></div>
+      <h3>光谱反射率/干涉膜厚仪</h3>
+      <p class="equip-purpose">厚度与面内均匀性</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>沉积/刻蚀/CMP后</dd></div><div><dt>代表设备 / 厂商</dt><dd>Filmetrics F20; KLA SpectraFilm</dd></div><div><dt>部署定位</dt><dd>在线/实验室</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.filmetrics.com/products/instruments/thin-film-reflectometers/filmetrics-f20" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="薄膜与材料量测" data-priority="P1" data-query="E23 薄膜与材料量测 XRR薄膜反射 膜厚/密度/界面粗糙度 关键超薄膜 Rigaku XTRAIA MF-3000（原 MFM310） 量产部分/实验室 P1 https://rigaku.com/products/semiconductor-metrology/xrr-edxrf-and-optical-tools/xtraia-mf-3000 V08">
+      <div class="equip-card-top"><span class="micro-label">E23 · 薄膜与材料量测</span><span class="priority p1">P1</span></div>
+      <h3>XRR薄膜反射</h3>
+      <p class="equip-purpose">膜厚/密度/界面粗糙度</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>关键超薄膜</dd></div><div><dt>代表设备 / 厂商</dt><dd>Rigaku XTRAIA MF-3000（原 MFM310）</dd></div><div><dt>部署定位</dt><dd>量产部分/实验室</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://rigaku.com/products/semiconductor-metrology/xrr-edxrf-and-optical-tools/xtraia-mf-3000" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a><a class="inline-video" href="#video-V08">关联视频 V08 <span aria-hidden="true">↘</span></a></div>
+    </article>
+<article class="equip-card" data-group="薄膜与材料量测" data-priority="P1" data-query="E24 薄膜与材料量测 XRF/TXRF荧光 膜成分、元素量/金属污染 金属膜/污染监控 Rigaku XTRAIA MF-3000（原 MFM310）; KLA 在线/实验室 P1 https://rigaku.com/products/semiconductor-metrology/xrr-edxrf-and-optical-tools/xtraia-mf-3000 V08">
+      <div class="equip-card-top"><span class="micro-label">E24 · 薄膜与材料量测</span><span class="priority p1">P1</span></div>
+      <h3>XRF/TXRF荧光</h3>
+      <p class="equip-purpose">膜成分、元素量/金属污染</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>金属膜/污染监控</dd></div><div><dt>代表设备 / 厂商</dt><dd>Rigaku XTRAIA MF-3000（原 MFM310）; KLA</dd></div><div><dt>部署定位</dt><dd>在线/实验室</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://rigaku.com/products/semiconductor-metrology/xrr-edxrf-and-optical-tools/xtraia-mf-3000" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a><a class="inline-video" href="#video-V08">关联视频 V08 <span aria-hidden="true">↘</span></a></div>
+    </article>
+<article class="equip-card" data-group="薄膜与材料量测" data-priority="P1" data-query="E25 薄膜与材料量测 XRD/GIXRD衍射 晶相、晶向、应力、晶体结构 薄膜与材料开发 Rigaku XTRAIA MF-3000（原 MFM310） 量产部分/实验室 P1 https://rigaku.com/products/semiconductor-metrology/xrr-edxrf-and-optical-tools/xtraia-mf-3000 V08">
+      <div class="equip-card-top"><span class="micro-label">E25 · 薄膜与材料量测</span><span class="priority p1">P1</span></div>
+      <h3>XRD/GIXRD衍射</h3>
+      <p class="equip-purpose">晶相、晶向、应力、晶体结构</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>薄膜与材料开发</dd></div><div><dt>代表设备 / 厂商</dt><dd>Rigaku XTRAIA MF-3000（原 MFM310）</dd></div><div><dt>部署定位</dt><dd>量产部分/实验室</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://rigaku.com/products/semiconductor-metrology/xrr-edxrf-and-optical-tools/xtraia-mf-3000" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a><a class="inline-video" href="#video-V08">关联视频 V08 <span aria-hidden="true">↘</span></a></div>
+    </article>
+<article class="equip-card" data-group="薄膜与材料量测" data-priority="P1" data-query="E26 薄膜与材料量测 皮秒超声金属膜厚 非透明金属膜厚及材料 金属互连/沉积/CMP Onto Echo 量产在线 P1 https://ontoinnovation.com/product-categories/metrology/">
+      <div class="equip-card-top"><span class="micro-label">E26 · 薄膜与材料量测</span><span class="priority p1">P1</span></div>
+      <h3>皮秒超声金属膜厚</h3>
+      <p class="equip-purpose">非透明金属膜厚及材料</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>金属互连/沉积/CMP</dd></div><div><dt>代表设备 / 厂商</dt><dd>Onto Echo</dd></div><div><dt>部署定位</dt><dd>量产在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://ontoinnovation.com/product-categories/metrology/" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="薄膜与材料量测" data-priority="P2" data-query="E27 薄膜与材料量测 Raman/FTIR/XPS/SIMS深度分析 化学键、应力、元素与掺杂深度 过程开发/根因 HORIBA; IONTOF等 实验室/专用 P2 https://snsf.stanford.edu/facilities/fab/fcr/profilometer">
+      <div class="equip-card-top"><span class="micro-label">E27 · 薄膜与材料量测</span><span class="priority p2">P2</span></div>
+      <h3>Raman/FTIR/XPS/SIMS深度分析</h3>
+      <p class="equip-purpose">化学键、应力、元素与掺杂深度</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>过程开发/根因</dd></div><div><dt>代表设备 / 厂商</dt><dd>HORIBA; IONTOF等</dd></div><div><dt>部署定位</dt><dd>实验室/专用</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://snsf.stanford.edu/facilities/fab/fcr/profilometer" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="几何/表面量测" data-priority="P0" data-query="E28 几何/表面量测 接触式台阶仪 台阶高度、刻蚀深度、粗糙度 刻蚀/沉积/CMP后 KLA Alpha-Step/Tencor 实验室/自动化型 P0 https://snsf.stanford.edu/facilities/fab/fcr/profilometer V06;V07">
+      <div class="equip-card-top"><span class="micro-label">E28 · 几何/表面量测</span><span class="priority p0">P0</span></div>
+      <h3>接触式台阶仪</h3>
+      <p class="equip-purpose">台阶高度、刻蚀深度、粗糙度</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>刻蚀/沉积/CMP后</dd></div><div><dt>代表设备 / 厂商</dt><dd>KLA Alpha-Step/Tencor</dd></div><div><dt>部署定位</dt><dd>实验室/自动化型</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://snsf.stanford.edu/facilities/fab/fcr/profilometer" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="几何/表面量测" data-priority="P0" data-query="E29 几何/表面量测 原子力显微镜 AFM 纳米级表面形貌、粗糙度、dishing CMP/清洗/薄膜 Park NX-Wafer 量产在线 P0 https://www.parksystems.com/en/products/in-line-metrology-afm/wafer-fabrications/nx-wafer V04">
+      <div class="equip-card-top"><span class="micro-label">E29 · 几何/表面量测</span><span class="priority p0">P0</span></div>
+      <h3>原子力显微镜 AFM</h3>
+      <p class="equip-purpose">纳米级表面形貌、粗糙度、dishing</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>CMP/清洗/薄膜</dd></div><div><dt>代表设备 / 厂商</dt><dd>Park NX-Wafer</dd></div><div><dt>部署定位</dt><dd>量产在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.parksystems.com/en/products/in-line-metrology-afm/wafer-fabrications/nx-wafer" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a><a class="inline-video" href="#video-V04">关联视频 V04 <span aria-hidden="true">↘</span></a></div>
+    </article>
+<article class="equip-card" data-group="几何/表面量测" data-priority="P1" data-query="E30 几何/表面量测 白光干涉/光学轮廓仪 3D台阶、表面波纹、局部平坦度 CMP/刻蚀/封装前 Zygo NewView 在线/实验室 P1 https://snsf.stanford.edu/facilities/fab/fcr/profilometer">
+      <div class="equip-card-top"><span class="micro-label">E30 · 几何/表面量测</span><span class="priority p1">P1</span></div>
+      <h3>白光干涉/光学轮廓仪</h3>
+      <p class="equip-purpose">3D台阶、表面波纹、局部平坦度</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>CMP/刻蚀/封装前</dd></div><div><dt>代表设备 / 厂商</dt><dd>Zygo NewView</dd></div><div><dt>部署定位</dt><dd>在线/实验室</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://snsf.stanford.edu/facilities/fab/fcr/profilometer" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="几何/表面量测" data-priority="P0" data-query="E31 几何/表面量测 晶圆几何/翘曲/平整度仪 bow、warp、TTV、nanotopography 进料/膜应力/CMP KLA PWG; MicroSense 量产在线 P0 https://www.asml.com/technology/lithography-principles/measuring-accuracy">
+      <div class="equip-card-top"><span class="micro-label">E31 · 几何/表面量测</span><span class="priority p0">P0</span></div>
+      <h3>晶圆几何/翘曲/平整度仪</h3>
+      <p class="equip-purpose">bow、warp、TTV、nanotopography</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>进料/膜应力/CMP</dd></div><div><dt>代表设备 / 厂商</dt><dd>KLA PWG; MicroSense</dd></div><div><dt>部署定位</dt><dd>量产在线</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.asml.com/technology/lithography-principles/measuring-accuracy" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="电学与掺杂量测" data-priority="P0" data-query="E32 电学与掺杂量测 四探针方块电阻仪 4PP Rs、金属/掺杂层均匀性 离子注入退火、金属沉积 KLA OmniMap; Ossila演示 量产在线/实验室 P0 https://www.ossila.com/pages/four-point-probe-measurement-guide V13">
+      <div class="equip-card-top"><span class="micro-label">E32 · 电学与掺杂量测</span><span class="priority p0">P0</span></div>
+      <h3>四探针方块电阻仪 4PP</h3>
+      <p class="equip-purpose">Rs、金属/掺杂层均匀性</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>离子注入退火、金属沉积</dd></div><div><dt>代表设备 / 厂商</dt><dd>KLA OmniMap; Ossila演示</dd></div><div><dt>部署定位</dt><dd>量产在线/实验室</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.ossila.com/pages/four-point-probe-measurement-guide" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a><a class="inline-video" href="#video-V13">关联视频 V13 <span aria-hidden="true">↘</span></a></div>
+    </article>
+<article class="equip-card" data-group="电学与掺杂量测" data-priority="P1" data-query="E33 电学与掺杂量测 非接触式电阻率/载流子量测 Rs/载流子非接触量测 注入/退火/薄膜 KLA; Onto 量产部分 P1 https://ontoinnovation.com/product-categories/metrology/">
+      <div class="equip-card-top"><span class="micro-label">E33 · 电学与掺杂量测</span><span class="priority p1">P1</span></div>
+      <h3>非接触式电阻率/载流子量测</h3>
+      <p class="equip-purpose">Rs/载流子非接触量测</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>注入/退火/薄膜</dd></div><div><dt>代表设备 / 厂商</dt><dd>KLA; Onto</dd></div><div><dt>部署定位</dt><dd>量产部分</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://ontoinnovation.com/product-categories/metrology/" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="电学与掺杂量测" data-priority="P1" data-query="E34 电学与掺杂量测 C-V/I-V/SPV电学量测 电容、漏电、界面态、Fe污染 栅氧化/介质/表面 Onto FAaST CV/IV; Digital SPV 在线/实验室 P1 https://ontoinnovation.com/product-categories/metrology/">
+      <div class="equip-card-top"><span class="micro-label">E34 · 电学与掺杂量测</span><span class="priority p1">P1</span></div>
+      <h3>C-V/I-V/SPV电学量测</h3>
+      <p class="equip-purpose">电容、漏电、界面态、Fe污染</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>栅氧化/介质/表面</dd></div><div><dt>代表设备 / 厂商</dt><dd>Onto FAaST CV/IV; Digital SPV</dd></div><div><dt>部署定位</dt><dd>在线/实验室</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://ontoinnovation.com/product-categories/metrology/" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="电学与掺杂量测" data-priority="P2" data-query="E35 电学与掺杂量测 Hall/SRP/扩展电阻分析 载流子浓度、迁移率、掺杂深度 注入/退火工艺开发 专用Hall/SRP站 实验室/采样 P2 https://ontoinnovation.com/product-categories/metrology/">
+      <div class="equip-card-top"><span class="micro-label">E35 · 电学与掺杂量测</span><span class="priority p2">P2</span></div>
+      <h3>Hall/SRP/扩展电阻分析</h3>
+      <p class="equip-purpose">载流子浓度、迁移率、掺杂深度</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>注入/退火工艺开发</dd></div><div><dt>代表设备 / 厂商</dt><dd>专用Hall/SRP站</dd></div><div><dt>部署定位</dt><dd>实验室/采样</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://ontoinnovation.com/product-categories/metrology/" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="电学与掺杂量测" data-priority="P0" data-query="E36 电学与掺杂量测 WAT/PCM晶圆参数测试机台 Vt/Idsat/漏电/接触电阻等 接近工序末端/监控点 自动探针台+参数分析仪 量产监控 P0 https://ontoinnovation.com/product-categories/metrology/">
+      <div class="equip-card-top"><span class="micro-label">E36 · 电学与掺杂量测</span><span class="priority p0">P0</span></div>
+      <h3>WAT/PCM晶圆参数测试机台</h3>
+      <p class="equip-purpose">Vt/Idsat/漏电/接触电阻等</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>接近工序末端/监控点</dd></div><div><dt>代表设备 / 厂商</dt><dd>自动探针台+参数分析仪</dd></div><div><dt>部署定位</dt><dd>量产监控</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://ontoinnovation.com/product-categories/metrology/" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="掩模检测与量测" data-priority="P0" data-query="E37 掩模检测与量测 掩模图形缺陷检测 掩模缺陷和可印刷性 掩模进料/周期维护 Lasertec MATRICS 掩模专用 P0 https://www.lasertec.co.jp/en/products/semiconductor/actis_a300.html">
+      <div class="equip-card-top"><span class="micro-label">E37 · 掩模检测与量测</span><span class="priority p0">P0</span></div>
+      <h3>掩模图形缺陷检测</h3>
+      <p class="equip-purpose">掩模缺陷和可印刷性</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>掩模进料/周期维护</dd></div><div><dt>代表设备 / 厂商</dt><dd>Lasertec MATRICS</dd></div><div><dt>部署定位</dt><dd>掩模专用</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.lasertec.co.jp/en/products/semiconductor/actis_a300.html" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="掩模检测与量测" data-priority="P0" data-query="E38 掩模检测与量测 EUV Actinic掩模检测 13.5nm下可印刷缺陷/保护膜透检 EUV掩模进料/例行QA Lasertec ACTIS A200HiT/A300 EUV掩模专用 P0 https://www.lasertec.co.jp/en/products/semiconductor/actis_a200hit.html">
+      <div class="equip-card-top"><span class="micro-label">E38 · 掩模检测与量测</span><span class="priority p0">P0</span></div>
+      <h3>EUV Actinic掩模检测</h3>
+      <p class="equip-purpose">13.5nm下可印刷缺陷/保护膜透检</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>EUV掩模进料/例行QA</dd></div><div><dt>代表设备 / 厂商</dt><dd>Lasertec ACTIS A200HiT/A300</dd></div><div><dt>部署定位</dt><dd>EUV掩模专用</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.lasertec.co.jp/en/products/semiconductor/actis_a200hit.html" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="掩模检测与量测" data-priority="P1" data-query="E39 掩模检测与量测 EUV blank/multilayer缺陷检测 blank及多层反射膜缺陷 掩模制造（相邻产业） Lasertec ABICS 掩模厂专用 P1 https://www.lasertec.co.jp/en/company/pdf/en_company_profile202603.pdf">
+      <div class="equip-card-top"><span class="micro-label">E39 · 掩模检测与量测</span><span class="priority p1">P1</span></div>
+      <h3>EUV blank/multilayer缺陷检测</h3>
+      <p class="equip-purpose">blank及多层反射膜缺陷</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>掩模制造（相邻产业）</dd></div><div><dt>代表设备 / 厂商</dt><dd>Lasertec ABICS</dd></div><div><dt>部署定位</dt><dd>掩模厂专用</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.lasertec.co.jp/en/company/pdf/en_company_profile202603.pdf" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="掩模检测与量测" data-priority="P1" data-query="E40 掩模检测与量测 掩模CD/位置/背面/保护膜 掩模CD、registration、污物 掩模QA Lasertec BASIC/相关设备 掩模厂/晶圆厂 P1 https://www.lasertec.co.jp/en/company/pdf/en_company_profile202603.pdf">
+      <div class="equip-card-top"><span class="micro-label">E40 · 掩模检测与量测</span><span class="priority p1">P1</span></div>
+      <h3>掩模CD/位置/背面/保护膜</h3>
+      <p class="equip-purpose">掩模CD、registration、污物</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>掩模QA</dd></div><div><dt>代表设备 / 厂商</dt><dd>Lasertec BASIC/相关设备</dd></div><div><dt>部署定位</dt><dd>掩模厂/晶圆厂</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.lasertec.co.jp/en/company/pdf/en_company_profile202603.pdf" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="在线设备监控" data-priority="P0" data-query="E41 在线设备监控 光学发射光谱 OES端点 等离子光谱、刻蚀终点 干法刻蚀/清腔 Oxford Instruments / Ocean Optics / Verity OES 集成在主设备 P0 https://plasma.oxinst.com/service-support/upgrades/endpoint-detectors">
+      <div class="equip-card-top"><span class="micro-label">E41 · 在线设备监控</span><span class="priority p0">P0</span></div>
+      <h3>光学发射光谱 OES端点</h3>
+      <p class="equip-purpose">等离子光谱、刻蚀终点</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>干法刻蚀/清腔</dd></div><div><dt>代表设备 / 厂商</dt><dd>Oxford Instruments / Ocean Optics / Verity OES</dd></div><div><dt>部署定位</dt><dd>集成在主设备</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://plasma.oxinst.com/service-support/upgrades/endpoint-detectors" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="在线设备监控" data-priority="P1" data-query="E42 在线设备监控 RGA/QMS残气分析 真空残气、泄漏、污染 刻蚀/PVD/CVD腔体 质谱仪集成 集成在主设备 P1 https://plasma.oxinst.com/service-support/upgrades/endpoint-detectors">
+      <div class="equip-card-top"><span class="micro-label">E42 · 在线设备监控</span><span class="priority p1">P1</span></div>
+      <h3>RGA/QMS残气分析</h3>
+      <p class="equip-purpose">真空残气、泄漏、污染</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>刻蚀/PVD/CVD腔体</dd></div><div><dt>代表设备 / 厂商</dt><dd>质谱仪集成</dd></div><div><dt>部署定位</dt><dd>集成在主设备</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://plasma.oxinst.com/service-support/upgrades/endpoint-detectors" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="在线设备监控" data-priority="P0" data-query="E43 在线设备监控 原位光学/干涉端点量测 沉积膜厚/刻蚀终点 沉积/刻蚀/抛光 OEM内置传感器 集成在主设备 P0 https://plasma.oxinst.com/service-support/service-blog-and-faqs/optimal-processing-with-automatic-endpoint-detectors">
+      <div class="equip-card-top"><span class="micro-label">E43 · 在线设备监控</span><span class="priority p0">P0</span></div>
+      <h3>原位光学/干涉端点量测</h3>
+      <p class="equip-purpose">沉积膜厚/刻蚀终点</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>沉积/刻蚀/抛光</dd></div><div><dt>代表设备 / 厂商</dt><dd>OEM内置传感器</dd></div><div><dt>部署定位</dt><dd>集成在主设备</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://plasma.oxinst.com/service-support/service-blog-and-faqs/optimal-processing-with-automatic-endpoint-detectors" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="在线设备监控" data-priority="P1" data-query="E44 在线设备监控 传感器晶圆/腔体状态计量 温度/等离子均匀性、设备基线 制程腔体维护 KLA SensArray 维护诊断/设备控制 P1 https://www.kla.com/media-room/kla-technologies">
+      <div class="equip-card-top"><span class="micro-label">E44 · 在线设备监控</span><span class="priority p1">P1</span></div>
+      <h3>传感器晶圆/腔体状态计量</h3>
+      <p class="equip-purpose">温度/等离子均匀性、设备基线</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>制程腔体维护</dd></div><div><dt>代表设备 / 厂商</dt><dd>KLA SensArray</dd></div><div><dt>部署定位</dt><dd>维护诊断/设备控制</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.kla.com/media-room/kla-technologies" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="在线设备监控" data-priority="P1" data-query="E45 在线设备监控 湿法化学液/超纯水/金属污染 浓度、pH、颗粒、微量金属 清洗/CMP/湿法 KLA Quali-Line及仪器 在线取样/离线分析 P1 https://www.kla.com/media-room/kla-technologies">
+      <div class="equip-card-top"><span class="micro-label">E45 · 在线设备监控</span><span class="priority p1">P1</span></div>
+      <h3>湿法化学液/超纯水/金属污染</h3>
+      <p class="equip-purpose">浓度、pH、颗粒、微量金属</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>清洗/CMP/湿法</dd></div><div><dt>代表设备 / 厂商</dt><dd>KLA Quali-Line及仪器</dd></div><div><dt>部署定位</dt><dd>在线取样/离线分析</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.kla.com/media-room/kla-technologies" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="良率数据与控制" data-priority="P0" data-query="E46 良率数据与控制 SPC/FDC设备数据监控 控制图、设备漂移、异常检测 贯穿生产 KLA/厂内MES集成 软件系统 P0">
+      <div class="equip-card-top"><span class="micro-label">E46 · 良率数据与控制</span><span class="priority p0">P0</span></div>
+      <h3>SPC/FDC设备数据监控</h3>
+      <p class="equip-purpose">控制图、设备漂移、异常检测</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>贯穿生产</dd></div><div><dt>代表设备 / 厂商</dt><dd>KLA/厂内MES集成</dd></div><div><dt>部署定位</dt><dd>软件系统</dd></div></dl>
+      <div class="equip-foot"></div>
+    </article>
+<article class="equip-card" data-group="良率数据与控制" data-priority="P0" data-query="E47 良率数据与控制 APC/R2R工艺反馈控制 模型补偿、recipe反馈、自动纠偏 光刻/CMP/沉积/刻蚀 ASML/HVM数据平台 软件系统 P0 https://www.asml.com/technology/lithography-principles/measuring-accuracy">
+      <div class="equip-card-top"><span class="micro-label">E47 · 良率数据与控制</span><span class="priority p0">P0</span></div>
+      <h3>APC/R2R工艺反馈控制</h3>
+      <p class="equip-purpose">模型补偿、recipe反馈、自动纠偏</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>光刻/CMP/沉积/刻蚀</dd></div><div><dt>代表设备 / 厂商</dt><dd>ASML/HVM数据平台</dd></div><div><dt>部署定位</dt><dd>软件系统</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.asml.com/technology/lithography-principles/measuring-accuracy" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="equip-card" data-group="良率数据与控制" data-priority="P0" data-query="E48 良率数据与控制 YMS/Defect map/ADC/KLARF 坐标/缺陷分布/杀伤缺陷关联 全流程 KLA/厂内Yield系统 软件系统 P0 https://www.kla.com/media-room/kla-technologies V15">
+      <div class="equip-card-top"><span class="micro-label">E48 · 良率数据与控制</span><span class="priority p0">P0</span></div>
+      <h3>YMS/Defect map/ADC/KLARF</h3>
+      <p class="equip-purpose">坐标/缺陷分布/杀伤缺陷关联</p>
+      <dl class="equip-meta"><div><dt>工艺节点</dt><dd>全流程</dd></div><div><dt>代表设备 / 厂商</dt><dd>KLA/厂内Yield系统</dd></div><div><dt>部署定位</dt><dd>软件系统</dd></div></dl>
+      <div class="equip-foot"><a class="inline-link" href="https://www.kla.com/media-room/kla-technologies" target="_blank" rel="noopener noreferrer">产品或资料入口 <span aria-hidden="true">↗</span></a><a class="inline-video" href="#video-V15">关联视频 V15 <span aria-hidden="true">↘</span></a></div>
+    </article></div>
+      <p id="noDevice" class="empty">没有符合条件的设备，试试清空关键词或更换分类。</p>
+      <div class="load-wrap"><button type="button" class="load-btn" id="moreEquipment">继续查看设备 ↓</button></div>
+    </div></section>
+
+    <section class="section" id="videos"><div class="container">
+      <div class="section-heading"><div><span class="section-kicker">05 / VIDEO RESOURCE LIBRARY</span><h2>18 条原厂视频、技术讲座与实操课程</h2></div><p>原厂机型视频用于识别设备形态和厂商定位；高校实操更适合理解测量步骤，不能替代量产机台性能参数。</p></div>
+      <p class="video-disclaimer"><strong>视频访问说明：</strong>以下链接可能跳转至厂商嵌入播放器、YouTube、Vimeo、LinkedIn 或报名页。标为“待复核”的入口有旧站或访问异常；“访问受限”可能需要登录、注册或受地区政策影响。本页未托管或复制第三方视频，也不承诺每一条都可在当前网络环境播放。</p>
+      <div class="searchbar"><label class="search" aria-label="视频关键词搜索"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="videoSearch" type="search" placeholder="搜索机型、制作者、技术主题…" autocomplete="off"></label>
+      <div class="segmented" role="group" aria-label="视频素材类别"><button type="button" data-video-kind="all" aria-pressed="true">全部</button><button type="button" data-video-kind="原厂设备" aria-pressed="false">原厂设备</button><button type="button" data-video-kind="操作实录" aria-pressed="false">操作实录</button><button type="button" data-video-kind="技术讲座" aria-pressed="false">技术讲座</button></div></div>
+      <div class="results-line"><span id="videoCounter" aria-live="polite">共 18 条视频资料</span><button class="text-action" type="button" id="downloadVideos">导出视频索引 CSV ↗</button></div>
+      <div class="video-grid" id="videoGrid"><article class="video-card" id="video-V01" data-kind="原厂设备" data-query="V01 裸片激光散射检测 KLA Surfscan 韩国原厂工程师介绍 KLA 厂商产品解说 官网嵌入播放器；韩语 高 https://www.kla.com/ko/media-room/surfscan-%ED%8E%B8 可见播放入口；未验证播放器客户端 原厂设备 公开入口">
+       <div class="video-top"><span class="video-number">V01</span><span class="video-kind kind-vendor">原厂设备</span><span class="access open">公开入口</span></div>
+       <h3>KLA Surfscan 韩国原厂工程师介绍</h3><p class="video-for">裸片激光散射检测 <span class="dot-sep">·</span> KLA</p>
+       <p class="video-desc">厂商产品解说。可见播放入口；未验证播放器客户端</p>
+       <div class="video-foot"><span>官网嵌入播放器；韩语</span><a class="watch-link" href="https://www.kla.com/ko/media-room/surfscan-%ED%8E%B8" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V02" data-kind="技术讲座" data-query="V02 带图形光学BBP检测 KLA BBP检测技术40年 KLA 技术历史+产线应用解说 中文官网嵌入视频 高 https://www.kla.com/zh-hans/media-room/bbp-inspection-40-years-of-discovery-at-the-speed-of-light 非特定最新型号操作教学 技术讲座 公开入口">
+       <div class="video-top"><span class="video-number">V02</span><span class="video-kind kind-lecture">技术讲座</span><span class="access open">公开入口</span></div>
+       <h3>KLA BBP检测技术40年</h3><p class="video-for">带图形光学BBP检测 <span class="dot-sep">·</span> KLA</p>
+       <p class="video-desc">技术历史+产线应用解说。非特定最新型号操作教学</p>
+       <div class="video-foot"><span>中文官网嵌入视频</span><a class="watch-link" href="https://www.kla.com/zh-hans/media-room/bbp-inspection-40-years-of-discovery-at-the-speed-of-light" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V03" data-kind="原厂设备" data-query="V03 CD-SEM Hitachi High-Tech GT2000 Introduction Video Hitachi High-Tech 原厂设备宣传/技术介绍 官方页面内Brightcove播放器 高 https://www.hitachi-hightech.com/global/en/products/semiconductor-manufacturing/cd-sem/metrology-solution/semi-gt2000.html 原厂直指GT2000机型；可从设备页播放 原厂设备 公开入口">
+       <div class="video-top"><span class="video-number">V03</span><span class="video-kind kind-vendor">原厂设备</span><span class="access open">公开入口</span></div>
+       <h3>Hitachi High-Tech GT2000 Introduction Video</h3><p class="video-for">CD-SEM <span class="dot-sep">·</span> Hitachi High-Tech</p>
+       <p class="video-desc">原厂设备宣传/技术介绍。原厂直指GT2000机型；可从设备页播放</p>
+       <div class="video-foot"><span>官方页面内Brightcove播放器</span><a class="watch-link" href="https://www.hitachi-hightech.com/global/en/products/semiconductor-manufacturing/cd-sem/metrology-solution/semi-gt2000.html" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V04" data-kind="原厂设备" data-query="V04 量产AFM/CMP Park NX-Wafer 设备介绍视频 Park Systems 原厂设备介绍 官方页面内Brightcove播放器 高 https://www.parksystems.com/en/products/in-line-metrology-afm/wafer-fabrications/nx-wafer 覆盖300mm自动化AFM及CMP应用 原厂设备 公开入口">
+       <div class="video-top"><span class="video-number">V04</span><span class="video-kind kind-vendor">原厂设备</span><span class="access open">公开入口</span></div>
+       <h3>Park NX-Wafer 设备介绍视频</h3><p class="video-for">量产AFM/CMP <span class="dot-sep">·</span> Park Systems</p>
+       <p class="video-desc">原厂设备介绍。覆盖300mm自动化AFM及CMP应用</p>
+       <div class="video-foot"><span>官方页面内Brightcove播放器</span><a class="watch-link" href="https://www.parksystems.com/en/products/in-line-metrology-afm/wafer-fabrications/nx-wafer" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V05" data-kind="技术讲座" data-query="V05 光谱椭偏/膜厚 University of Arizona M2000 培训课程（Session 1-7） University of Arizona 大学课程/分析软件演示 Vimeo多集 中 https://nfc.arizona.edu/spectroscopic-ellipsometer 科研设备课程，不等于量产全自动椭偏仪 技术讲座 公开入口">
+       <div class="video-top"><span class="video-number">V05</span><span class="video-kind kind-lecture">技术讲座</span><span class="access open">公开入口</span></div>
+       <h3>University of Arizona M2000 培训课程（Session 1-7）</h3><p class="video-for">光谱椭偏/膜厚 <span class="dot-sep">·</span> University of Arizona</p>
+       <p class="video-desc">大学课程/分析软件演示。科研设备课程，不等于量产全自动椭偏仪</p>
+       <div class="video-foot"><span>Vimeo多集</span><a class="watch-link" href="https://nfc.arizona.edu/spectroscopic-ellipsometer" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V06" data-kind="操作实录" data-query="V06 台阶轮廓仪 Stanford KLA Tencor Alpha-Step D-500 操作教程 Stanford SNSF 实操视频 YouTube 高 https://www.youtube.com/watch?v=U1eDc-Pw_ys 实验室机型；官方大学页可确认 操作实录 公开入口">
+       <div class="video-top"><span class="video-number">V06</span><span class="video-kind kind-demo">操作实录</span><span class="access open">公开入口</span></div>
+       <h3>Stanford KLA Tencor Alpha-Step D-500 操作教程</h3><p class="video-for">台阶轮廓仪 <span class="dot-sep">·</span> Stanford SNSF</p>
+       <p class="video-desc">实操视频。实验室机型；官方大学页可确认</p>
+       <div class="video-foot"><span>YouTube</span><a class="watch-link" href="https://www.youtube.com/watch?v=U1eDc-Pw_ys" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V07" data-kind="操作实录" data-query="V07 台阶轮廓仪 Copenhagen KLA Tencor Profilometer 操作教程 Niels Bohr Institute 实操视频 YouTube 高 https://www.youtube.com/watch?v=GWIt1polWDw 历史/科研机型，非先进产线大规模自动化机台 操作实录 公开入口">
+       <div class="video-top"><span class="video-number">V07</span><span class="video-kind kind-demo">操作实录</span><span class="access open">公开入口</span></div>
+       <h3>Copenhagen KLA Tencor Profilometer 操作教程</h3><p class="video-for">台阶轮廓仪 <span class="dot-sep">·</span> Niels Bohr Institute</p>
+       <p class="video-desc">实操视频。历史/科研机型，非先进产线大规模自动化机台</p>
+       <div class="video-foot"><span>YouTube</span><a class="watch-link" href="https://www.youtube.com/watch?v=GWIt1polWDw" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V08" data-kind="原厂设备" data-query="V08 XRR/XRF/XRD多模态量测 Rigaku MFM310（现MF-3000）技术视频 Rigaku 原厂设备展示 旧官网页面视频栏目 中 https://drupal9.rigaku.com/products/semi/mfm310 视频栏目已检索到，但旧网站访问不稳定；保留待复核 原厂设备 待复核">
+       <div class="video-top"><span class="video-number">V08</span><span class="video-kind kind-vendor">原厂设备</span><span class="access pending">待复核</span></div>
+       <h3>Rigaku MFM310（现MF-3000）技术视频</h3><p class="video-for">XRR/XRF/XRD多模态量测 <span class="dot-sep">·</span> Rigaku</p>
+       <p class="video-desc">原厂设备展示。视频栏目已检索到，但旧网站访问不稳定；保留待复核</p>
+       <div class="video-foot"><span>旧官网页面视频栏目</span><a class="watch-link" href="https://drupal9.rigaku.com/products/semi/mfm310" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V09" data-kind="技术讲座" data-query="V09 FIB-SEM/截面分析 Helios MX1 PFIB-SEM: 300mm Fab Process Control Thermo Fisher 31分钟原厂技术讲座 需填写表单 高 https://www.thermofisher.com/kr/ko/home/events/boost-fab-process-control-with-the-helios-mx1-pfib-sem.html 视频存在，需表单登记后观看 技术讲座 访问受限">
+       <div class="video-top"><span class="video-number">V09</span><span class="video-kind kind-lecture">技术讲座</span><span class="access limited">访问受限</span></div>
+       <h3>Helios MX1 PFIB-SEM: 300mm Fab Process Control</h3><p class="video-for">FIB-SEM/截面分析 <span class="dot-sep">·</span> Thermo Fisher</p>
+       <p class="video-desc">31分钟原厂技术讲座。视频存在，需表单登记后观看</p>
+       <div class="video-foot"><span>需填写表单</span><a class="watch-link" href="https://www.thermofisher.com/kr/ko/home/events/boost-fab-process-control-with-the-helios-mx1-pfib-sem.html" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V10" data-kind="操作实录" data-query="V10 FIB截面/TEM制样 FEI Helios G4 PFIB CXe S/TEM Lamella Prep University of Florida 科研设施实操教学 YouTube 高 https://www.youtube.com/watch?v=G7JVnd4WewU 离线FA设备，不是在线全片缺陷扫描 操作实录 公开入口">
+       <div class="video-top"><span class="video-number">V10</span><span class="video-kind kind-demo">操作实录</span><span class="access open">公开入口</span></div>
+       <h3>FEI Helios G4 PFIB CXe S/TEM Lamella Prep</h3><p class="video-for">FIB截面/TEM制样 <span class="dot-sep">·</span> University of Florida</p>
+       <p class="video-desc">科研设施实操教学。离线FA设备，不是在线全片缺陷扫描</p>
+       <div class="video-foot"><span>YouTube</span><a class="watch-link" href="https://www.youtube.com/watch?v=G7JVnd4WewU" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V11" data-kind="操作实录" data-query="V11 FIB截面成像 FEI Helios PFIB CXe In-situ Cross-section SEM Imaging University of Florida 实际操作演示 YouTube 高 https://www.youtube.com/watch?v=x4pOCzTDzcs 截面成像，不等于TEM原位大规模工艺在线检测 操作实录 公开入口">
+       <div class="video-top"><span class="video-number">V11</span><span class="video-kind kind-demo">操作实录</span><span class="access open">公开入口</span></div>
+       <h3>FEI Helios PFIB CXe In-situ Cross-section SEM Imaging</h3><p class="video-for">FIB截面成像 <span class="dot-sep">·</span> University of Florida</p>
+       <p class="video-desc">实际操作演示。截面成像，不等于TEM原位大规模工艺在线检测</p>
+       <div class="video-foot"><span>YouTube</span><a class="watch-link" href="https://www.youtube.com/watch?v=x4pOCzTDzcs" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V12" data-kind="技术讲座" data-query="V12 STEM-EDS成分 Automated STEM-EDS of DRAM Capacitors Thermo Fisher 原厂专业讲座 可能需登记 中 https://www.thermofisher.com/us/en/home/about-us/events/industrial/tem-metrology-and-elemental-analysis.html 工艺失效与开发分析 技术讲座 访问受限">
+       <div class="video-top"><span class="video-number">V12</span><span class="video-kind kind-lecture">技术讲座</span><span class="access limited">访问受限</span></div>
+       <h3>Automated STEM-EDS of DRAM Capacitors</h3><p class="video-for">STEM-EDS成分 <span class="dot-sep">·</span> Thermo Fisher</p>
+       <p class="video-desc">原厂专业讲座。工艺失效与开发分析</p>
+       <div class="video-foot"><span>可能需登记</span><a class="watch-link" href="https://www.thermofisher.com/us/en/home/about-us/events/industrial/tem-metrology-and-elemental-analysis.html" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V13" data-kind="操作实录" data-query="V13 四探针方阻 Ossila Four-Point Probe Quickstart Ossila 台式实操视频 厂商产品指引页嵌入 中 https://www.ossila.com/pages/four-point-probe-measurement-guide 示范原理，不代表300mm自动化四探针设备 操作实录 公开入口">
+       <div class="video-top"><span class="video-number">V13</span><span class="video-kind kind-demo">操作实录</span><span class="access open">公开入口</span></div>
+       <h3>Ossila Four-Point Probe Quickstart</h3><p class="video-for">四探针方阻 <span class="dot-sep">·</span> Ossila</p>
+       <p class="video-desc">台式实操视频。示范原理，不代表300mm自动化四探针设备</p>
+       <div class="video-foot"><span>厂商产品指引页嵌入</span><a class="watch-link" href="https://www.ossila.com/pages/four-point-probe-measurement-guide" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V14" data-kind="原厂设备" data-query="V14 电子束缺陷检测 KLA eSL10 E-beam Defect Inspection Video KLA LinkedIn 原厂设备宣传视频 LinkedIn贴文视频 高 https://www.linkedin.com/posts/klacorp_esl10-e-beam-wafer-defect-inspection-system-activity-6727946985145475072-bu-x 需依登录/地区政策观看 原厂设备 访问受限">
+       <div class="video-top"><span class="video-number">V14</span><span class="video-kind kind-vendor">原厂设备</span><span class="access limited">访问受限</span></div>
+       <h3>KLA eSL10 E-beam Defect Inspection Video</h3><p class="video-for">电子束缺陷检测 <span class="dot-sep">·</span> KLA LinkedIn</p>
+       <p class="video-desc">原厂设备宣传视频。需依登录/地区政策观看</p>
+       <div class="video-foot"><span>LinkedIn贴文视频</span><a class="watch-link" href="https://www.linkedin.com/posts/klacorp_esl10-e-beam-wafer-defect-inspection-system-activity-6727946985145475072-bu-x" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V15" data-kind="技术讲座" data-query="V15 前道检测硬件概念 KLA Innovative System Technologies KLA 多设备系统级原理宣传 官网视频 中 https://www.kla.com/media-room/kla-technologies 非具体机台实操 技术讲座 公开入口">
+       <div class="video-top"><span class="video-number">V15</span><span class="video-kind kind-lecture">技术讲座</span><span class="access open">公开入口</span></div>
+       <h3>KLA Innovative System Technologies</h3><p class="video-for">前道检测硬件概念 <span class="dot-sep">·</span> KLA</p>
+       <p class="video-desc">多设备系统级原理宣传。非具体机台实操</p>
+       <div class="video-foot"><span>官网视频</span><a class="watch-link" href="https://www.kla.com/media-room/kla-technologies" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V16" data-kind="操作实录" data-query="V16 FIB-SEM/TEM制样 FEI Helios G4 PFIB TEM样品制备2025版 University of Florida 实操视频 YouTube 高 https://www.youtube.com/watch?v=KJzYNA-L_QI 2025版教学 操作实录 公开入口">
+       <div class="video-top"><span class="video-number">V16</span><span class="video-kind kind-demo">操作实录</span><span class="access open">公开入口</span></div>
+       <h3>FEI Helios G4 PFIB TEM样品制备2025版</h3><p class="video-for">FIB-SEM/TEM制样 <span class="dot-sep">·</span> University of Florida</p>
+       <p class="video-desc">实操视频。2025版教学</p>
+       <div class="video-foot"><span>YouTube</span><a class="watch-link" href="https://www.youtube.com/watch?v=KJzYNA-L_QI" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V17" data-kind="技术讲座" data-query="V17 等离子刻蚀原位终点 Oxford Instruments: Endpointing / OES / laser interferometry webinar Oxford Instruments 厂商专题讲座 厂商研讨会栏目 中 https://plasma.oxinst.com/webinars/plasma-processing-for-compound-semiconductors-and-photonics 页面含终点检测讲座，具体视频入口可能有限制 技术讲座 待复核">
+       <div class="video-top"><span class="video-number">V17</span><span class="video-kind kind-lecture">技术讲座</span><span class="access pending">待复核</span></div>
+       <h3>Oxford Instruments: Endpointing / OES / laser interferometry webinar</h3><p class="video-for">等离子刻蚀原位终点 <span class="dot-sep">·</span> Oxford Instruments</p>
+       <p class="video-desc">厂商专题讲座。页面含终点检测讲座，具体视频入口可能有限制</p>
+       <div class="video-foot"><span>厂商研讨会栏目</span><a class="watch-link" href="https://plasma.oxinst.com/webinars/plasma-processing-for-compound-semiconductors-and-photonics" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article>
+<article class="video-card" id="video-V18" data-kind="操作实录" data-query="V18 光谱椭偏膜厚 M2000 Spectroscopic Ellipsometry Mapping and Dynamic Data University of Arizona 课程录像 Vimeo 高 https://vimeo.com/543370576/2fda232830 以光谱反演/映射为主 操作实录 公开入口">
+       <div class="video-top"><span class="video-number">V18</span><span class="video-kind kind-demo">操作实录</span><span class="access open">公开入口</span></div>
+       <h3>M2000 Spectroscopic Ellipsometry Mapping and Dynamic Data</h3><p class="video-for">光谱椭偏膜厚 <span class="dot-sep">·</span> University of Arizona</p>
+       <p class="video-desc">课程录像。以光谱反演/映射为主</p>
+       <div class="video-foot"><span>Vimeo</span><a class="watch-link" href="https://vimeo.com/543370576/2fda232830" target="_blank" rel="noopener noreferrer">打开视频或课程 <span aria-hidden="true">↗</span></a></div>
+    </article></div><p id="noVideo" class="empty">没有符合条件的视频资源，请尝试其他关键词。</p>
+    </div></section>
+
+    <section class="section" id="method"><div class="container">
+      <div class="section-heading"><div><span class="section-kicker">06 / RESEARCH METHODOLOGY</span><h2>从设备罗列升级到设备竞争研究</h2></div><p>真正的设备选型和产业研究需要可量化的比较维度，而不是只根据厂商宣传词判断技术水平。</p></div>
+      <div class="analysis-grid"><div class="analysis-panel"><div class="panel-caption">EVALUATION FRAMEWORK</div><h3>五个必须回答的问题</h3><div class="question-item"><span>01</span><div><strong>测量能力</strong><p>灵敏度、分辨率、精度、重复性是否分别定义？不同厂商测试条件能否比较？</p></div></div>
+<div class="question-item"><span>02</span><div><strong>量产能力</strong><p>WPH、检测覆盖、采样策略、自动化、FOUP / SECS-GEM 支持如何？</p></div></div>
+<div class="question-item"><span>03</span><div><strong>应用边界</strong><p>逻辑、DRAM、NAND、SiC/GaN 分别适用哪些工艺节点与关键层？</p></div></div>
+<div class="question-item"><span>04</span><div><strong>技术与竞争</strong><p>光学与电子束互补关系是什么？主要厂商与国产替代切入点在哪里？</p></div></div>
+<div class="question-item"><span>05</span><div><strong>经济价值</strong><p>每片检测成本、关键缺陷捕获、误报成本和良率收益如何量化？</p></div></div></div>
+      <div class="analysis-panel"><div class="panel-caption">CRITICAL THINKING</div><h3>必须避免的三类推论错误</h3>
+        <div class="mistake"><strong>① 高分辨率 ≠ 高良率贡献</strong><p>缺陷捕获率、误报率、吞吐量、采样率、分析时效和检验成本必须一起评估，单纯比较最小可检缺陷尺寸会产生误导。</p></div>
+        <div class="mistake"><strong>② 同一种物理技术 ≠ 同一个设备市场</strong><p>CD-SEM、Review SEM、电子束缺陷扫描、FIB-SEM 技术有交叉，实际检测任务、系统配置、单位时间产能完全不同。</p></div>
+        <div class="mistake"><strong>③ 宣传精度 ≠ 量产环境总误差</strong><p>必须区分短期重复性、长期稳定性、机台匹配、参考量测偏差和模型引入的不确定度。OCD 的模型反演尤其需要验证。</p></div>
+        <div class="panel-caption" style="margin-top:19px">RESEARCH TIERS</div>
+        <div class="rank-row"><b>P0</b><div><strong>首先深挖</strong>光学 / 电子束缺陷检测、Review SEM、CD-SEM、OCD、Overlay、膜厚。</div></div>
+        <div class="rank-row"><b>P1</b><div><strong>形成闭环</strong>AFM、CMP 表面量测、电学监控、掩模检测、端点监测、污染与几何量测。</div></div>
+        <div class="rank-row"><b>P2</b><div><strong>专题研究</strong>FIB / TEM、特殊材料和离线精细表征、SiC/GaN 等专用技术。</div></div>
+      </div></div>
+      <div class="closing"><h3>研究结论与覆盖边界</h3><p><strong>设备技术图谱</strong>回答“使用什么设备、检测原理是什么、谁提供设备”；<strong>良率控制闭环</strong>回答“为何在此处测量、数据如何反馈工艺、能否证明提升良率”。两者共同构成完整的第五章。</p><p>本页面主要覆盖硅基逻辑 / DRAM / NAND 的 FEOL、MOL、BEOL 检测量测。SiC/GaN、MEMS、先进封装需要另建专题。设备价格、全球份额、先进节点实测精度及逐机型量产 WPH 尚未系统核实；不得将此页作为采购规格书。更新日期：2026-10-20。</p></div>
+    </div></section>
+  </main>
+  <footer class="footer"><div class="container"><div class="footer-grid"><div><strong>SEMICON / PROCESS CONTROL RESEARCH</strong><p>基于第五章研究报告及设备 / 视频索引整理的独立静态页面。设备与视频链接指向第三方官方站点或原始发布页，内容、播放权限与版本可能变化。内容适于研究索引，非生产工艺操作指引。</p></div><div class="source-list"><a class="" href="https://www.kla.com/" target="_blank" rel="noopener noreferrer">KLA <span aria-hidden="true">↗</span></a> · <a class="" href="https://www.asml.com/products/metrology-and-inspection-systems" target="_blank" rel="noopener noreferrer">ASML Metrology &amp; Inspection <span aria-hidden="true">↗</span></a> · <a class="" href="https://www.hitachi-hightech.com/global/en/products/semiconductor-manufacturing/cd-sem/metrology-solution/semi-gt2000.html" target="_blank" rel="noopener noreferrer">Hitachi GT2000 <span aria-hidden="true">↗</span></a> · <a class="" href="https://www.parksystems.com/en/products/in-line-metrology-afm/wafer-fabrications/nx-wafer" target="_blank" rel="noopener noreferrer">Park NX-Wafer <span aria-hidden="true">↗</span></a> · <a class="" href="https://www.thermofisher.com/fr/en/home/events/boost-fab-process-control-with-the-helios-mx1-pfib-sem.html" target="_blank" rel="noopener noreferrer">Thermo Fisher Webinar <span aria-hidden="true">↗</span></a> · <a class="" href="https://github.com/hywangtong/SemiConductIndrstryResearch" target="_blank" rel="noopener noreferrer">用户原始仓库 <span aria-hidden="true">↗</span></a></div></div><div class="copyright">CHAPTER 05 · EQUIPMENT × METROLOGY × YIELD CONTROL · 2026 / 10</div></div></footer>
+  <script type="application/json" id="equipmentData">[{"id": "E01", "group": "晶圆缺陷检测", "name": "裸片激光散射检测 / LPD", "purpose": "颗粒、晶体原生缺陷、雾度", "stage": "进料/清洗/外延", "model": "KLA Surfscan", "role": "量产在线", "priority": "P0", "url": "https://www.kla.com/ko/media-room/surfscan-%ED%8E%B8", "video": "V01"}, {"id": "E02", "group": "晶圆缺陷检测", "name": "带图形晶圆明场/BBP检测", "purpose": "颗粒、图形缺失、短路、桥接", "stage": "光刻/刻蚀/薄膜/CMP后", "model": "KLA 39xx", "role": "量产在线", "priority": "P0", "url": "https://www.kla.com/zh-hans/media-room/bbp-inspection-40-years-of-discovery-at-the-speed-of-light", "video": "V02"}, {"id": "E03", "group": "晶圆缺陷检测", "name": "带图形暗场光学检测", "purpose": "散射类颗粒与部分图形缺陷", "stage": "刻蚀/薄膜/清洗后", "model": "KLA Puma; Hitachi DI", "role": "量产在线", "priority": "P0", "url": "https://www.hitachi-hightech.com/global/en/products/semiconductor-manufacturing/cd-sem/", "video": ""}, {"id": "E04", "group": "晶圆缺陷检测", "name": "高分辨率多电子束扫描检测", "purpose": "超微细缺陷、电压衬度、电气异常", "stage": "关键层图形后", "model": "ASML HMI eScan 1100", "role": "量产在线", "priority": "P0", "url": "https://www.asml.com/products/metrology-and-inspection-systems", "video": ""}, {"id": "E05", "group": "晶圆缺陷检测", "name": "单束电子束缺陷检测", "purpose": "光学难检微小缺陷、VC信号", "stage": "关键光刻/刻蚀层", "model": "KLA eSL10", "role": "量产在线", "priority": "P0", "url": "https://www.linkedin.com/posts/klacorp_esl10-e-beam-wafer-defect-inspection-system-activity-6727946985145475072-bu-x", "video": "V14"}, {"id": "E06", "group": "晶圆缺陷检测", "name": "边缘/斜面/背面检测", "purpose": "崩边、裂纹、背面残留、夹持污染", "stage": "进出站、CMP、清洗", "model": "KLA CIRCL; Lasertec CIEL", "role": "量产在线", "priority": "P1", "url": "https://www.lasertec.co.jp/en/company/pdf/en_company_profile202603.pdf", "video": ""}, {"id": "E07", "group": "晶圆缺陷检测", "name": "宏观缺陷/晶圆外观检测", "purpose": "光刻胶涂布、条纹、边缘不良", "stage": "涂胶/显影/刻蚀/CMP", "model": "Onto Inspection portfolio", "role": "量产在线/专用", "priority": "P1", "url": "https://ontoinnovation.com/cmos-technologies/", "video": ""}, {"id": "E08", "group": "晶圆缺陷检测", "name": "SiC/GaN晶体缺陷专用检测", "purpose": "BPD、stacking fault等", "stage": "SiC/GaN外延/衬底", "model": "Lasertec SICA/GALOIS", "role": "化合物半导体专用", "priority": "P2", "url": "https://www.lasertec.co.jp/en/company/pdf/en_company_profile202603.pdf", "video": ""}, {"id": "E09", "group": "缺陷复检与失效分析", "name": "自动缺陷复检 SEM / ADR", "purpose": "按缺陷坐标成像、ADC自动分类", "stage": "光学检测后", "model": "Hitachi CR系列; KLA eDR", "role": "量产复检", "priority": "P0", "url": "https://www.hitachi-hightech.com/global/en/knowledge/semiconductor/room/manufacturing/review-sem.html", "video": ""}, {"id": "E10", "group": "缺陷复检与失效分析", "name": "SEM-EDS元素分析", "purpose": "颗粒化学成分与污染源", "stage": "异常缺陷调查", "model": "Thermo Fisher; EDAX", "role": "实验室/部分集成", "priority": "P1", "url": "https://nrf.aux.eng.ufl.edu/resources/resource.asp?id=178", "video": "V09"}, {"id": "E11", "group": "缺陷复检与失效分析", "name": "FIB-SEM双束截面分析", "purpose": "局部截面、埋藏缺陷、3D形貌", "stage": "疑难缺陷/失效分析", "model": "Thermo Helios MX1/PFIB", "role": "在线专用/实验室", "priority": "P1", "url": "https://www.thermofisher.com/kr/ko/home/events/boost-fab-process-control-with-the-helios-mx1-pfib-sem.html", "video": "V09;V10;V11"}, {"id": "E12", "group": "缺陷复检与失效分析", "name": "TEM/STEM-EDS/EELS", "purpose": "原子级截面与元素/界面分析", "stage": "工艺开发/疑难失效", "model": "Thermo Talos/Spectra", "role": "离线实验室", "priority": "P1", "url": "https://www.thermofisher.com/kr/ko/home/semiconductors/learning-center/webinars.html", "video": "V12"}, {"id": "E13", "group": "图形尺寸量测", "name": "CD-SEM", "purpose": "线宽、孔径、CDU、LER/LWR", "stage": "光刻/刻蚀后", "model": "Hitachi GT2000/CG7300", "role": "量产在线", "priority": "P0", "url": "https://www.hitachi-hightech.com/global/en/products/semiconductor-manufacturing/cd-sem/metrology-solution/semi-gt2000.html", "video": "V03"}, {"id": "E14", "group": "图形尺寸量测", "name": "高压/深结构 CD-SEM", "purpose": "3D结构较深位置及埋藏信息", "stage": "先进逻辑/存储3D层", "model": "Hitachi CV7300", "role": "量产在线", "priority": "P1", "url": "https://www.hitachi-hightech.com/global/en/products/semiconductor-manufacturing/cd-sem/metrology-solution/", "video": ""}, {"id": "E15", "group": "图形尺寸量测", "name": "OCD /光学散射量测", "purpose": "CD、侧壁角、形貌、埋藏结构反演", "stage": "光刻/刻蚀/沉积/CMP", "model": "Onto Atlas V/G6", "role": "量产在线", "priority": "P0", "url": "https://ontoinnovation.com/products/atlas-v-system/", "video": ""}, {"id": "E16", "group": "图形尺寸量测", "name": "红外OCD/高纵深比结构", "purpose": "高AR孔/沟槽、膜层几何", "stage": "3D NAND/DRAM", "model": "Onto Aspect", "role": "量产在线", "priority": "P1", "url": "https://ontoinnovation.com/product-categories/metrology/", "video": ""}, {"id": "E17", "group": "图形尺寸量测", "name": "CD-AFM", "purpose": "直接轮廓、侧壁/CD基准验证", "stage": "光刻/刻蚀工艺开发", "model": "Park NX-Wafer; Bruker", "role": "参考/部分在线", "priority": "P1", "url": "https://www.parksystems.com/en/products/in-line-metrology-afm/wafer-fabrications/nx-wafer", "video": "V04"}, {"id": "E18", "group": "套刻与位置量测", "name": "图像式套刻 IBO", "purpose": "跨层对准误差 X/Y", "stage": "显影后/刻蚀后", "model": "KLA Archer", "role": "量产在线", "priority": "P0", "url": "https://www.asml.com/technology/lithography-principles/measuring-accuracy", "video": ""}, {"id": "E19", "group": "套刻与位置量测", "name": "衍射式套刻 DBO", "purpose": "周期靶标衍射分析Overlay", "stage": "ADI/AEI", "model": "ASML YieldStar 1385", "role": "量产在线", "priority": "P0", "url": "https://www.asml.com/products/metrology-and-inspection-systems/yieldstar-1385", "video": ""}, {"id": "E20", "group": "套刻与位置量测", "name": "晶圆图形位置/几何形变", "purpose": "网格残差、形变、全片对准", "stage": "关键曝光层", "model": "KLA PWG; wafer geometry", "role": "量产在线", "priority": "P1", "url": "https://www.asml.com/technology/lithography-principles/measuring-accuracy", "video": ""}, {"id": "E21", "group": "薄膜与材料量测", "name": "光谱椭偏仪 SE", "purpose": "厚度、n/k、复合膜光学参数", "stage": "沉积/氧化/清洗后", "model": "Onto Atlas; JA Woollam M2000", "role": "量产在线/实验室", "priority": "P0", "url": "https://nfc.arizona.edu/spectroscopic-ellipsometer", "video": "V05"}, {"id": "E22", "group": "薄膜与材料量测", "name": "光谱反射率/干涉膜厚仪", "purpose": "厚度与面内均匀性", "stage": "沉积/刻蚀/CMP后", "model": "Filmetrics F20; KLA SpectraFilm", "role": "在线/实验室", "priority": "P0", "url": "https://www.filmetrics.com/products/instruments/thin-film-reflectometers/filmetrics-f20", "video": ""}, {"id": "E23", "group": "薄膜与材料量测", "name": "XRR薄膜反射", "purpose": "膜厚/密度/界面粗糙度", "stage": "关键超薄膜", "model": "Rigaku XTRAIA MF-3000（原 MFM310）", "role": "量产部分/实验室", "priority": "P1", "url": "https://rigaku.com/products/semiconductor-metrology/xrr-edxrf-and-optical-tools/xtraia-mf-3000", "video": "V08"}, {"id": "E24", "group": "薄膜与材料量测", "name": "XRF/TXRF荧光", "purpose": "膜成分、元素量/金属污染", "stage": "金属膜/污染监控", "model": "Rigaku XTRAIA MF-3000（原 MFM310）; KLA", "role": "在线/实验室", "priority": "P1", "url": "https://rigaku.com/products/semiconductor-metrology/xrr-edxrf-and-optical-tools/xtraia-mf-3000", "video": "V08"}, {"id": "E25", "group": "薄膜与材料量测", "name": "XRD/GIXRD衍射", "purpose": "晶相、晶向、应力、晶体结构", "stage": "薄膜与材料开发", "model": "Rigaku XTRAIA MF-3000（原 MFM310）", "role": "量产部分/实验室", "priority": "P1", "url": "https://rigaku.com/products/semiconductor-metrology/xrr-edxrf-and-optical-tools/xtraia-mf-3000", "video": "V08"}, {"id": "E26", "group": "薄膜与材料量测", "name": "皮秒超声金属膜厚", "purpose": "非透明金属膜厚及材料", "stage": "金属互连/沉积/CMP", "model": "Onto Echo", "role": "量产在线", "priority": "P1", "url": "https://ontoinnovation.com/product-categories/metrology/", "video": ""}, {"id": "E27", "group": "薄膜与材料量测", "name": "Raman/FTIR/XPS/SIMS深度分析", "purpose": "化学键、应力、元素与掺杂深度", "stage": "过程开发/根因", "model": "HORIBA; IONTOF等", "role": "实验室/专用", "priority": "P2", "url": "https://snsf.stanford.edu/facilities/fab/fcr/profilometer", "video": ""}, {"id": "E28", "group": "几何/表面量测", "name": "接触式台阶仪", "purpose": "台阶高度、刻蚀深度、粗糙度", "stage": "刻蚀/沉积/CMP后", "model": "KLA Alpha-Step/Tencor", "role": "实验室/自动化型", "priority": "P0", "url": "https://snsf.stanford.edu/facilities/fab/fcr/profilometer", "video": "V06;V07"}, {"id": "E29", "group": "几何/表面量测", "name": "原子力显微镜 AFM", "purpose": "纳米级表面形貌、粗糙度、dishing", "stage": "CMP/清洗/薄膜", "model": "Park NX-Wafer", "role": "量产在线", "priority": "P0", "url": "https://www.parksystems.com/en/products/in-line-metrology-afm/wafer-fabrications/nx-wafer", "video": "V04"}, {"id": "E30", "group": "几何/表面量测", "name": "白光干涉/光学轮廓仪", "purpose": "3D台阶、表面波纹、局部平坦度", "stage": "CMP/刻蚀/封装前", "model": "Zygo NewView", "role": "在线/实验室", "priority": "P1", "url": "https://snsf.stanford.edu/facilities/fab/fcr/profilometer", "video": ""}, {"id": "E31", "group": "几何/表面量测", "name": "晶圆几何/翘曲/平整度仪", "purpose": "bow、warp、TTV、nanotopography", "stage": "进料/膜应力/CMP", "model": "KLA PWG; MicroSense", "role": "量产在线", "priority": "P0", "url": "https://www.asml.com/technology/lithography-principles/measuring-accuracy", "video": ""}, {"id": "E32", "group": "电学与掺杂量测", "name": "四探针方块电阻仪 4PP", "purpose": "Rs、金属/掺杂层均匀性", "stage": "离子注入退火、金属沉积", "model": "KLA OmniMap; Ossila演示", "role": "量产在线/实验室", "priority": "P0", "url": "https://www.ossila.com/pages/four-point-probe-measurement-guide", "video": "V13"}, {"id": "E33", "group": "电学与掺杂量测", "name": "非接触式电阻率/载流子量测", "purpose": "Rs/载流子非接触量测", "stage": "注入/退火/薄膜", "model": "KLA; Onto", "role": "量产部分", "priority": "P1", "url": "https://ontoinnovation.com/product-categories/metrology/", "video": ""}, {"id": "E34", "group": "电学与掺杂量测", "name": "C-V/I-V/SPV电学量测", "purpose": "电容、漏电、界面态、Fe污染", "stage": "栅氧化/介质/表面", "model": "Onto FAaST CV/IV; Digital SPV", "role": "在线/实验室", "priority": "P1", "url": "https://ontoinnovation.com/product-categories/metrology/", "video": ""}, {"id": "E35", "group": "电学与掺杂量测", "name": "Hall/SRP/扩展电阻分析", "purpose": "载流子浓度、迁移率、掺杂深度", "stage": "注入/退火工艺开发", "model": "专用Hall/SRP站", "role": "实验室/采样", "priority": "P2", "url": "https://ontoinnovation.com/product-categories/metrology/", "video": ""}, {"id": "E36", "group": "电学与掺杂量测", "name": "WAT/PCM晶圆参数测试机台", "purpose": "Vt/Idsat/漏电/接触电阻等", "stage": "接近工序末端/监控点", "model": "自动探针台+参数分析仪", "role": "量产监控", "priority": "P0", "url": "https://ontoinnovation.com/product-categories/metrology/", "video": ""}, {"id": "E37", "group": "掩模检测与量测", "name": "掩模图形缺陷检测", "purpose": "掩模缺陷和可印刷性", "stage": "掩模进料/周期维护", "model": "Lasertec MATRICS", "role": "掩模专用", "priority": "P0", "url": "https://www.lasertec.co.jp/en/products/semiconductor/actis_a300.html", "video": ""}, {"id": "E38", "group": "掩模检测与量测", "name": "EUV Actinic掩模检测", "purpose": "13.5nm下可印刷缺陷/保护膜透检", "stage": "EUV掩模进料/例行QA", "model": "Lasertec ACTIS A200HiT/A300", "role": "EUV掩模专用", "priority": "P0", "url": "https://www.lasertec.co.jp/en/products/semiconductor/actis_a200hit.html", "video": ""}, {"id": "E39", "group": "掩模检测与量测", "name": "EUV blank/multilayer缺陷检测", "purpose": "blank及多层反射膜缺陷", "stage": "掩模制造（相邻产业）", "model": "Lasertec ABICS", "role": "掩模厂专用", "priority": "P1", "url": "https://www.lasertec.co.jp/en/company/pdf/en_company_profile202603.pdf", "video": ""}, {"id": "E40", "group": "掩模检测与量测", "name": "掩模CD/位置/背面/保护膜", "purpose": "掩模CD、registration、污物", "stage": "掩模QA", "model": "Lasertec BASIC/相关设备", "role": "掩模厂/晶圆厂", "priority": "P1", "url": "https://www.lasertec.co.jp/en/company/pdf/en_company_profile202603.pdf", "video": ""}, {"id": "E41", "group": "在线设备监控", "name": "光学发射光谱 OES端点", "purpose": "等离子光谱、刻蚀终点", "stage": "干法刻蚀/清腔", "model": "Oxford Instruments / Ocean Optics / Verity OES", "role": "集成在主设备", "priority": "P0", "url": "https://plasma.oxinst.com/service-support/upgrades/endpoint-detectors", "video": ""}, {"id": "E42", "group": "在线设备监控", "name": "RGA/QMS残气分析", "purpose": "真空残气、泄漏、污染", "stage": "刻蚀/PVD/CVD腔体", "model": "质谱仪集成", "role": "集成在主设备", "priority": "P1", "url": "https://plasma.oxinst.com/service-support/upgrades/endpoint-detectors", "video": ""}, {"id": "E43", "group": "在线设备监控", "name": "原位光学/干涉端点量测", "purpose": "沉积膜厚/刻蚀终点", "stage": "沉积/刻蚀/抛光", "model": "OEM内置传感器", "role": "集成在主设备", "priority": "P0", "url": "https://plasma.oxinst.com/service-support/service-blog-and-faqs/optimal-processing-with-automatic-endpoint-detectors", "video": ""}, {"id": "E44", "group": "在线设备监控", "name": "传感器晶圆/腔体状态计量", "purpose": "温度/等离子均匀性、设备基线", "stage": "制程腔体维护", "model": "KLA SensArray", "role": "维护诊断/设备控制", "priority": "P1", "url": "https://www.kla.com/media-room/kla-technologies", "video": ""}, {"id": "E45", "group": "在线设备监控", "name": "湿法化学液/超纯水/金属污染", "purpose": "浓度、pH、颗粒、微量金属", "stage": "清洗/CMP/湿法", "model": "KLA Quali-Line及仪器", "role": "在线取样/离线分析", "priority": "P1", "url": "https://www.kla.com/media-room/kla-technologies", "video": ""}, {"id": "E46", "group": "良率数据与控制", "name": "SPC/FDC设备数据监控", "purpose": "控制图、设备漂移、异常检测", "stage": "贯穿生产", "model": "KLA/厂内MES集成", "role": "软件系统", "priority": "P0", "url": "", "video": ""}, {"id": "E47", "group": "良率数据与控制", "name": "APC/R2R工艺反馈控制", "purpose": "模型补偿、recipe反馈、自动纠偏", "stage": "光刻/CMP/沉积/刻蚀", "model": "ASML/HVM数据平台", "role": "软件系统", "priority": "P0", "url": "https://www.asml.com/technology/lithography-principles/measuring-accuracy", "video": ""}, {"id": "E48", "group": "良率数据与控制", "name": "YMS/Defect map/ADC/KLARF", "purpose": "坐标/缺陷分布/杀伤缺陷关联", "stage": "全流程", "model": "KLA/厂内Yield系统", "role": "软件系统", "priority": "P0", "url": "https://www.kla.com/media-room/kla-technologies", "video": "V15"}]</script><script type="application/json" id="videoData">[{"id": "V01", "group": "裸片激光散射检测", "title": "KLA Surfscan 韩国原厂工程师介绍", "publisher": "KLA", "nature": "厂商产品解说", "mode": "官网嵌入播放器；韩语", "match": "高", "url": "https://www.kla.com/ko/media-room/surfscan-%ED%8E%B8", "note": "可见播放入口；未验证播放器客户端", "kind": "原厂设备", "access": "公开入口"}, {"id": "V02", "group": "带图形光学BBP检测", "title": "KLA BBP检测技术40年", "publisher": "KLA", "nature": "技术历史+产线应用解说", "mode": "中文官网嵌入视频", "match": "高", "url": "https://www.kla.com/zh-hans/media-room/bbp-inspection-40-years-of-discovery-at-the-speed-of-light", "note": "非特定最新型号操作教学", "kind": "技术讲座", "access": "公开入口"}, {"id": "V03", "group": "CD-SEM", "title": "Hitachi High-Tech GT2000 Introduction Video", "publisher": "Hitachi High-Tech", "nature": "原厂设备宣传/技术介绍", "mode": "官方页面内Brightcove播放器", "match": "高", "url": "https://www.hitachi-hightech.com/global/en/products/semiconductor-manufacturing/cd-sem/metrology-solution/semi-gt2000.html", "note": "原厂直指GT2000机型；可从设备页播放", "kind": "原厂设备", "access": "公开入口"}, {"id": "V04", "group": "量产AFM/CMP", "title": "Park NX-Wafer 设备介绍视频", "publisher": "Park Systems", "nature": "原厂设备介绍", "mode": "官方页面内Brightcove播放器", "match": "高", "url": "https://www.parksystems.com/en/products/in-line-metrology-afm/wafer-fabrications/nx-wafer", "note": "覆盖300mm自动化AFM及CMP应用", "kind": "原厂设备", "access": "公开入口"}, {"id": "V05", "group": "光谱椭偏/膜厚", "title": "University of Arizona M2000 培训课程（Session 1-7）", "publisher": "University of Arizona", "nature": "大学课程/分析软件演示", "mode": "Vimeo多集", "match": "中", "url": "https://nfc.arizona.edu/spectroscopic-ellipsometer", "note": "科研设备课程，不等于量产全自动椭偏仪", "kind": "技术讲座", "access": "公开入口"}, {"id": "V06", "group": "台阶轮廓仪", "title": "Stanford KLA Tencor Alpha-Step D-500 操作教程", "publisher": "Stanford SNSF", "nature": "实操视频", "mode": "YouTube", "match": "高", "url": "https://www.youtube.com/watch?v=U1eDc-Pw_ys", "note": "实验室机型；官方大学页可确认", "kind": "操作实录", "access": "公开入口"}, {"id": "V07", "group": "台阶轮廓仪", "title": "Copenhagen KLA Tencor Profilometer 操作教程", "publisher": "Niels Bohr Institute", "nature": "实操视频", "mode": "YouTube", "match": "高", "url": "https://www.youtube.com/watch?v=GWIt1polWDw", "note": "历史/科研机型，非先进产线大规模自动化机台", "kind": "操作实录", "access": "公开入口"}, {"id": "V08", "group": "XRR/XRF/XRD多模态量测", "title": "Rigaku MFM310（现MF-3000）技术视频", "publisher": "Rigaku", "nature": "原厂设备展示", "mode": "旧官网页面视频栏目", "match": "中", "url": "https://drupal9.rigaku.com/products/semi/mfm310", "note": "视频栏目已检索到，但旧网站访问不稳定；保留待复核", "kind": "原厂设备", "access": "待复核"}, {"id": "V09", "group": "FIB-SEM/截面分析", "title": "Helios MX1 PFIB-SEM: 300mm Fab Process Control", "publisher": "Thermo Fisher", "nature": "31分钟原厂技术讲座", "mode": "需填写表单", "match": "高", "url": "https://www.thermofisher.com/kr/ko/home/events/boost-fab-process-control-with-the-helios-mx1-pfib-sem.html", "note": "视频存在，需表单登记后观看", "kind": "技术讲座", "access": "访问受限"}, {"id": "V10", "group": "FIB截面/TEM制样", "title": "FEI Helios G4 PFIB CXe S/TEM Lamella Prep", "publisher": "University of Florida", "nature": "科研设施实操教学", "mode": "YouTube", "match": "高", "url": "https://www.youtube.com/watch?v=G7JVnd4WewU", "note": "离线FA设备，不是在线全片缺陷扫描", "kind": "操作实录", "access": "公开入口"}, {"id": "V11", "group": "FIB截面成像", "title": "FEI Helios PFIB CXe In-situ Cross-section SEM Imaging", "publisher": "University of Florida", "nature": "实际操作演示", "mode": "YouTube", "match": "高", "url": "https://www.youtube.com/watch?v=x4pOCzTDzcs", "note": "截面成像，不等于TEM原位大规模工艺在线检测", "kind": "操作实录", "access": "公开入口"}, {"id": "V12", "group": "STEM-EDS成分", "title": "Automated STEM-EDS of DRAM Capacitors", "publisher": "Thermo Fisher", "nature": "原厂专业讲座", "mode": "可能需登记", "match": "中", "url": "https://www.thermofisher.com/us/en/home/about-us/events/industrial/tem-metrology-and-elemental-analysis.html", "note": "工艺失效与开发分析", "kind": "技术讲座", "access": "访问受限"}, {"id": "V13", "group": "四探针方阻", "title": "Ossila Four-Point Probe Quickstart", "publisher": "Ossila", "nature": "台式实操视频", "mode": "厂商产品指引页嵌入", "match": "中", "url": "https://www.ossila.com/pages/four-point-probe-measurement-guide", "note": "示范原理，不代表300mm自动化四探针设备", "kind": "操作实录", "access": "公开入口"}, {"id": "V14", "group": "电子束缺陷检测", "title": "KLA eSL10 E-beam Defect Inspection Video", "publisher": "KLA LinkedIn", "nature": "原厂设备宣传视频", "mode": "LinkedIn贴文视频", "match": "高", "url": "https://www.linkedin.com/posts/klacorp_esl10-e-beam-wafer-defect-inspection-system-activity-6727946985145475072-bu-x", "note": "需依登录/地区政策观看", "kind": "原厂设备", "access": "访问受限"}, {"id": "V15", "group": "前道检测硬件概念", "title": "KLA Innovative System Technologies", "publisher": "KLA", "nature": "多设备系统级原理宣传", "mode": "官网视频", "match": "中", "url": "https://www.kla.com/media-room/kla-technologies", "note": "非具体机台实操", "kind": "技术讲座", "access": "公开入口"}, {"id": "V16", "group": "FIB-SEM/TEM制样", "title": "FEI Helios G4 PFIB TEM样品制备2025版", "publisher": "University of Florida", "nature": "实操视频", "mode": "YouTube", "match": "高", "url": "https://www.youtube.com/watch?v=KJzYNA-L_QI", "note": "2025版教学", "kind": "操作实录", "access": "公开入口"}, {"id": "V17", "group": "等离子刻蚀原位终点", "title": "Oxford Instruments: Endpointing / OES / laser interferometry webinar", "publisher": "Oxford Instruments", "nature": "厂商专题讲座", "mode": "厂商研讨会栏目", "match": "中", "url": "https://plasma.oxinst.com/webinars/plasma-processing-for-compound-semiconductors-and-photonics", "note": "页面含终点检测讲座，具体视频入口可能有限制", "kind": "技术讲座", "access": "待复核"}, {"id": "V18", "group": "光谱椭偏膜厚", "title": "M2000 Spectroscopic Ellipsometry Mapping and Dynamic Data", "publisher": "University of Arizona", "nature": "课程录像", "mode": "Vimeo", "match": "高", "url": "https://vimeo.com/543370576/2fda232830", "note": "以光谱反演/映射为主", "kind": "操作实录", "access": "公开入口"}]</script>
+  <script>
+    (() => {
+      'use strict';
+      const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
+      const equipment=JSON.parse($('#equipmentData').textContent), videos=JSON.parse($('#videoData').textContent);
+      const deviceCards=$$('#equipmentGrid .equip-card'), videoCards=$$('#videoGrid .video-card');
+      let group='all', priority='all', deviceLimit=12, videoKind='all';
+      const normalized=v=>(v||'').toLocaleLowerCase();
+      function filterDevice(){
+        const term=normalized($('#equipmentSearch').value.trim()); let hits=0,visible=0;
+        for(const card of deviceCards){
+          const okay=(group==='all'||card.dataset.group===group)&&(priority==='all'||card.dataset.priority===priority)&&normalized(card.dataset.query).includes(term);
+          if(okay)hits++; const show=okay&&visible<deviceLimit; card.hidden=!show;if(show)visible++;
+        }
+        $('#equipmentCounter').innerHTML=`当前展示 <b>${visible}</b> / 命中 <b>${hits}</b> / 共 <b>${equipment.length}</b> 类设备`;
+        $('#noDevice').style.display=hits===0?'block':'none';$('#moreEquipment').hidden=hits<=visible;
+      }
+      function filterVideo(){
+        const term=normalized($('#videoSearch').value.trim());let hits=0;
+        for(const card of videoCards){const okay=(videoKind==='all'||card.dataset.kind===videoKind)&&normalized(card.dataset.query).includes(term);card.hidden=!okay;if(okay)hits++}
+        $('#videoCounter').innerHTML=`当前展示 <b>${hits}</b> / 共 <b>${videos.length}</b> 条资料`;$('#noVideo').style.display=hits===0?'block':'none';
+      }
+      $('#equipmentSearch').addEventListener('input',()=>{deviceLimit=12;filterDevice()});
+      $('#groupSelect').addEventListener('change',ev=>{group=ev.target.value;deviceLimit=12;filterDevice()});
+      $$('.segmented button[data-priority]').forEach(btn=>btn.addEventListener('click',()=>{priority=btn.dataset.priority;deviceLimit=12;$$('.segmented button[data-priority]').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));filterDevice()}));
+      $('#moreEquipment').addEventListener('click',()=>{deviceLimit+=12;filterDevice()});
+      $$('[data-pick-group]').forEach(btn=>btn.addEventListener('click',()=>{group=btn.dataset.pickGroup;$('#groupSelect').value=group;$('#equipmentSearch').value='';deviceLimit=12;filterDevice();$('#equipment').scrollIntoView({behavior:'smooth'})}));
+      $('#videoSearch').addEventListener('input',filterVideo);
+      $$('.segmented button[data-video-kind]').forEach(btn=>btn.addEventListener('click',()=>{videoKind=btn.dataset.videoKind;$$('.segmented button[data-video-kind]').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));filterVideo()}));
+      function toCSV(rows,cols){const q=x=>'"'+String(x==null?'':x).replace(/"/g,'""')+'"';return '\uFEFF'+[cols.map(c=>q(c[1])).join(','),...rows.map(row=>cols.map(c=>q(row[c[0]])).join(','))].join('\r\n')}
+      function download(name,content){const url=URL.createObjectURL(new Blob([content],{type:'text/csv;charset=utf-8;'}));const a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+      $('#downloadEquipment').addEventListener('click',()=>download('front_end_inspection_equipment.csv',toCSV(equipment,[['id','ID'],['group','系统'],['name','设备细分类'],['purpose','测量目标'],['stage','工艺节点'],['model','代表厂商或型号'],['role','部署定位'],['priority','优先级'],['url','资料链接'],['video','关联视频']])))
+      $('#downloadVideos').addEventListener('click',()=>download('inspection_video_library.csv',toCSV(videos,[['id','ID'],['group','设备类别'],['title','视频标题'],['publisher','发布方'],['nature','素材性质'],['mode','观看方式'],['access','访问说明'],['note','研究说明'],['url','链接']])))
+      const themeToggle=$('#themeToggle');let stored='';try{stored=localStorage.getItem('research-theme')||''}catch(e){}
+      if(stored==='light')document.documentElement.classList.add('light');
+      themeToggle.textContent=document.documentElement.classList.contains('light')?'☾':'☼';
+      themeToggle.addEventListener('click',()=>{const light=document.documentElement.classList.toggle('light');themeToggle.textContent=light?'☾':'☼';try{localStorage.setItem('research-theme',light?'light':'dark')}catch(e){}});
+      function showLinkedVideo(){const id=decodeURIComponent(location.hash.replace('#',''));if(!/^video-V\d+$/.test(id))return;videoKind='all';$$('[data-video-kind]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.videoKind==='all')));$('#videoSearch').value='';filterVideo();}
+      window.addEventListener('hashchange',showLinkedVideo);
+      filterDevice();filterVideo();showLinkedVideo();
+    })();
+  </script>
+</body></html>
