@@ -1,0 +1,6 @@
+# Static single-page HTML site, served from the repository's existing HTML file.
+# No Node.js / npm dependencies are needed for this repository.
+[build]
+  base = "."
+  command = "mkdir -p dist && cp ./*.html dist/index.html"
+  publish = "dist"
