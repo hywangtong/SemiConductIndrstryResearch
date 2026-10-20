@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; img-src data:; font-src data:; media-src data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="四、晶圆制造：从空白晶圆到完整电路。半导体工业全流程调研报告独立章节。"/>
+<title>四、晶圆制造：从空白晶圆到完整电路｜半导体工业全流程调研报告</title>
+<style>
+:root{--ink:#15243a;--sub:#53657a;--muted:#7a8ca0;--bg:#f3f6fa;--paper:#fff;--line:#dce5ee;--accent:#2456ad;--accent-soft:#eaf1fc;--shadow:0 18px 55px rgba(25,45,80,.07);color-scheme:light;font-synthesis:none}
+*{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:25px} body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.84 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;-webkit-font-smoothing:antialiased}
+.shell{display:grid;grid-template-columns:256px minmax(0,1fr);gap:34px;max-width:1490px;margin:0 auto;padding:28px 32px 64px}.sidebar{position:sticky;top:22px;align-self:start;max-height:calc(100vh - 44px);overflow:auto;padding:24px 15px 24px 4px;scrollbar-width:thin}.brand{display:flex;align-items:center;gap:12px;margin:0 0 26px 10px;font-weight:800;letter-spacing:.4px;color:#1b3c74;font-size:17px}.brand-mark{height:33px;width:33px;border-radius:9px;background:linear-gradient(145deg,#2258b7,#51a2d0);display:grid;place-items:center;color:white;font-size:17px;box-shadow:0 6px 13px #2456ad25}.sidebar small{display:block;color:#8493a4;margin:0 0 13px 13px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:800}.toc{display:flex;flex-direction:column;gap:3px}.toc-link{display:flex;align-items:flex-start;gap:9px;border-radius:8px;color:#516276;text-decoration:none;padding:8px 10px;font-size:12.5px;line-height:1.4;transition:background .12s}.toc-link:hover,.toc-link:focus{color:#1f56a2;background:#e7eef8;outline:none}.toc-index{font-size:10px;line-height:19px;color:#8fa3b9;font-variant-numeric:tabular-nums;flex:none;font-weight:700}.side-footer{font-size:11px;color:#97a5b6;margin:28px 12px 0;border-top:1px solid #dae3ed;padding-top:18px;line-height:1.7}.main{min-width:0}.sheet{border:1px solid #e3e9f0;background:var(--paper);border-radius:18px;box-shadow:var(--shadow);padding:0 50px 48px;overflow:hidden}.hero{margin:0 -50px 38px;padding:46px 50px 42px;color:white;background:radial-gradient(circle at 90% -30%,#548bda 0,transparent 40%),linear-gradient(115deg,#102d5c,#1d4e96 75%,#23549c);position:relative;overflow:hidden}.hero:after{content:'';position:absolute;right:0;bottom:-120px;width:250px;height:260px;border-radius:50%;border:48px solid #ffffff10;transform:rotate(24deg)}.eyebrow{font-weight:750;letter-spacing:2.2px;text-transform:uppercase;color:#b6d7ff;font-size:11px}.hero h1{font-size:clamp(30px,3.4vw,45px);line-height:1.3;letter-spacing:-1.2px;margin:13px 0 17px;max-width:790px;font-weight:850}.hero p{max-width:770px;color:#dce9ff;margin:0;font-size:14px}.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:23px}.hero-tag{border:1px solid #ffffff45;color:#ebf4ff;border-radius:999px;padding:4px 12px;font-size:11px}.notice{border-left:4px solid #3982da;padding:12px 18px;background:#f0f6ff;margin:0 0 26px;color:#36547d;font-size:13px}.content h2{font-size:24px;color:#163864;letter-spacing:-.45px;line-height:1.4;border-top:1px solid #e4eaf1;padding-top:35px;margin:43px 0 18px}.content h2:first-child{border-top:0;margin-top:0}.content h3{font-size:17.5px;letter-spacing:-.2px;color:#1d3f6f;margin:27px 0 10px}.heading-anchor{opacity:0;font-size:.66em;vertical-align:middle;margin-left:8px;text-decoration:none;color:#7598c7}.content h2:hover .heading-anchor,.content h3:hover .heading-anchor{opacity:1}.content p{margin:12px 0 19px}.content strong{color:#1a3764;font-weight:730}.content ul,.content ol{padding-left:25px;margin:8px 0 22px}.content li{margin:6px 0;padding-left:3px}.content a{color:#2456ac;text-underline-offset:3px;text-decoration-color:#a7c3e8}.content a:hover{color:#123973}.content blockquote{border-left:4px solid #4b81d4;margin:0 0 25px;padding:13px 20px;background:#eef5ff;border-radius:0 8px 8px 0;font-size:14px;color:#385674}.content blockquote p{margin:0}.table-scroll{max-width:100%;overflow-x:auto;border:1px solid #dfe8f1;border-radius:10px;margin:16px 0 26px;scrollbar-width:thin}.table-scroll:focus{outline:2px solid #95b5e4;outline-offset:2px}table{width:100%;border-spacing:0;border-collapse:collapse;min-width:530px;font-size:13.1px;line-height:1.62}thead{background:#edf3fb}th{text-align:left;color:#234570;font-weight:750;white-space:nowrap}th,td{padding:11px 15px;border-bottom:1px solid #e6edf4;vertical-align:top}tr:last-child td{border-bottom:none}tbody tr:nth-child(even){background:#fafcff}tbody tr:hover{background:#f1f6fd}.process-flow{max-width:760px;margin:22px auto 25px}.flow-node{border:1px solid #dce6f0;border-radius:10px;background:#f8fafc;text-align:center;padding:15px 17px;display:flex;flex-direction:column;gap:3px}.flow-node.blue{background:#edf4ff;border-color:#c5d8f6}.flow-node.green{background:#eaf8f4;border-color:#b9e4d6}.flow-node.amber{background:#fff7e9;border-color:#f1deb7}.flow-node.purple{background:#f5effb;border-color:#dfcbef}.flow-index{font-size:10px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:#6e8196}.flow-node strong{font-size:14px!important}.flow-node small{font-size:11px;color:#6d8194}.flow-arrow{text-align:center;color:#6f93bd;font-size:20px;line-height:21px;margin:4px 0}.mini-flow{max-width:760px;background:#f7faff;border:1px solid #dbe7f7;border-radius:12px;margin:17px 0 26px;padding:18px;text-align:center;color:#224c83;font-size:13.4px;font-weight:700}.mini-flow span{display:block;color:#8ca8ce;margin:3px}.bottom-note{margin:34px -50px -48px;padding:27px 50px;background:#f5f8fc;border-top:1px solid #e4eaf2;color:#798ba1;font-size:12px}.backtop{display:inline-block;margin-top:15px;color:#2b5db0!important;text-decoration:none!important;font-weight:750}.footer{padding:22px 6px;color:#8b9bb0;font-size:11px;text-align:center}.smallbadge{display:inline-flex;background:#e9f1fd;color:#285da4;border-radius:999px;padding:2px 10px;font-size:11px;font-weight:800}.skip{position:absolute;left:-1000px;top:4px;background:#fff;color:#142f56;padding:10px;z-index:100}.skip:focus{left:10px}
+@media(max-width:1050px){.shell{grid-template-columns:205px minmax(0,1fr);gap:20px;padding:20px}.sheet{padding:0 30px 36px}.hero{margin:0 -30px 29px;padding:37px 30px}.bottom-note{margin:32px -30px -36px;padding:22px 30px}.toc-link{font-size:11.7px}}
+@media(max-width:760px){.shell{display:block;padding:0}.sidebar{position:static;max-height:none;padding:17px 17px 12px;border-bottom:1px solid #dae3ed}.brand{margin:0 0 7px}.sidebar small,.side-footer{display:none}.toc{flex-direction:row;overflow:auto;padding-bottom:4px;gap:6px;white-space:nowrap}.toc-link{flex:none;background:#edf2f9;border-radius:999px;padding:7px 11px}.toc-index{display:none}.sheet{border:0;border-radius:0;padding:0 18px 30px;box-shadow:none}.hero{margin:0 -18px 22px;padding:34px 21px}.hero h1{font-size:30px}.content h2{font-size:21px}.content h3{font-size:16.5px}.bottom-note{margin:24px -18px -30px;padding:22px 18px}.footer{padding:20px}table{font-size:12.4px}th,td{padding:10px 12px}}
+@media print{@page{size:A4;margin:15mm 12mm}body{background:white;color:black;font-size:10.5pt}.shell{display:block;padding:0;max-width:none}.sidebar,.footer,.backtop,.heading-anchor{display:none!important}.sheet{padding:0;border:0;box-shadow:none;border-radius:0;overflow:visible}.hero{margin:0 0 15mm;background:#143b71!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;padding:15mm}.hero h1{font-size:27pt}.content h2{break-after:avoid-page;page-break-after:avoid;font-size:17pt}.content h3{break-after:avoid-page;page-break-after:avoid;font-size:13pt}.content table{font-size:8pt;min-width:0}.content tr{break-inside:avoid-page;page-break-inside:avoid}.table-scroll{overflow:visible;border-color:#ccc}.process-flow{max-width:100%}.flow-node,.mini-flow,thead{-webkit-print-color-adjust:exact;print-color-adjust:exact}.bottom-note{margin:14mm 0 0;padding:5mm 0;background:none}.content a{color:#164d9d}}
+.eli5-intro{margin:0 0 25px;padding:20px;background:#f7faff;border:1px solid #d6e3f5;border-radius:12px}.eli5-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px}.content .eli5-title{margin:0;color:#2456ad;font-size:17px;line-height:1.5;font-weight:800}.eli5-source{flex:none;font-size:11px}.content .eli5-summary{margin:10px 0 16px;font-size:14px;line-height:1.8;color:#36516f}.content .eli5-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;list-style:none;padding:0;margin:0}.content .eli5-steps li{position:relative;margin:0;padding:12px 10px;background:#fff;border:1px solid #dce5ee;border-radius:9px;text-align:center;min-width:0}.eli5-steps li+li:before{content:'→';position:absolute;left:-19px;top:50%;transform:translateY(-50%);color:#607fa7;font-size:19px;line-height:1}.eli5-step-number{display:block;text-align:left;color:#2456ad;font-size:18px;font-weight:800;line-height:1}.eli5-steps svg{display:block;width:100%;height:auto;max-width:230px;margin:2px auto 8px;aspect-ratio:220/130}.eli5-step-label{display:block;color:#1a3764;font-size:14px;font-weight:750;line-height:1.5}.content a:focus-visible{outline:2px solid #2456ad;outline-offset:3px;border-radius:2px}.heading-anchor:focus-visible{opacity:1}
+@media(max-width:480px){.eli5-intro{padding:15px}.eli5-heading{align-items:flex-start}.content .eli5-title{font-size:16px}.content .eli5-steps{grid-template-columns:1fr;gap:22px}.eli5-steps li+li:before{content:'↓';left:50%;top:-12px;transform:translate(-50%,-50%)}.eli5-step-number{font-size:20px}.eli5-step-label{font-size:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.toc-link{transition:none}}
+@media print{.eli5-intro{padding:4mm;break-inside:avoid-page;page-break-inside:avoid;background:#f7faff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.content .eli5-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:5mm}.eli5-steps svg{max-width:150px}.eli5-source{display:none}.content .eli5-summary,.eli5-step-label{font-size:9pt}.eli5-step-number{font-size:12pt}.eli5-steps li+li:before{content:'→';left:-4.5mm;top:50%;transform:translateY(-50%)}}
+
+/* Directory and chapter navigation */
+.content h2.subsection-heading{font-size:17.5px;letter-spacing:-.2px;color:#1d3f6f;margin:27px 0 10px;border:0;padding:0}
+@media(max-width:760px){.content h2.subsection-heading{font-size:16.5px}}
+@media print{.content h2.subsection-heading{font-size:13pt}}
+.home-link{display:inline-block;margin:0 10px 20px;color:var(--accent);font-size:13px;font-weight:750;text-decoration:none}.toc-link[aria-current="page"]{background:var(--accent-soft);color:#1f56a2;font-weight:750}.home-link:focus-visible,.page-nav a:focus-visible,.directory-grid a:focus-visible,.section-toc a:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
+.directory-shell{display:block;max-width:1160px}.directory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;list-style:none;margin:0;padding:0}.directory-card{min-width:0;border:1px solid var(--line);border-radius:12px;padding:22px;background:#fbfcff}.directory-number{font-size:11px;font-weight:800;letter-spacing:1px;color:var(--muted)}.directory-card h2{font-size:18px;line-height:1.6;margin:8px 0 12px}.directory-card h2 a{color:#1d3f6f;text-decoration:none}.directory-card h2 a:hover{text-decoration:underline;text-underline-offset:4px}.directory-card ul{margin:0;padding-left:20px;color:var(--muted)}.directory-card li{margin:7px 0;font-size:13px}.directory-card li a{color:var(--sub);text-underline-offset:3px;text-decoration-color:#b7c9e1}.directory-card li a:hover{color:var(--accent)}
+.chapter-hero h1{font-size:clamp(26px,3vw,37px);letter-spacing:-.5px;max-width:900px}.chapter-hero .heading-anchor{color:#dce9ff}.chapter-hero h1:hover .heading-anchor{opacity:1}.page-nav{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:16px;align-items:center;border-top:1px solid var(--line);padding-top:22px;margin-top:32px}.page-nav a{color:var(--accent);text-decoration:none;line-height:1.6;font-size:13px}.page-nav a:hover{text-decoration:underline}.page-nav small{display:block;color:var(--muted);font-size:11px}.page-nav .next{text-align:right}.page-nav .directory-return{font-weight:800;white-space:nowrap}.section-toc{padding:18px 20px;border:1px solid var(--line);border-radius:10px;background:#f7faff;margin-bottom:26px;font-size:13px}.section-toc strong{color:#1d3f6f}.section-toc ul{margin:8px 0 0;padding-left:20px}.section-toc li{margin:5px 0}.section-toc a{color:var(--accent);text-underline-offset:3px}
+@media(max-width:760px){.directory-grid{grid-template-columns:1fr;gap:14px}.directory-card{padding:18px}.directory-card h2{font-size:18px}.home-link{margin:0 0 12px}.page-nav{gap:10px}.page-nav a{font-size:12px}}
+@media print{.home-link,.page-nav,.section-toc{display:none!important}.directory-grid{display:block}.directory-card{break-inside:avoid-page;page-break-inside:avoid;background:white;margin:0 0 5mm;padding:4mm}.directory-card h2{font-size:13pt}.directory-card li{font-size:10pt}.chapter-hero h1{font-size:23pt}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳转正文</a>
+<div class="shell" id="top">
+<aside class="sidebar" aria-label="章节目录">
+<div class="brand"><span class="brand-mark" aria-hidden="true">◆</span><span>半导体工业研究</span></div>
+<a class="home-link" href="index.html">← 返回目录首页</a>
+<small>CONTENT / 章节目录</small><nav class="toc" aria-label="章节导航"><a class="toc-link" href="chapter-01.html"><span class="toc-index">01</span><span>一、先建立完整的工业制造框架</span></a>
+<a class="toc-link" href="chapter-02.html"><span class="toc-index">02</span><span>二、原材料提纯与单晶长晶</span></a>
+<a class="toc-link" href="chapter-03.html"><span class="toc-index">03</span><span>三、晶棒加工与晶圆衬底制造</span></a>
+<a class="toc-link" href="chapter-04.html" aria-current="page"><span class="toc-index">04</span><span>四、晶圆制造：从空白晶圆到完整电路</span></a>
+<a class="toc-link" href="chapter-05.html"><span class="toc-index">05</span><span>五、贯穿整个前道的检测与良率控制</span></a>
+<a class="toc-link" href="chapter-06.html"><span class="toc-index">06</span><span>六、晶圆测试（Wafer Sort / CP）</span></a>
+<a class="toc-link" href="chapter-07.html"><span class="toc-index">07</span><span>七、晶圆减薄、切割与芯片分离</span></a>
+<a class="toc-link" href="chapter-08.html"><span class="toc-index">08</span><span>八、封装工艺：把裸芯片变成可使用的元器件</span></a>
+<a class="toc-link" href="chapter-09.html"><span class="toc-index">09</span><span>九、封装后的成品测试与质量验证</span></a>
+<a class="toc-link" href="chapter-10.html"><span class="toc-index">10</span><span>十、不同半导体产品的制造流程差异</span></a>
+<a class="toc-link" href="chapter-11.html"><span class="toc-index">11</span><span>十一、从产业角度看：完整设备与材料供应链</span></a>
+<a class="toc-link" href="chapter-12.html"><span class="toc-index">12</span><span>十二、如何进一步把这份调研用于实际产业研究</span></a>
+<a class="toc-link" href="conclusion.html"><span class="toc-index">13</span><span>最终结论</span></a></nav>
+<div class="side-footer">12 章正文 · 最终结论<br/>各章独立页面 · 离线可阅读</div>
+</aside>
+<main class="main" id="main"><article class="sheet">
+<header class="hero chapter-hero"><span class="eyebrow">Semiconductor Manufacturing · 04 / 13</span><h1 id="chapter-04">四、晶圆制造：从空白晶圆到完整电路<a aria-label="定位到本章节" class="heading-anchor" href="#chapter-04">#</a></h1><p>半导体工业全流程调研报告</p></header>
+<nav class="section-toc" aria-label="本章小节"><strong>本章目录</strong><ul><li><a href="#chapter-04-sub-01">4.1 晶圆厂的基础工艺库</a></li><li><a href="#chapter-04-sub-02">4.2 光刻并不是一道简单的曝光工序</a></li><li><a href="#chapter-04-sub-03">4.3 前道器件制造 FEOL：制造晶体管</a></li><li><a href="#chapter-04-sub-04">4.4 中段制程 MOL：让晶体管接触到布线</a></li><li><a href="#chapter-04-sub-05">4.5 后段金属互连 BEOL：把器件连接成电路</a></li><li><a href="#chapter-04-sub-06">4.6 一条重要的并行生产线：光掩模制造</a></li></ul></nav>
+<div class="content">
+<aside class="eli5-intro" aria-labelledby="chapter-04-eli5">
+<div class="eli5-heading"><p class="eli5-title" id="chapter-04-eli5">ELI5 · 在晶圆上逐层做出电路</p><a class="eli5-source" href="https://www.asml.com/en/technology/all-about-microchips/how-microchips-are-made" target="_blank" rel="noopener noreferrer" aria-label="第4节通俗导读参考：ASML">资料 ↗</a></div>
+<p class="eli5-summary">先铺薄膜，再用光刻确定图形，配合刻蚀、掺杂等步骤做出晶体管，也就是控制电流的微小开关。反复加工并铺设金属连线，许多开关才组成电路。</p>
+<ol class="eli5-steps" aria-label="三步看懂本节">
+<li><span class="eli5-step-number" aria-hidden="true">01</span><svg viewBox="0 0 220 130" role="img" aria-label="硅片表面增加一层薄膜"><rect x="43" y="85" width="134" height="23" rx="0" fill="#2456ad" stroke="#2456ad" stroke-width="2"/><rect x="43" y="74" width="134" height="10" rx="0" fill="#eaf1fc" stroke="#15243a" stroke-width="2"/><path d="M65 30 L65 63" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M60 57 L65 63 L70 57" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M110 30 L110 63" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M105 57 L110 63 L115 57" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M155 30 L155 63" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M150 57 L155 63 L160 57" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="eli5-step-label">铺上薄膜</span></li>
+<li><span class="eli5-step-number" aria-hidden="true">02</span><svg viewBox="0 0 220 130" role="img" aria-label="按设计在硅片表面形成不同的微小结构"><rect x="43" y="85" width="134" height="23" rx="0" fill="#2456ad" stroke="#2456ad" stroke-width="2"/><rect x="43" y="67" width="35" height="17" rx="0" fill="#eaf1fc" stroke="#15243a" stroke-width="2"/><rect x="102" y="67" width="32" height="17" rx="0" fill="#eaf1fc" stroke="#15243a" stroke-width="2"/><rect x="156" y="67" width="21" height="17" rx="0" fill="#eaf1fc" stroke="#15243a" stroke-width="2"/><path d="M43 28 h134 M43 28 v10 h35 v-10 M102 28 v10 h32 v-10" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M87 40 L87 72" fill="none" stroke="#2456ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M82 66 L87 72 L92 66" fill="none" stroke="#2456ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M145 40 L145 72" fill="none" stroke="#2456ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M140 66 L145 72 L150 66" fill="none" stroke="#2456ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="eli5-step-label">按图形成结构</span></li>
+<li><span class="eli5-step-number" aria-hidden="true">03</span><svg viewBox="0 0 220 130" role="img" aria-label="下方器件通过上方多层金属线路连接"><rect x="37" y="93" width="146" height="18" rx="0" fill="#2456ad" stroke="#2456ad" stroke-width="2"/><rect x="55" y="79" width="28" height="13" rx="0" fill="#eaf1fc" stroke="#15243a" stroke-width="2"/><rect x="137" y="79" width="28" height="13" rx="0" fill="#eaf1fc" stroke="#15243a" stroke-width="2"/><path d="M69 79 v-20 h82 v20 M53 39 h115 v20 M83 59 v-20" fill="none" stroke="#2456ad" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" /><path d="M31 68 Q13 18 64 16 M64 16 l-7 -5 M64 16 l-7 6" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="eli5-step-label">重复加工并连线</span></li>
+</ol>
+</aside>
+<p>晶圆制造（Wafer Fabrication）通常由晶圆厂（Fab）完成，也是工艺整合复杂度最高的阶段。</p>
+<p>晶圆厂不是先把整片晶圆氧化完，再把全部图形光刻完，最后统一刻蚀。实际生产是根据芯片设计，将许多工艺模块按规定顺序组合，在晶圆上逐层形成器件和布线。</p>
+<h2 class="subsection-heading" id="chapter-04-sub-01">4.1 晶圆厂的基础工艺库<a aria-label="定位到本章节" class="heading-anchor" href="#chapter-04-sub-01">#</a></h2>
+<div aria-label="可横向滚动的工序表格" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">工艺</th>
+<th scope="col">核心技术</th>
+<th scope="col">典型设备与用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. 清洗 Cleaning</td>
+<td>湿法化学清洗、兆声清洗、干法清洗</td>
+<td>湿法清洗机、单片清洗机；去除污染</td>
+</tr>
+<tr>
+<td>2. 氧化 Oxidation</td>
+<td>干氧氧化、湿氧氧化</td>
+<td>氧化炉；形成 SiO₂</td>
+</tr>
+<tr>
+<td>3. 扩散 Diffusion</td>
+<td>高温扩散、热处理</td>
+<td>扩散炉；调节掺杂分布</td>
+</tr>
+<tr>
+<td>4. 外延 Epitaxy</td>
+<td>单晶外延生长</td>
+<td>外延反应炉；生长单晶半导体薄层</td>
+</tr>
+<tr>
+<td>5. 薄膜沉积 CVD</td>
+<td>LPCVD、PECVD、其他 CVD</td>
+<td>沉积设备；形成介质、导电层等</td>
+</tr>
+<tr>
+<td>6. 物理沉积 PVD</td>
+<td>溅射等</td>
+<td>PVD 腔体；沉积金属及功能薄膜</td>
+</tr>
+<tr>
+<td>7. 原子层沉积 ALD</td>
+<td>自限性表面反应</td>
+<td>ALD 设备；精确控制超薄膜</td>
+</tr>
+<tr>
+<td>8. 光刻 Lithography</td>
+<td>DUV / EUV 曝光</td>
+<td>涂胶显影机、光刻机；定义图形</td>
+</tr>
+<tr>
+<td>9. 干法刻蚀 Dry Etch</td>
+<td>RIE、ICP 等等离子体刻蚀</td>
+<td>刻蚀机；精细转移图形</td>
+</tr>
+<tr>
+<td>10. 湿法刻蚀 Wet Etch</td>
+<td>化学溶液选择性去除材料</td>
+<td>湿法槽式或单片设备</td>
+</tr>
+<tr>
+<td>11. 离子注入 Implantation</td>
+<td>B、P、As 等离子注入</td>
+<td>离子注入机；调控电学性质</td>
+</tr>
+<tr>
+<td>12. 退火 Annealing</td>
+<td>RTA、RTP、炉管热处理等</td>
+<td>退火设备；激活掺杂、修复损伤</td>
+</tr>
+<tr>
+<td>13. 化学机械平坦化 CMP</td>
+<td>化学腐蚀与机械研磨结合</td>
+<td>CMP 设备；平坦化晶圆</td>
+</tr>
+<tr>
+<td>14. 金属电镀 ECP</td>
+<td>铜等金属电化学沉积</td>
+<td>电镀设备；填充布线沟槽</td>
+</tr>
+<tr>
+<td>15. 检测与量测</td>
+<td>光学、电子束、光谱等</td>
+<td>缺陷检测、CD-SEM、膜厚量测系统</td>
+</tr>
+</tbody>
+</table></div>
+<p>这些工艺贯穿不同制造阶段。具体设备技术会随制程、材料和产品发生变化。</p>
+<h2 class="subsection-heading" id="chapter-04-sub-02">4.2 光刻并不是一道简单的曝光工序<a aria-label="定位到本章节" class="heading-anchor" href="#chapter-04-sub-02">#</a></h2>
+<p>完整的典型光刻循环可以拆成以下子工序：</p>
+<div aria-label="可横向滚动的工序表格" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">步骤</th>
+<th scope="col">子工序</th>
+<th scope="col">步骤</th>
+<th scope="col">子工序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>前处理清洗</td>
+<td>02</td>
+<td>脱水烘烤</td>
+</tr>
+<tr>
+<td>03</td>
+<td>表面增黏处理</td>
+<td>04</td>
+<td>旋涂光刻胶</td>
+</tr>
+<tr>
+<td>05</td>
+<td>软烘 Soft Bake</td>
+<td>06</td>
+<td>对准与曝光</td>
+</tr>
+<tr>
+<td>07</td>
+<td>曝光后烘烤 PEB</td>
+<td>08</td>
+<td>显影 Develop</td>
+</tr>
+<tr>
+<td>09</td>
+<td>图形检测</td>
+<td>10</td>
+<td>刻蚀或离子注入</td>
+</tr>
+<tr>
+<td>11</td>
+<td>去胶 Strip</td>
+<td>12</td>
+<td>清洗与缺陷检查</td>
+</tr>
+</tbody>
+</table></div>
+<p>显影后是否增加硬烘、硬掩模转移或专门清洗，取决于具体光刻胶及图形转移流程。光刻通过光掩模和曝光设备将设计图形转移到光刻胶，再利用刻蚀或注入等工艺把图形转移到材料层中。光刻机本身并不等于完整的图形加工生产线。</p>
+<h2 class="subsection-heading" id="chapter-04-sub-03">4.3 前道器件制造 FEOL：制造晶体管<a aria-label="定位到本章节" class="heading-anchor" href="#chapter-04-sub-03">#</a></h2>
+<p>以典型 CMOS MOSFET 制造为例：</p>
+<div aria-label="可横向滚动的工序表格" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">工艺模块</th>
+<th scope="col">代表性工序</th>
+<th scope="col">最终形成的结构</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>衬底准备</td>
+<td>来料检测、清洗、必要的外延</td>
+<td>满足器件要求的硅表面</td>
+</tr>
+<tr>
+<td>隔离 STI</td>
+<td>光刻 → 沟槽刻蚀 → 氧化物填充 → CMP</td>
+<td>晶体管之间的绝缘隔离</td>
+</tr>
+<tr>
+<td>阱区形成 Well</td>
+<td>光刻 → N/P 阱离子注入 → 退火</td>
+<td>晶体管所在的掺杂区域</td>
+</tr>
+<tr>
+<td>有源区处理</td>
+<td>表面清洗、界面处理、必要的沟道调节注入</td>
+<td>晶体管工作区域</td>
+</tr>
+<tr>
+<td>栅堆叠 Gate Stack</td>
+<td>栅介质形成、栅电极材料沉积与图形化</td>
+<td>控制沟道的栅极</td>
+</tr>
+<tr>
+<td>源漏工程</td>
+<td>选择性注入、侧墙 Spacer、源漏形成、激活退火</td>
+<td>Source / Drain</td>
+</tr>
+<tr>
+<td>低阻接触</td>
+<td>必要的硅化物形成及界面处理</td>
+<td>低接触电阻区域</td>
+</tr>
+<tr>
+<td>层间绝缘</td>
+<td>沉积介质层、平坦化</td>
+<td>与互连层隔离的器件结构</td>
+</tr>
+</tbody>
+</table></div>
+<p>这是一条教学性的工艺模块序列，不是可以直接执行的制造配方。对于先进 FinFET、GAA 纳米片晶体管，额外存在鳍形或纳米片结构加工、牺牲层释放、复杂栅替换、选择性外延等步骤；对于较成熟的平面 CMOS，工序则不同。</p>
+<h2 class="subsection-heading" id="chapter-04-sub-04">4.4 中段制程 MOL：让晶体管接触到布线<a aria-label="定位到本章节" class="heading-anchor" href="#chapter-04-sub-04">#</a></h2>
+<p>MOL（Middle of Line）主要负责把 FEOL 器件与 BEOL 金属互连连接起来。典型操作包括：</p>
+<ol>
+<li>沉积接触绝缘介质（ILD）。</li>
+<li>进行接触孔光刻。</li>
+<li>刻蚀 Contact Hole。</li>
+<li>清洗接触孔底部及界面。</li>
+<li>沉积衬里、阻挡层或接触材料。</li>
+<li>使用金属填充接触孔，例如部分工艺中的钨。</li>
+<li>通过 CMP 去除多余材料。</li>
+<li>制作局部互连结构。</li>
+</ol>
+<p>MOL 与 FEOL、BEOL 的具体边界随技术平台不同而变化。它的目的在于降低接触电阻，并建立稳定的器件与金属布线连接。</p>
+<h2 class="subsection-heading" id="chapter-04-sub-05">4.5 后段金属互连 BEOL：把器件连接成电路<a aria-label="定位到本章节" class="heading-anchor" href="#chapter-04-sub-05">#</a></h2>
+<p>在晶体管之上制作多层金属布线，是集成电路具有完整电气功能的必要条件。以常见铜互连工艺为例：</p>
+<div class="mini-flow">沉积层间绝缘介质（ILD / Low-k）<span>↓</span>光刻定义通孔和布线沟槽<span>↓</span>刻蚀 Via / Trench<span>↓</span>预清洗、沉积阻挡层 / 种子层<span>↓</span>电镀或其他工艺填充金属<span>↓</span>CMP 去除多余金属并平坦化<span>↓</span>沉积封帽/阻挡介质 → 下一层互连</div>
+<p>通过重复互连模块形成不同层级的布线，最后连接到芯片外部的焊盘（Pad）。某些技术使用铝互连、钨、钌或其他材料及不同图形化方式，不能把铜双镶嵌（Dual Damascene）当成所有芯片的唯一工艺。</p>
+<p>最后的晶圆级操作还可能包括：</p>
+<ul>
+<li>顶层金属和电源分布结构。</li>
+<li>钝化层（Passivation）沉积。</li>
+<li>焊盘开口（Pad Opening）。</li>
+<li>聚酰亚胺等保护层。</li>
+<li>特定封装所需的 RDL、UBM、凸块（Bump）或 TSV 结构。</li>
+</ul>
+<h2 class="subsection-heading" id="chapter-04-sub-06">4.6 一条重要的并行生产线：光掩模制造<a aria-label="定位到本章节" class="heading-anchor" href="#chapter-04-sub-06">#</a></h2>
+<p>晶圆制造还依赖光掩模（Photomask / Reticle）。光掩模通常在专门的掩模制造环节生产：</p>
+<p><strong>电路设计和版图 → 设计规则检查与验证 → 光学邻近修正（OPC）→ 掩模数据准备 → 电子束写入 → 显影 → 刻蚀 → 去胶清洗 → 缺陷检查与修复 → 最终量测及验收。</strong></p>
+<p>具体步骤取决于 DUV 或 EUV 掩模类型。掩模制造质量会影响整批晶圆上的图形质量。</p>
+</div>
+<nav class="page-nav" aria-label="章节翻页"><a rel="prev" href="chapter-03.html"><small>← 上一节</small>三、晶棒加工与晶圆衬底制造</a><a class="directory-return" href="index.html#chapter-04">返回目录</a><a class="next" rel="next" href="chapter-05.html"><small>下一节 →</small>五、贯穿整个前道的检测与良率控制</a></nav>
+<div class="bottom-note">这是一份通用工业工艺综述，不是某一晶圆厂的工艺路线卡，也不包含可直接投产的配方参数。不同产品、材料体系、技术节点及封装方案的实际制造顺序存在差异。<br/><a href="#top" class="backtop">↑ 返回顶部</a></div>
+</article><div class="footer">半导体工业全流程调研报告 · 章节独立阅读 · 可离线打开或打印为 PDF</div></main>
+</div></body></html>

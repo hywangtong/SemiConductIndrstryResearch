@@ -4,9 +4,10 @@
 
 This repository publishes a Chinese-language semiconductor manufacturing research report as a static website.
 
-- `index.html`: complete report, chapter navigation, tables, process diagrams, and embedded CSS, including responsive and print styles.
+- `index.html`: directory homepage with chapter and subsection links.
+- `chapter-01.html` through `chapter-12.html`, and `conclusion.html`: independent report pages with chapter navigation, tables, process diagrams, and embedded responsive and print styles.
 - `netlify.toml`: deployment configuration; builds into `dist/` and publishes that directory.
-- `NETLIFY_DEPLOY.md`: deployment notes. Some instructions describe the earlier HTML filename; use the current `index.html` and `netlify.toml` as the source of truth.
+- `NETLIFY_DEPLOY.md`: deployment notes and local build commands for the directory homepage and chapter pages.
 
 There are no separate source, asset, or test directories, JavaScript runtime dependencies, or backend services. Keep the report readable offline.
 
@@ -15,11 +16,11 @@ There are no separate source, asset, or test directories, JavaScript runtime dep
 Run commands from the repository root:
 
 - `Start-Process .\index.html` (PowerShell): open the report in the default browser for local preview.
-- `mkdir -p dist && cp ./*.html dist/index.html` (POSIX shell): reproduce the configured Netlify build.
-- `New-Item -ItemType Directory -Force dist; Copy-Item .\index.html .\dist\index.html` (PowerShell): produce the equivalent deployment output on Windows.
+- `mkdir -p dist && cp ./*.html dist/` (POSIX shell): reproduce the configured Netlify build.
+- `New-Item -ItemType Directory -Force dist; Copy-Item .\*.html .\dist\` (PowerShell): produce the equivalent deployment output on Windows.
 - `git diff --check`: check changes for whitespace errors before committing.
 
-No npm installation or compilation is required. The Netlify wildcard assumes exactly one root HTML file; update the build command if adding others. Keep generated `dist/` output out of commits.
+No npm installation or compilation is required. The Netlify build copies every root HTML file while preserving its filename. Keep generated `dist/` output out of commits.
 
 ## 本机预览
 
@@ -53,7 +54,7 @@ python -m http.server 8000 --bind 127.0.0.1
 
 Preserve UTF-8 encoding, `lang="zh-CN"`, and Chinese report prose. Match existing HTML layout and compact CSS; avoid reformatting the entire document. No formatter, linter, or universal indentation rule is configured. Use two spaces for TOML settings.
 
-Use descriptive kebab-case classes and preserve anchor patterns such as `chapter-04` and `chapter-04-sub-01`. Update navigation links alongside heading IDs. Retain semantic headings, table headers, keyboard access, and accessible labels.
+Use descriptive kebab-case classes and preserve anchor patterns such as `chapter-04` and `chapter-04-sub-01`. Update homepage links, chapter navigation, and previous/next links alongside heading IDs or chapter filenames. Retain semantic headings, table headers, keyboard access, and accessible labels.
 
 ## Testing Guidelines
 

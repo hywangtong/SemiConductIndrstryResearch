@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; form-action 'none'; img-src data:; font-src data:; media-src data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="九、封装后的成品测试与质量验证。半导体工业全流程调研报告独立章节。"/>
+<title>九、封装后的成品测试与质量验证｜半导体工业全流程调研报告</title>
+<style>
+:root{--ink:#15243a;--sub:#53657a;--muted:#7a8ca0;--bg:#f3f6fa;--paper:#fff;--line:#dce5ee;--accent:#2456ad;--accent-soft:#eaf1fc;--shadow:0 18px 55px rgba(25,45,80,.07);color-scheme:light;font-synthesis:none}
+*{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:25px} body{margin:0;background:var(--bg);color:var(--ink);font:15.5px/1.84 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif;-webkit-font-smoothing:antialiased}
+.shell{display:grid;grid-template-columns:256px minmax(0,1fr);gap:34px;max-width:1490px;margin:0 auto;padding:28px 32px 64px}.sidebar{position:sticky;top:22px;align-self:start;max-height:calc(100vh - 44px);overflow:auto;padding:24px 15px 24px 4px;scrollbar-width:thin}.brand{display:flex;align-items:center;gap:12px;margin:0 0 26px 10px;font-weight:800;letter-spacing:.4px;color:#1b3c74;font-size:17px}.brand-mark{height:33px;width:33px;border-radius:9px;background:linear-gradient(145deg,#2258b7,#51a2d0);display:grid;place-items:center;color:white;font-size:17px;box-shadow:0 6px 13px #2456ad25}.sidebar small{display:block;color:#8493a4;margin:0 0 13px 13px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:800}.toc{display:flex;flex-direction:column;gap:3px}.toc-link{display:flex;align-items:flex-start;gap:9px;border-radius:8px;color:#516276;text-decoration:none;padding:8px 10px;font-size:12.5px;line-height:1.4;transition:background .12s}.toc-link:hover,.toc-link:focus{color:#1f56a2;background:#e7eef8;outline:none}.toc-index{font-size:10px;line-height:19px;color:#8fa3b9;font-variant-numeric:tabular-nums;flex:none;font-weight:700}.side-footer{font-size:11px;color:#97a5b6;margin:28px 12px 0;border-top:1px solid #dae3ed;padding-top:18px;line-height:1.7}.main{min-width:0}.sheet{border:1px solid #e3e9f0;background:var(--paper);border-radius:18px;box-shadow:var(--shadow);padding:0 50px 48px;overflow:hidden}.hero{margin:0 -50px 38px;padding:46px 50px 42px;color:white;background:radial-gradient(circle at 90% -30%,#548bda 0,transparent 40%),linear-gradient(115deg,#102d5c,#1d4e96 75%,#23549c);position:relative;overflow:hidden}.hero:after{content:'';position:absolute;right:0;bottom:-120px;width:250px;height:260px;border-radius:50%;border:48px solid #ffffff10;transform:rotate(24deg)}.eyebrow{font-weight:750;letter-spacing:2.2px;text-transform:uppercase;color:#b6d7ff;font-size:11px}.hero h1{font-size:clamp(30px,3.4vw,45px);line-height:1.3;letter-spacing:-1.2px;margin:13px 0 17px;max-width:790px;font-weight:850}.hero p{max-width:770px;color:#dce9ff;margin:0;font-size:14px}.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:23px}.hero-tag{border:1px solid #ffffff45;color:#ebf4ff;border-radius:999px;padding:4px 12px;font-size:11px}.notice{border-left:4px solid #3982da;padding:12px 18px;background:#f0f6ff;margin:0 0 26px;color:#36547d;font-size:13px}.content h2{font-size:24px;color:#163864;letter-spacing:-.45px;line-height:1.4;border-top:1px solid #e4eaf1;padding-top:35px;margin:43px 0 18px}.content h2:first-child{border-top:0;margin-top:0}.content h3{font-size:17.5px;letter-spacing:-.2px;color:#1d3f6f;margin:27px 0 10px}.heading-anchor{opacity:0;font-size:.66em;vertical-align:middle;margin-left:8px;text-decoration:none;color:#7598c7}.content h2:hover .heading-anchor,.content h3:hover .heading-anchor{opacity:1}.content p{margin:12px 0 19px}.content strong{color:#1a3764;font-weight:730}.content ul,.content ol{padding-left:25px;margin:8px 0 22px}.content li{margin:6px 0;padding-left:3px}.content a{color:#2456ac;text-underline-offset:3px;text-decoration-color:#a7c3e8}.content a:hover{color:#123973}.content blockquote{border-left:4px solid #4b81d4;margin:0 0 25px;padding:13px 20px;background:#eef5ff;border-radius:0 8px 8px 0;font-size:14px;color:#385674}.content blockquote p{margin:0}.table-scroll{max-width:100%;overflow-x:auto;border:1px solid #dfe8f1;border-radius:10px;margin:16px 0 26px;scrollbar-width:thin}.table-scroll:focus{outline:2px solid #95b5e4;outline-offset:2px}table{width:100%;border-spacing:0;border-collapse:collapse;min-width:530px;font-size:13.1px;line-height:1.62}thead{background:#edf3fb}th{text-align:left;color:#234570;font-weight:750;white-space:nowrap}th,td{padding:11px 15px;border-bottom:1px solid #e6edf4;vertical-align:top}tr:last-child td{border-bottom:none}tbody tr:nth-child(even){background:#fafcff}tbody tr:hover{background:#f1f6fd}.process-flow{max-width:760px;margin:22px auto 25px}.flow-node{border:1px solid #dce6f0;border-radius:10px;background:#f8fafc;text-align:center;padding:15px 17px;display:flex;flex-direction:column;gap:3px}.flow-node.blue{background:#edf4ff;border-color:#c5d8f6}.flow-node.green{background:#eaf8f4;border-color:#b9e4d6}.flow-node.amber{background:#fff7e9;border-color:#f1deb7}.flow-node.purple{background:#f5effb;border-color:#dfcbef}.flow-index{font-size:10px;font-weight:800;letter-spacing:1.3px;text-transform:uppercase;color:#6e8196}.flow-node strong{font-size:14px!important}.flow-node small{font-size:11px;color:#6d8194}.flow-arrow{text-align:center;color:#6f93bd;font-size:20px;line-height:21px;margin:4px 0}.mini-flow{max-width:760px;background:#f7faff;border:1px solid #dbe7f7;border-radius:12px;margin:17px 0 26px;padding:18px;text-align:center;color:#224c83;font-size:13.4px;font-weight:700}.mini-flow span{display:block;color:#8ca8ce;margin:3px}.bottom-note{margin:34px -50px -48px;padding:27px 50px;background:#f5f8fc;border-top:1px solid #e4eaf2;color:#798ba1;font-size:12px}.backtop{display:inline-block;margin-top:15px;color:#2b5db0!important;text-decoration:none!important;font-weight:750}.footer{padding:22px 6px;color:#8b9bb0;font-size:11px;text-align:center}.smallbadge{display:inline-flex;background:#e9f1fd;color:#285da4;border-radius:999px;padding:2px 10px;font-size:11px;font-weight:800}.skip{position:absolute;left:-1000px;top:4px;background:#fff;color:#142f56;padding:10px;z-index:100}.skip:focus{left:10px}
+@media(max-width:1050px){.shell{grid-template-columns:205px minmax(0,1fr);gap:20px;padding:20px}.sheet{padding:0 30px 36px}.hero{margin:0 -30px 29px;padding:37px 30px}.bottom-note{margin:32px -30px -36px;padding:22px 30px}.toc-link{font-size:11.7px}}
+@media(max-width:760px){.shell{display:block;padding:0}.sidebar{position:static;max-height:none;padding:17px 17px 12px;border-bottom:1px solid #dae3ed}.brand{margin:0 0 7px}.sidebar small,.side-footer{display:none}.toc{flex-direction:row;overflow:auto;padding-bottom:4px;gap:6px;white-space:nowrap}.toc-link{flex:none;background:#edf2f9;border-radius:999px;padding:7px 11px}.toc-index{display:none}.sheet{border:0;border-radius:0;padding:0 18px 30px;box-shadow:none}.hero{margin:0 -18px 22px;padding:34px 21px}.hero h1{font-size:30px}.content h2{font-size:21px}.content h3{font-size:16.5px}.bottom-note{margin:24px -18px -30px;padding:22px 18px}.footer{padding:20px}table{font-size:12.4px}th,td{padding:10px 12px}}
+@media print{@page{size:A4;margin:15mm 12mm}body{background:white;color:black;font-size:10.5pt}.shell{display:block;padding:0;max-width:none}.sidebar,.footer,.backtop,.heading-anchor{display:none!important}.sheet{padding:0;border:0;box-shadow:none;border-radius:0;overflow:visible}.hero{margin:0 0 15mm;background:#143b71!important;-webkit-print-color-adjust:exact;print-color-adjust:exact;padding:15mm}.hero h1{font-size:27pt}.content h2{break-after:avoid-page;page-break-after:avoid;font-size:17pt}.content h3{break-after:avoid-page;page-break-after:avoid;font-size:13pt}.content table{font-size:8pt;min-width:0}.content tr{break-inside:avoid-page;page-break-inside:avoid}.table-scroll{overflow:visible;border-color:#ccc}.process-flow{max-width:100%}.flow-node,.mini-flow,thead{-webkit-print-color-adjust:exact;print-color-adjust:exact}.bottom-note{margin:14mm 0 0;padding:5mm 0;background:none}.content a{color:#164d9d}}
+.eli5-intro{margin:0 0 25px;padding:20px;background:#f7faff;border:1px solid #d6e3f5;border-radius:12px}.eli5-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px}.content .eli5-title{margin:0;color:#2456ad;font-size:17px;line-height:1.5;font-weight:800}.eli5-source{flex:none;font-size:11px}.content .eli5-summary{margin:10px 0 16px;font-size:14px;line-height:1.8;color:#36516f}.content .eli5-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;list-style:none;padding:0;margin:0}.content .eli5-steps li{position:relative;margin:0;padding:12px 10px;background:#fff;border:1px solid #dce5ee;border-radius:9px;text-align:center;min-width:0}.eli5-steps li+li:before{content:'→';position:absolute;left:-19px;top:50%;transform:translateY(-50%);color:#607fa7;font-size:19px;line-height:1}.eli5-step-number{display:block;text-align:left;color:#2456ad;font-size:18px;font-weight:800;line-height:1}.eli5-steps svg{display:block;width:100%;height:auto;max-width:230px;margin:2px auto 8px;aspect-ratio:220/130}.eli5-step-label{display:block;color:#1a3764;font-size:14px;font-weight:750;line-height:1.5}.content a:focus-visible{outline:2px solid #2456ad;outline-offset:3px;border-radius:2px}.heading-anchor:focus-visible{opacity:1}
+@media(max-width:480px){.eli5-intro{padding:15px}.eli5-heading{align-items:flex-start}.content .eli5-title{font-size:16px}.content .eli5-steps{grid-template-columns:1fr;gap:22px}.eli5-steps li+li:before{content:'↓';left:50%;top:-12px;transform:translate(-50%,-50%)}.eli5-step-number{font-size:20px}.eli5-step-label{font-size:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.toc-link{transition:none}}
+@media print{.eli5-intro{padding:4mm;break-inside:avoid-page;page-break-inside:avoid;background:#f7faff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.content .eli5-steps{grid-template-columns:repeat(3,minmax(0,1fr));gap:5mm}.eli5-steps svg{max-width:150px}.eli5-source{display:none}.content .eli5-summary,.eli5-step-label{font-size:9pt}.eli5-step-number{font-size:12pt}.eli5-steps li+li:before{content:'→';left:-4.5mm;top:50%;transform:translateY(-50%)}}
+
+/* Directory and chapter navigation */
+.content h2.subsection-heading{font-size:17.5px;letter-spacing:-.2px;color:#1d3f6f;margin:27px 0 10px;border:0;padding:0}
+@media(max-width:760px){.content h2.subsection-heading{font-size:16.5px}}
+@media print{.content h2.subsection-heading{font-size:13pt}}
+.home-link{display:inline-block;margin:0 10px 20px;color:var(--accent);font-size:13px;font-weight:750;text-decoration:none}.toc-link[aria-current="page"]{background:var(--accent-soft);color:#1f56a2;font-weight:750}.home-link:focus-visible,.page-nav a:focus-visible,.directory-grid a:focus-visible,.section-toc a:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:3px}
+.directory-shell{display:block;max-width:1160px}.directory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;list-style:none;margin:0;padding:0}.directory-card{min-width:0;border:1px solid var(--line);border-radius:12px;padding:22px;background:#fbfcff}.directory-number{font-size:11px;font-weight:800;letter-spacing:1px;color:var(--muted)}.directory-card h2{font-size:18px;line-height:1.6;margin:8px 0 12px}.directory-card h2 a{color:#1d3f6f;text-decoration:none}.directory-card h2 a:hover{text-decoration:underline;text-underline-offset:4px}.directory-card ul{margin:0;padding-left:20px;color:var(--muted)}.directory-card li{margin:7px 0;font-size:13px}.directory-card li a{color:var(--sub);text-underline-offset:3px;text-decoration-color:#b7c9e1}.directory-card li a:hover{color:var(--accent)}
+.chapter-hero h1{font-size:clamp(26px,3vw,37px);letter-spacing:-.5px;max-width:900px}.chapter-hero .heading-anchor{color:#dce9ff}.chapter-hero h1:hover .heading-anchor{opacity:1}.page-nav{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:16px;align-items:center;border-top:1px solid var(--line);padding-top:22px;margin-top:32px}.page-nav a{color:var(--accent);text-decoration:none;line-height:1.6;font-size:13px}.page-nav a:hover{text-decoration:underline}.page-nav small{display:block;color:var(--muted);font-size:11px}.page-nav .next{text-align:right}.page-nav .directory-return{font-weight:800;white-space:nowrap}.section-toc{padding:18px 20px;border:1px solid var(--line);border-radius:10px;background:#f7faff;margin-bottom:26px;font-size:13px}.section-toc strong{color:#1d3f6f}.section-toc ul{margin:8px 0 0;padding-left:20px}.section-toc li{margin:5px 0}.section-toc a{color:var(--accent);text-underline-offset:3px}
+@media(max-width:760px){.directory-grid{grid-template-columns:1fr;gap:14px}.directory-card{padding:18px}.directory-card h2{font-size:18px}.home-link{margin:0 0 12px}.page-nav{gap:10px}.page-nav a{font-size:12px}}
+@media print{.home-link,.page-nav,.section-toc{display:none!important}.directory-grid{display:block}.directory-card{break-inside:avoid-page;page-break-inside:avoid;background:white;margin:0 0 5mm;padding:4mm}.directory-card h2{font-size:13pt}.directory-card li{font-size:10pt}.chapter-hero h1{font-size:23pt}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳转正文</a>
+<div class="shell" id="top">
+<aside class="sidebar" aria-label="章节目录">
+<div class="brand"><span class="brand-mark" aria-hidden="true">◆</span><span>半导体工业研究</span></div>
+<a class="home-link" href="index.html">← 返回目录首页</a>
+<small>CONTENT / 章节目录</small><nav class="toc" aria-label="章节导航"><a class="toc-link" href="chapter-01.html"><span class="toc-index">01</span><span>一、先建立完整的工业制造框架</span></a>
+<a class="toc-link" href="chapter-02.html"><span class="toc-index">02</span><span>二、原材料提纯与单晶长晶</span></a>
+<a class="toc-link" href="chapter-03.html"><span class="toc-index">03</span><span>三、晶棒加工与晶圆衬底制造</span></a>
+<a class="toc-link" href="chapter-04.html"><span class="toc-index">04</span><span>四、晶圆制造：从空白晶圆到完整电路</span></a>
+<a class="toc-link" href="chapter-05.html"><span class="toc-index">05</span><span>五、贯穿整个前道的检测与良率控制</span></a>
+<a class="toc-link" href="chapter-06.html"><span class="toc-index">06</span><span>六、晶圆测试（Wafer Sort / CP）</span></a>
+<a class="toc-link" href="chapter-07.html"><span class="toc-index">07</span><span>七、晶圆减薄、切割与芯片分离</span></a>
+<a class="toc-link" href="chapter-08.html"><span class="toc-index">08</span><span>八、封装工艺：把裸芯片变成可使用的元器件</span></a>
+<a class="toc-link" href="chapter-09.html" aria-current="page"><span class="toc-index">09</span><span>九、封装后的成品测试与质量验证</span></a>
+<a class="toc-link" href="chapter-10.html"><span class="toc-index">10</span><span>十、不同半导体产品的制造流程差异</span></a>
+<a class="toc-link" href="chapter-11.html"><span class="toc-index">11</span><span>十一、从产业角度看：完整设备与材料供应链</span></a>
+<a class="toc-link" href="chapter-12.html"><span class="toc-index">12</span><span>十二、如何进一步把这份调研用于实际产业研究</span></a>
+<a class="toc-link" href="conclusion.html"><span class="toc-index">13</span><span>最终结论</span></a></nav>
+<div class="side-footer">12 章正文 · 最终结论<br/>各章独立页面 · 离线可阅读</div>
+</aside>
+<main class="main" id="main"><article class="sheet">
+<header class="hero chapter-hero"><span class="eyebrow">Semiconductor Manufacturing · 09 / 13</span><h1 id="chapter-09">九、封装后的成品测试与质量验证<a aria-label="定位到本章节" class="heading-anchor" href="#chapter-09">#</a></h1><p>半导体工业全流程调研报告</p></header>
+<nav class="section-toc" aria-label="本章小节"><strong>本章目录</strong><ul><li><a href="#chapter-09-sub-01">9.1 典型成品测试流程</a></li><li><a href="#chapter-09-sub-02">9.2 可靠性验证项目</a></li></ul></nav>
+<div class="content">
+<aside class="eli5-intro" aria-labelledby="chapter-09-eli5">
+<div class="eli5-heading"><p class="eli5-title" id="chapter-09-eli5">ELI5 · 封装后再考试，耐久性另做验证</p><a class="eli5-source" href="https://www.ti.com/quality-reliability/reliability.html" target="_blank" rel="noopener noreferrer" aria-label="第9节通俗导读参考：TI">资料 ↗</a></div>
+<p class="eli5-summary">封装好的芯片还要逐颗测功能和性能，按规格分档。可靠性验证通常另取样品，用高温、湿热等条件考察长期表现；不代表每颗出货芯片都做一遍全部耐久试验。</p>
+<ol class="eli5-steps" aria-label="三步看懂本节">
+<li><span class="eli5-step-number" aria-hidden="true">01</span><svg viewBox="0 0 220 130" role="img" aria-label="封装器件放进测试座，检查电气性能"><rect x="47" y="42" width="126" height="68" rx="5" fill="#ffffff" stroke="#15243a" stroke-width="2"/><rect x="78" y="48" width="64" height="42" rx="5" fill="#eaf1fc" stroke="#15243a" stroke-width="2"/><rect x="98" y="58" width="24" height="22" rx="2" fill="#2456ad" stroke="#2456ad" stroke-width="2"/><path d="M107 66 h6 v6 h-6 Z" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" /><path d="M88 48 v-9 M88 90 v9" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M101 48 v-9 M101 90 v9" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M117 48 v-9 M117 90 v9" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M130 48 v-9 M130 90 v9" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M27 60 h13 M180 60 h13 M110 22 v13" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M175 99 l5 5 l10 -12" fill="none" stroke="#15243a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="eli5-step-label">逐颗测功能与性能</span></li>
+<li><span class="eli5-step-number" aria-hidden="true">02</span><svg viewBox="0 0 220 130" role="img" aria-label="一颗封装样品在试验箱中接受温度应力"><rect x="47" y="18" width="126" height="99" rx="5" fill="#ffffff" stroke="#15243a" stroke-width="2"/><rect x="60" y="30" width="100" height="75" rx="3" fill="#eaf1fc" stroke="#15243a" stroke-width="2"/><rect x="78" y="48" width="64" height="42" rx="5" fill="#eaf1fc" stroke="#15243a" stroke-width="2"/><rect x="98" y="58" width="24" height="22" rx="2" fill="#2456ad" stroke="#2456ad" stroke-width="2"/><path d="M107 66 h6 v6 h-6 Z" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" /><path d="M88 48 v-9 M88 90 v9" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M101 48 v-9 M101 90 v9" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M117 48 v-9 M117 90 v9" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M130 48 v-9 M130 90 v9" fill="none" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M184 31 v42 a9 9 0 1 0 12 0 V31 a6 6 0 0 0 -12 0" fill="#ffffff" stroke="#15243a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><path d="M190 52 v31" fill="none" stroke="#ad432b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="eli5-step-label">另取样品验耐久</span></li>
+<li><span class="eli5-step-number" aria-hidden="true">03</span><svg viewBox="0 0 220 130" role="img" aria-label="符合规格的封装器件放入不同交付托盘"><rect x="18" y="44" width="83" height="66" rx="4" fill="#ffffff" stroke="#15243a" stroke-width="2"/><rect x="119" y="44" width="83" height="66" rx="4" fill="#ffffff" stroke="#15243a" stroke-width="2"/><rect x="29" y="58" width="19" height="16" rx="2" fill="#eaf1fc" stroke="#2456ad" stroke-width="2"/><rect x="29" y="83" width="19" height="16" rx="2" fill="#eaf1fc" stroke="#2456ad" stroke-width="2"/><rect x="63" y="58" width="19" height="16" rx="2" fill="#eaf1fc" stroke="#2456ad" stroke-width="2"/><rect x="63" y="83" width="19" height="16" rx="2" fill="#eaf1fc" stroke="#2456ad" stroke-width="2"/><rect x="130" y="58" width="19" height="16" rx="2" fill="#eaf1fc" stroke="#2456ad" stroke-width="2"/><rect x="130" y="83" width="19" height="16" rx="2" fill="#eaf1fc" stroke="#2456ad" stroke-width="2"/><rect x="164" y="58" width="19" height="16" rx="2" fill="#eaf1fc" stroke="#2456ad" stroke-width="2"/><rect x="164" y="83" width="19" height="16" rx="2" fill="#eaf1fc" stroke="#2456ad" stroke-width="2"/><path d="M49 28 l5 5 l10 -12" fill="none" stroke="#15243a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /><path d="M150 28 l5 5 l10 -12" fill="none" stroke="#15243a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" /></svg><span class="eli5-step-label">合格品分档交付</span></li>
+</ol>
+</aside>
+<p>芯片完成封装后，仍然需要进行成品电测、外观检测及必要的可靠性筛选。</p>
+<h2 class="subsection-heading" id="chapter-09-sub-01">9.1 典型成品测试流程<a aria-label="定位到本章节" class="heading-anchor" href="#chapter-09-sub-01">#</a></h2>
+<div aria-label="可横向滚动的工序表格" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">顺序</th>
+<th scope="col">工序</th>
+<th scope="col">检测内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Package Inspection</td>
+<td>外观、封装尺寸、引脚及焊球检查</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Final Electrical Test</td>
+<td>DC/AC 参数和功能测试</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Performance Binning</td>
+<td>根据性能、频率等指标分档</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Burn-in（按需）</td>
+<td>在规定的温度、电压等应力下筛除早期失效</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Post Burn-in Test（按需）</td>
+<td>老化后再次检查功能与参数</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Package Integrity Check</td>
+<td>检查内部空洞、分层等封装缺陷</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Final Visual Inspection</td>
+<td>外观、标识、引脚共面度等</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Packing</td>
+<td>编带、托盘、干燥和防静电包装</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Shipment</td>
+<td>按客户要求交付并保留批次追溯记录</td>
+</tr>
+</tbody>
+</table></div>
+<p>执行顺序及是否进行 Burn-in、X-ray、超声扫描等，取决于产品规格和客户要求。</p>
+<h2 class="subsection-heading" id="chapter-09-sub-02">9.2 可靠性验证项目<a aria-label="定位到本章节" class="heading-anchor" href="#chapter-09-sub-02">#</a></h2>
+<div aria-label="可横向滚动的工序表格" class="table-scroll" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">项目</th>
+<th scope="col">目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTOL 高温工作寿命</td>
+<td>评估长期工作应力下的可靠性</td>
+</tr>
+<tr>
+<td>Temperature Cycling 温度循环</td>
+<td>评估热胀冷缩造成的机械疲劳</td>
+</tr>
+<tr>
+<td>HAST / THB 湿热偏压试验</td>
+<td>评估潮湿环境与偏压导致的失效</td>
+</tr>
+<tr>
+<td>ESD 静电放电</td>
+<td>验证静电防护能力</td>
+</tr>
+<tr>
+<td>Latch-up 闩锁测试</td>
+<td>评估特定 IC 的闩锁敏感性</td>
+</tr>
+<tr>
+<td>Solderability 可焊性</td>
+<td>验证外部端子的可焊接性能</td>
+</tr>
+<tr>
+<td>C-SAM 超声扫描</td>
+<td>检测封装内部的分层、空洞等</td>
+</tr>
+<tr>
+<td>X-ray X 射线检查</td>
+<td>检测部分内部连接、焊点缺陷</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>可靠性验证通常以样品和批次资格认证为主，不意味着每颗量产芯片都经历所有破坏性或长时间可靠性试验。</strong></p>
+</div>
+<nav class="page-nav" aria-label="章节翻页"><a rel="prev" href="chapter-08.html"><small>← 上一节</small>八、封装工艺：把裸芯片变成可使用的元器件</a><a class="directory-return" href="index.html#chapter-09">返回目录</a><a class="next" rel="next" href="chapter-10.html"><small>下一节 →</small>十、不同半导体产品的制造流程差异</a></nav>
+<div class="bottom-note">这是一份通用工业工艺综述，不是某一晶圆厂的工艺路线卡，也不包含可直接投产的配方参数。不同产品、材料体系、技术节点及封装方案的实际制造顺序存在差异。<br/><a href="#top" class="backtop">↑ 返回顶部</a></div>
+</article><div class="footer">半导体工业全流程调研报告 · 章节独立阅读 · 可离线打开或打印为 PDF</div></main>
+</div></body></html>
